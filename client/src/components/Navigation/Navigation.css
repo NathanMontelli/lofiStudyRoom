@@ -1,0 +1,23 @@
+
+.logo {
+  font-family: 'Architects daughter';
+  font-size: 2rem;
+  display: flex;
+}
+
+.nav-links {
+  font-family: 'Architects daughter';
+  display: flex;
+  text-align: center;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  font-size: 40px;
+  
+}
+
+.position {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+}
