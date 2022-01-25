@@ -31,10 +31,12 @@
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8",
+    "nodemon": "^2.0.15",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0",
     "react-bootstrap": "^2.1.1"
+    "socket.io": "^4.4.1"
   }
 }
