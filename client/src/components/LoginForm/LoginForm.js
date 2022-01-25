@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Form, Label, Input, Button } from 'reactstrap'
+import { Form, Button, Alert } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 
 const LoginForm = () => {
@@ -25,29 +25,35 @@ const LoginForm = () => {
 
   return (
     <Form>
-      <div className="mb-3">
-        <Label htmlFor="username">Username</Label>
-        <Input
+      <Form.Group className="mb-3" controlId="formBasiclUsername">
+        <Form.Label>Username</Form.Label>
+        <Form.Control
           type="text"
-          className="form-control"
           name="username"
           value={loginState.username}
           onChange={handleInputChange} />
-      </div>
-      <div className="mb-3">
-        <Label htmlFor="password">Password</Label>
-        <Input
-          type="password"
-          className="form-control"
-          name="password"
-          value={loginState.password}
-          onChange={handleInputChange} />
-      </div>
-      <Button
-        color="primary"
-        onClick={handleLoginUser} >
-        Log In
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasiclPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control 
+        type="password" 
+        name="password"
+        value={loginState.password}
+        onChange={handleInputChange} />
+      </Form.Group>
+     
+      <Button 
+      variant="primary" 
+      type="submit"
+      onClick={handleLoginUser}>
+        Log in
       </Button>
+      <hr />
+      <Alert>
+       Dont have an account?
+        <Alert.Link href="/register">Register Now</Alert.Link>
+      </Alert>
     </Form>
   )
 }
