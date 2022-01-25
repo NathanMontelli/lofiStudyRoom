@@ -1,1 +1,1 @@
-export { default } from '.RegisterForm.js'
+export { default } from './RegisterForm.js'
