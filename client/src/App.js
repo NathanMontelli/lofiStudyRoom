@@ -6,6 +6,8 @@ import {
   Navigate,
 } from 'react-router-dom'
 import { v4 as uuidV4 } from 'uuid'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigation from './components/Navigation'
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
           <Route path='/documents/:id' element={<TextEditor />} />
         </Routes>
       </Router>
+    <Navigation />
     </>
   )
 }

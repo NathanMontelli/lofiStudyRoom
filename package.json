@@ -36,7 +36,11 @@
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0",
+<<<<<<< HEAD
     "react-bootstrap": "^2.1.1",
     "socket.io": "^4.4.1"
+=======
+    "react-bootstrap": "^2.1.1"
+>>>>>>> 3ae34fac34db16ad498337920a60fec1e65355cf
   }
 }
