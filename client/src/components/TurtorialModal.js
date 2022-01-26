@@ -7,26 +7,22 @@ import first from "../Assets/lofigirl.gif"
 import second from "../Assets/jake-lofi.gif"
 import third from "../Assets/nuro.gif"
 import "../Button.css"
-
+import ButtonComponent from './ButtonComponent';
 
 const TutorialModal = () => {
   const [show, setShow] = useState(false);
-
-
   const handleClose = () => setShow(false);
+  
   const handleShow = () => setShow(true);
+  
+
+  
 
 
+return (
+  <>
 
-
-
-
-  return (
-    <>
-      {/* <Button variant="primary" onClick={handleShow}>
-        <h1 className='text-center'>Tutorial</h1>
-      </Button> */}
-      <button onClick={handleShow}>
+      {/* <button onClick={handleShow}>
         <span className="cta">
           <span>Tutorial</span>
           <svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -34,7 +30,16 @@ const TutorialModal = () => {
             <polyline points="8 1 12 5 8 9"></polyline>
           </svg>
         </span>
-      </button>
+      </button> */}
+      
+     
+      <ButtonComponent handleBtnClick={handleShow} name={'Tutorial'} />
+     
+
+   
+     
+
+
 
 
 
@@ -44,6 +49,9 @@ const TutorialModal = () => {
         onHide={handleClose}
         // backdrop="static"
         keyboard={false}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
       >
         <Modal.Header closeButton>
           <Modal.Title><h1 className='text-center'>Tutorial</h1></Modal.Title>
