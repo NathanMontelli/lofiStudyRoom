@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Quill from "quill"
 import "quill/dist/quill.snow.css"
 import { io } from 'socket.io-client'
@@ -112,8 +112,8 @@ function TextEditor() {
       theme: 'snow',
       modules: { toolbar: TOOLBAR_OPTIONS },
     })
-    q.disable()
-    q.setText('Loading...')
+    // q.disable()
+    q.setText('Begin Writing here')
 
     setQuill(q)
   }, [])

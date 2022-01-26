@@ -1,3 +1,4 @@
+import React from 'react'
 import TextEditor from "../src/components/TextEditor";
 import {
   BrowserRouter as Router,
@@ -26,7 +27,7 @@ const App = () => {
           <Route path='/documents/:id' element={<TextEditor />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/profile' element={<Profile />} />
+          {/* <Route path='/profile' element={<Profile />} /> */}
         </Routes>
       </Router>
     <Navigation />
