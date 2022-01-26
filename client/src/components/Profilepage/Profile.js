@@ -1,5 +1,12 @@
 import { useState } from 'react'
-import { Form, Label, Input, Button } from 'reactstrap'
-import UserAPI from '../../utils/UserAPI'
+import { Form, Button, Alert, Badge } from 'react-bootstrap'
 
-export default Profile
+
+const Profile = () => {
+<div>
+  <h1>
+   <Badge bg="secondary">Your Profile</Badge>
+  </h1>
+  </div>
+
+export default Profile 
