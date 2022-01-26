@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Form, Button, Alert } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 
+
 const RegisterForm = () => {
   const [registerState, setRegisterState] = useState({
     name: '',
@@ -30,8 +31,8 @@ const RegisterForm = () => {
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Label>Full Name</Form.Label>
         <Form.Control
+          placeholder='Full Name'
           type="text"
           name="name"
           value={registerState.name}
@@ -39,8 +40,8 @@ const RegisterForm = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicUsername">
-        <Form.Label>Email</Form.Label>
         <Form.Control
+          placeholder='Email'
           type="email"
           name="email"
           value={registerState.email}
@@ -48,8 +49,8 @@ const RegisterForm = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicUsername">
-        <Form.Label>Username</Form.Label>
         <Form.Control
+          placeholder='Username'
           type="text"
           name="username"
           value={registerState.username}
@@ -57,8 +58,8 @@ const RegisterForm = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
         <Form.Control
+        placeholder='Password'
           type="password"
           name="password"
           value={registerState.password}
@@ -72,11 +73,12 @@ const RegisterForm = () => {
         Register
       </Button>
     <hr />
-    <Alert>
+    <Alert className='stuff'>
        Already have an account?
     <Alert.Link href="/login">Login Here</Alert.Link>
     </Alert>
     </Form>
+
   )
 }
 
