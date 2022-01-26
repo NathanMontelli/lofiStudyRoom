@@ -1,23 +1,24 @@
-
-import {Button} from 'react-bootstrap'
-import Geko from '../Lofi1/geko.png'
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap'
 import './LofiButton.css'
+import Lofi1 from '../Lofi1'
 
 
 const Lofi1Button = () => {
 
-
-  function handleClick ()  {
-    const pic = "https://user-images.githubusercontent.com/92957388/151237524-91e535b6-c5b8-4ffc-8ad7-5206348675fe.png"
-    document.getElementById('animal').src = pic.replace(`90x90`, '225x225');
-    document.getElementById('animal').style.display="block";
-    console.log('hello')
+  const [hideState, setHideState] = useState(false)
+  const handleHide = () => {
+  setHideState(!hideState)
   }
 
-  return (
+
+return (
     <>
-      <img src={Geko} alt="geko" id="animal" className='hidden' />
-      <Button onClick={handleClick}variant="primary">GekoMe</Button>
+
+      {
+        hideState ? < Lofi1 /> : null
+      }
+    <Button variant="primary" onClick={handleHide}>GekoMe</Button>
     </>
   );
 };
