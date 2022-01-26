@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigation from './components/Navigation'
+import Lofi1 from './components/Lofi1';
+// import Navigation from './components/Navigation'
 
 const App = () => {
   return (
     <>
-    <Navigation />
+    {/* <Navigation /> */}
+      <Lofi1 />
     </>
   )
 }
