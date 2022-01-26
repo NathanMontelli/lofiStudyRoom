@@ -1,12 +1,18 @@
-import Example from './components/modal';
+import TutorialModal from './components/modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Nav';
+// import ButtonHover from './components/button';
 
 const App = () => {
   return (
     <>
     <Navigation />
- <Example />
+ <TutorialModal />
+ <br />
+ <br />
+ <br />
+ <br />
+ {/* <ButtonHover /> */}
     </>
   )
 }
