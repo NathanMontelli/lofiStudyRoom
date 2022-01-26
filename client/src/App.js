@@ -1,7 +1,7 @@
 import TutorialModal from './components/TurtorialModal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Nav';
-// import ButtonHover from './components/button';
+
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
  <br />
  <br />
  <br />
- {/* <ButtonHover /> */}
+
     </>
   )
 }
