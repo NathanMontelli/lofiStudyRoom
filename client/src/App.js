@@ -34,24 +34,26 @@ const App = () => {
 
 
   return (
+   
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
 
       <Navigation />
-        <Lofi1Button onClick={Lofi1} />
+      <Lofi1Button onClick={Lofi1} />
       <TutorialModal />
       <br />
       <br />
       <br />
       <br />
-      <Routes>
+      <Routes> 
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        {/* <Route path='/' element={<Home />} /> */}
+        {/* {/* <Route path='/' element={<Home />} /> */}
       </Routes>
       </div>
     </Router>
+   
   )
 }
 
