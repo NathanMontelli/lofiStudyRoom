@@ -12,12 +12,15 @@ import Lofi1 from './components/Lofi1';
 import Lofi1Button from './components/Lofi1Button/Lofi1Button';
 import Navigation from './components/Navigation'
 
+
+
 // import Home from './pages/Home'
 const App = () => {
+
   return (
     <Router>
       <Navigation />
-        <Lofi1Button onClick={Lofi1} />
+      <Lofi1Button onClick={Lofi1} /> 
       <TutorialModal />
       <br />
       <br />
