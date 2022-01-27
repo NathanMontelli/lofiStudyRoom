@@ -1,10 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-<<<<<<< HEAD
 import './components/TextEditor/styles.css';
-=======
->>>>>>> 2fa0ad6a64a22713486dc6fec8c3db88b5d0a64b
 
 
 ReactDOM.render(
@@ -14,10 +11,7 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
-<<<<<<< HEAD
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-=======
->>>>>>> 2fa0ad6a64a22713486dc6fec8c3db88b5d0a64b
 

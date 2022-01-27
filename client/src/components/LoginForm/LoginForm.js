@@ -1,8 +1,23 @@
-import React,{ useState } from 'react'
-import { Form, Button, Alert } from 'react-bootstrap'
-import UserAPI from '../../utils/UserAPI'
+import React ,{useState, useEffect} from 'react';
+import { Form, Button, Alert } from 'react-bootstrap';
+import UserAPI from '../../utils/UserAPI';
+import './Login.css';
+import { gsap } from "gsap";
 
 const LoginForm = () => {
+
+  const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
+
+  useEffect(() => {
+
+
+
+    //Specify a starting and ending point in this case the opacity
+    tl.fromTo('.login', { opacity: 0 }, { opacity: 1, duration: 3 })
+
+  })
+
+
   const [loginState, setLoginState] = useState({
     username: '',
     password: ''
@@ -24,7 +39,7 @@ const LoginForm = () => {
   }
 
   return (
-    <Form>
+    <Form className="login">
       <Form.Group className="mb-3" controlId="formBasiclUsername">
         <Form.Label>Username</Form.Label>
         <Form.Control
