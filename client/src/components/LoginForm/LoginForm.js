@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Form, Button, Alert } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 
@@ -17,10 +17,17 @@ const LoginForm = () => {
       password: loginState.password
     })
       .then(token => {
-        localStorage.setItem('user', token)
-        setLoginState({ ...loginState, username: '', password: '' })
-        window.location = '/'
+        if (token === null) {
+          alert('input null')
+        } else {
+          localStorage.setItem('user', token)
+          setLoginState({ ...loginState, username: '', password: '' })
+          window.location = '/'
+        }
       })
+
+      .catch(err => alert('difficulties logging in'))
+
   }
 
   return (
@@ -36,22 +43,22 @@ const LoginForm = () => {
 
       <Form.Group className="mb-3" controlId="formBasiclPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control 
-        type="password" 
-        name="password"
-        value={loginState.password}
-        onChange={handleInputChange} />
+        <Form.Control
+          type="password"
+          name="password"
+          value={loginState.password}
+          onChange={handleInputChange} />
       </Form.Group>
-     
-      <Button 
-      variant="primary" 
-      type="submit"
-      onClick={handleLoginUser}>
+
+      <Button
+        variant="primary"
+        type="submit"
+        onClick={handleLoginUser}>
         Log in
       </Button>
       <hr />
       <Alert>
-       Dont have an account?
+        Dont have an account?
         <Alert.Link href="/register">Register Now</Alert.Link>
       </Alert>
     </Form>
