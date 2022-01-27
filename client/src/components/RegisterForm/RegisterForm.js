@@ -1,8 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Form, Button, Alert } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
+import { gsap } from "gsap";
+import './Register.css'
 
 const RegisterForm = () => {
+
+
+  const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
+  useEffect(() => {
+
+
+
+    //Specify a starting and ending point in this case the opacity
+    tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 3 })
+
+  })
+
   const [registerState, setRegisterState] = useState({
     name: '',
     email: '',
@@ -28,7 +42,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <Form>
+    <Form className = "register">
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Full Name</Form.Label>
         <Form.Control
