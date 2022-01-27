@@ -9,8 +9,7 @@ import { useRef } from "react";
 const Image = styled(motion.img)`
 position: absolute;
 width: 100%;
-max-width: 500px;
-max-width: 500px;
+max-width: 250px;
 `;
 
 const MotionConstraints = styled(motion.div)`
@@ -29,7 +28,6 @@ const Lofi1 = () => {
         <Image src={Geko} alt='geko' id='animal'
           drag={true}
           dragConstraints={constraintsRef}
-          // dragConstraints={{left: 250, right: 250, top:250, bottom: 250}}
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           dragTransition={{ bounceStiffness: 45, bounceDamping: 5 }}
