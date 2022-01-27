@@ -17,7 +17,7 @@ const Lofi1 = () => {
     <>
         <Image src={Geko} alt='geko'id ='animal'
           drag={true}
-          // dragConstraints={{left: 250, right: 250, top:250, bottom: 250}}
+          dragConstraints={{left: 250, right: 250, top:250, bottom: 250}}
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           // dragTransition={{ bounceStiffness: 300, bounceDamping: 10 }}
