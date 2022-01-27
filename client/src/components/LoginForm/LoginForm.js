@@ -15,7 +15,7 @@ const LoginForm = () => {
     //Specify a starting and ending point in this case the opacity
     tl.fromTo('.login', { opacity: 0 }, { opacity: 1, duration: 3 })
 
-  })
+  }, [])
 
 
   const [loginState, setLoginState] = useState({

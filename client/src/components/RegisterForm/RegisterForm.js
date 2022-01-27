@@ -15,7 +15,7 @@ const RegisterForm = () => {
     //Specify a starting and ending point in this case the opacity
     tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 3 })
 
-  })
+  }, [])
 
   const [registerState, setRegisterState] = useState({
     name: '',
@@ -52,7 +52,7 @@ const RegisterForm = () => {
           onChange={handleInputChange} />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicUsername">
+      <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
         <Form.Control
           type="email"

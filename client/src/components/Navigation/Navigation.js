@@ -16,9 +16,8 @@ const Navigation = () => {
 
     //Specify a starting and ending point in this case the opacity
     tl.fromTo('.logo', { opacity: 0 }, { opacity: 1, duration: 3 })
-    tl.fromTo('.hamburger', { opacity: 0 }, { opacity: 1, duration: 3 })
 
-  })
+  },[tl])
 
   return (
     <Navbar bg="" expand={false}>
@@ -50,7 +49,6 @@ const Navigation = () => {
                 placeholder="Search for notes..."
                 className="me-2"
                 aria-label="Search"
-
               />
               <Button variant="outline-success">Search</Button>
             </Form>
