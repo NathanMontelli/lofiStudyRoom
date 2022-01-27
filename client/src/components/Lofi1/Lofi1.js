@@ -10,6 +10,7 @@ const Image = styled(motion.img)`
 position: absolute;
 width: 100%;
 max-width: 250px;
+filter: drop-shadow(0px 5px 3px black);
 `;
 
 const MotionConstraints = styled(motion.div)`
