@@ -35,7 +35,7 @@ const RegisterForm = () => {
           setRegisterState({ ...registerState, name: '', email: '', username: '', password: '' })
           window.location = '/login'
         })
-        .catch(err=> console.log(err))
+        .catch(err => console.log(err))
 
     }
     setValidated(true);
