@@ -14,6 +14,7 @@ import Navigation from './components/Navigation'
 
 
 
+
 // import Home from './pages/Home'
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Navigation />
       <Lofi1Button onClick={Lofi1} />
       <TutorialModal />
+      
       <br />
       <br />
       <br />

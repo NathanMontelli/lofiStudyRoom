@@ -14,8 +14,8 @@ filter: drop-shadow(0px 5px 3px black);
 `;
 
 const MotionConstraints = styled(motion.div)`
-  height: 95vh;
-  width: 95vw;
+  height: 94vh;
+  width: 94vw;
 `;
 
 
@@ -35,10 +35,8 @@ const Lofi1 = () => {
           whileTap={{ scale: 0.9 }}
         />
     </MotionConstraints>
-     
 
   
-
     </>
   );
 };
