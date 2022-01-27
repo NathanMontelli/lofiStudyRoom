@@ -48,18 +48,18 @@ const LoginForm = () => {
   return (
     <Form className="login">
       <Form.Group className="mb-3" controlId="formBasiclUsername">
-        <Form.Label>Username</Form.Label>
         <Form.Control
           type="text"
+          placeholder='Username'
           name="username"
           value={loginState.username}
           onChange={handleInputChange} />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasiclPassword">
-        <Form.Label>Password</Form.Label>
         <Form.Control
           type="password"
+          placeholder='Password'
           name="password"
           value={loginState.password}
           onChange={handleInputChange} />

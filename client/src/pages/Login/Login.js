@@ -16,7 +16,6 @@ const Login = () => {
             transition={{duration:3}}>
             <h1 className='lofi'>LoFi Study Room</h1>
           </motion.h1>  
-          <hr className="my-4" />
         </div>
         <div className="row">
         <div className="col-md-4"></div>
