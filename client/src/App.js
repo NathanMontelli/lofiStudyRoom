@@ -16,22 +16,23 @@ import Navigation from './components/Navigation'
 
 // import Home from './pages/Home'
 const App = () => {
-
   return (
+   
     <Router>
       <Navigation />
-      <Lofi1Button onClick={Lofi1} /> 
+      <Lofi1Button onClick={Lofi1} />
       <TutorialModal />
       <br />
       <br />
       <br />
       <br />
-      <Routes>
+      <Routes> 
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        {/* <Route path='/' element={<Home />} /> */}
+        {/* {/* <Route path='/' element={<Home />} /> */}
       </Routes>
     </Router>
+   
   )
 }
 

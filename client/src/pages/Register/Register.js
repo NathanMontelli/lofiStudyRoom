@@ -1,24 +1,41 @@
+import React, {useEffect} from 'react'
 import RegisterForm from "../../components/RegisterForm"
-import './register.css'
+import'./PageRegister.css'
+import { gsap } from "gsap";
+import { motion } from 'framer-motion'
 
 const Register = () => {
+
+
+
+  //first needs class and then movement of object "%" and duration of animation
+  
+
+
   return (
     <>
-      <div className='bg'>
-        <div className="container">
-          <div className="row bg-light transparent p-1 rounded-lg m-3">
-            <h1 className="display-4">LoFi Study Room</h1>
-            <hr className="my-1" />
+      <section className="background">
+      <div className="container">
+        <div className="row p-5 rounded-lg m-3">
+            <motion.h1
+              initial={{ opacity: 0, translateX: -50, translateY: -50 }}
+              animate={{ opacity: 1, translatex: 0, translateY: 0 }}
+              transition={{ duration: 3 }}>
+              <h1 className='lofi'>LoFi Study Room</h1>
+            </motion.h1> 
+          <hr className="my-4" />
+        </div>
+        <div className="row">
+          <div className="col-md-4"></div>
+          <div className="col-md-4 text">
+            <h5>Register A New Account</h5>
+            <hr />
+            <RegisterForm />
           </div>
-          <div className="row">
-            <div className="col-md-6">
-              <h5>Register A New Account</h5>
-              <hr />
-              <RegisterForm />
-            </div>
-          </div>
+          <div className="col-md-4"></div>
         </div>
       </div>
+    </section>
     </>
   )
 }
