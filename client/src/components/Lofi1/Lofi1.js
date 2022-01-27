@@ -24,7 +24,7 @@ const Lofi1 = () => {
   const constraintsRef = useRef(null);
   return (
     <>
-   
+
       <MotionConstraints ref={constraintsRef}>
         <Image src={Geko} alt='geko' id='animal'
           drag={true}
@@ -35,7 +35,8 @@ const Lofi1 = () => {
           dragTransition={{ bounceStiffness: 45, bounceDamping: 5 }}
           whileTap={{ scale: 0.9 }}
         />
-      </MotionConstraints>
+    </MotionConstraints>
+     
 
   
 

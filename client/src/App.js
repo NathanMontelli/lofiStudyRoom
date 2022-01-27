@@ -16,8 +16,8 @@ import Navigation from './components/Navigation'
 
 // import Home from './pages/Home'
 const App = () => {
-
   return (
+   
     <Router>
       <Navigation />
       <Lofi1Button onClick={Lofi1} /> 
@@ -32,6 +32,7 @@ const App = () => {
         {/* <Route path='/' element={<Home />} /> */}
       </Routes>
     </Router>
+   
   )
 }
 
