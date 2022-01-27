@@ -6,12 +6,8 @@ import { motion } from 'framer-motion'
 
 const Register = () => {
 
-
-
   //first needs class and then movement of object "%" and duration of animation
   
-
-
   return (
     <>
       <section className="background">

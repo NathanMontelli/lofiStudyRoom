@@ -37,8 +37,6 @@ const Lofi1 = () => {
     </MotionConstraints>
      
 
-  
-
     </>
   );
 };

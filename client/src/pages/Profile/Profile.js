@@ -1,10 +1,10 @@
-import Navigation from "../../components/Navigation"
+import ProfileComp from "../../components/ProfileComp"
 
-const Profile = () => {
+const Profilepage = () => {
   return (
     <>
-      <div className="container">
-        <div className="row bg-light p-5 rounded-lg m-3">
-          <h1 className="display-4">LoFi Study Room</h1>
-          <hr className="my-4" />
-        </div>
+      <ProfileComp/>
+      </>
+    )}
+
+export default Profilepage

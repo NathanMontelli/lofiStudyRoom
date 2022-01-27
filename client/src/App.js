@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Profilepage from './pages/Profile'
 import TutorialModal from './components/TurtorialModal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lofi1 from './components/Lofi1';
@@ -31,7 +32,7 @@ const App = () => {
       <Routes> 
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/profile' element={<Profile />} />
+        <Route path='/profile' element={<Profilepage />} />
         {/* {/* <Route path='/' element={<Home />} /> */}
       </Routes>
     </Router>
