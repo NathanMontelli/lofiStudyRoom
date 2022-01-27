@@ -19,13 +19,13 @@ const App = () => {
   return (
    
     <Router>
-      <Navigation /> 
+      {/* <Navigation /> 
       <Lofi1Button onClick={Lofi1} /> 
       <TutorialModal />
       <br />
       <br />
       <br />
-      <br />
+      <br /> */}
       <Routes>
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
