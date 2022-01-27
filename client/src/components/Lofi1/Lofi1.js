@@ -26,7 +26,7 @@ const Lofi1 = () => {
     <>
 
       <MotionConstraints ref={constraintsRef}>
-        <Image src={Geko} alt='geko' id='animal'
+        <Image src={Geko} alt='geko'
           drag={true}
           dragConstraints={constraintsRef}
           initial={{ opacity: 0, y: -100 }}

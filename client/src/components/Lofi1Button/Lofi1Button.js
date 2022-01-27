@@ -11,7 +11,6 @@ const Lofi1Button = () => {
   setHideState(!hideState)
   }
 
-
 return (
     <>
 
