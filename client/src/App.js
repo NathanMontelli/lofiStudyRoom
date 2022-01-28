@@ -41,8 +41,6 @@ const App = () => {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-
-      <Bot />
       <Routes> 
         
         <Route path='/register' element={<Register />} />

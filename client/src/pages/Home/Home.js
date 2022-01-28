@@ -6,6 +6,7 @@ import Lofi1 from '../../components/Lofi1';
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
 import { Row, Container } from 'react-bootstrap'
+import Bot from '../../components/Modals/botModal';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     <>
       <section className="homeBackground">
         <Navigation />
+        <Bot />
         <div className="container">
           <div className="row p-5 rounded-lg ">
             <div className="col-md-4">
