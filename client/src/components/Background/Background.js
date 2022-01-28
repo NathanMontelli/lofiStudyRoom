@@ -5,14 +5,11 @@ import City from './city.jpg'
 
 
 const CityImg = styled(motion.img)`
-min-height:100vh;
-background-size:cover;
- -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-background-repeat: no-repeat;
- height: 100%;
-background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
 `;
 
 const Background = () => {

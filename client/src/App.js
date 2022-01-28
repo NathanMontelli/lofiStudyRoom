@@ -21,10 +21,10 @@ const App = () => {
   return (
 
     <Router>
-      {/* <Navigation />
-      <Lofi1Button onClick={Lofi1} /> */}
+      <Navigation />
+      <Lofi1Button onClick={Lofi1} /> 
       <BackgroundButton onClick={Background} />
-      {/* <TutorialModal /> */}
+      <TutorialModal />
 
       <br />
       <br />
