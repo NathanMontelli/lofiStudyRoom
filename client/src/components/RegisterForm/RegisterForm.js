@@ -1,8 +1,10 @@
-import React,{ useState, useEffect } from 'react'
-import { Form, Button, Alert } from 'react-bootstrap'
+import React, { useState, useEffect } from 'react'
+import { Form, Button, Alert, Row, Col, InputGroup } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 import { gsap } from "gsap";
 import './Register.css'
+
+
 
 const RegisterForm = () => {
 
@@ -26,19 +28,32 @@ const RegisterForm = () => {
 
   const handleInputChange = ({ target: { name, value } }) => setRegisterState({ ...registerState, [name]: value })
 
-  const handleRegisterUser = event => {
-    event.preventDefault()
-    UserAPI.register({
-      name: registerState.name,
-      email: registerState.email,
-      username: registerState.username,
-      password: registerState.password
-    })
-      .then(() => {
-        alert('User Registered! Please Log In!')
-        setRegisterState({ ...registerState, name: '', email: '', username: '', password: '' })
-        window.location = '/login'
+  const [validated, setValidated] = useState(false);
+
+  const handleRegisterUser = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    if (form.checkValidity() === true) {
+      event.preventDefault()
+      UserAPI.register({
+        name: registerState.name,
+        email: registerState.email,
+        username: registerState.username,
+        password: registerState.password
       })
+        .then(() => {
+          alert('User Registered! Please Log In!')
+          setRegisterState({ ...registerState, name: '', email: '', username: '', password: '' })
+          window.location = '/login'
+        })
+        .catch(err => console.log(err))
+
+    }
+    setValidated(true);
+
   }
 
   return (
@@ -82,15 +97,17 @@ const RegisterForm = () => {
       <Button
         variant="primary"
         type="submit"
-        onClick={handleRegisterUser}>
+        onClick={handleRegisterUser}
+      >
         Register
       </Button>
-    <hr />
-    <Alert>
-       Already have an account?
-    <Alert.Link href="/login">Login Here</Alert.Link>
-    </Alert>
+      <hr />
+      <Alert className='stuff'>
+        Already have an account?
+        <Alert.Link href="/login">Login Here</Alert.Link>
+      </Alert>
     </Form>
+
   )
 }
 

@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import RegisterForm from "../../components/RegisterForm"
 import'./PageRegister.css'
-import { gsap } from "gsap";
+
 import { motion } from 'framer-motion'
 
 const Register = () => {
@@ -23,7 +23,7 @@ const Register = () => {
               transition={{ duration: 3 }}>
               <h1 className='lofi'>LoFi Study Room</h1>
             </motion.h1> 
-          <hr className="my-4" />
+         
         </div>
         <div className="row">
           <div className="col-md-4"></div>
