@@ -11,32 +11,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Lofi1 from './components/Lofi1';
 import Lofi1Button from './components/Lofi1Button/Lofi1Button';
 import Navigation from './components/Navigation'
-import Howler from './components/Stream';
-
+import BackgroundButton from './components/BackgroundButton'
+import Background from './components/Background'
 
 
 
 // import Home from './pages/Home'
 const App = () => {
   return (
-   
+
     <Router>
-      <Navigation />
-      <Lofi1Button onClick={Lofi1} />
-      <TutorialModal />
-      <Howler />
-      
+      {/* <Navigation />
+      <Lofi1Button onClick={Lofi1} /> */}
+      <BackgroundButton onClick={Background} />
+      {/* <TutorialModal /> */}
+
       <br />
       <br />
       <br />
       <br />
-      <Routes> 
+      <Routes>
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         {/* {/* <Route path='/' element={<Home />} /> */}
       </Routes>
     </Router>
-   
+
   )
 }
 
