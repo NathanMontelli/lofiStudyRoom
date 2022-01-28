@@ -6,7 +6,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Login from './pages/Login'
 import Register from './pages/Register'
-import TutorialModal from './components/TutorialModal/TurtorialModal';
+import TutorialModal from './components/Modals/TurtorialModal';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lofi1 from './components/Lofi1';
@@ -18,6 +18,8 @@ import { useState, useEffect } from 'react'
 import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
 
+import Bot from './components/Modals/botModal';
+
 
 // import Home from './pages/Home'
 const App = () => {
@@ -27,7 +29,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
-    }, 1500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -46,6 +48,7 @@ const App = () => {
       <br />
       <br />
       <br />
+      <Bot />
       <Routes> 
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
