@@ -18,10 +18,19 @@
   font-size: 25px;
 }
 
+
+.navbar-toggler{
+  background-color: white;
+}
+
+.navbar-light .navbar-brand{
+  color: white;
+}
+
+
 .position {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 10vh;
 }
-
