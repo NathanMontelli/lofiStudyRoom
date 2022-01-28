@@ -1,0 +1,32 @@
+.lofi2 {
+  font-family: 'Architects daughter';
+  font-size: 45px2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  
+}
+
+
+.homeBackground {
+  min-height: 100vh;
+  background-image: url('../../Assets/lofigirl.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+.lofi1Button {
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  left: 0;
+}
+
+.tutorialModal {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 20px;
+  right: 0;
+}

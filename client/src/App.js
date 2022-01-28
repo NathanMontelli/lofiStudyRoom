@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import TutorialModal from './components/TurtorialModal';
@@ -19,17 +20,18 @@ const App = () => {
   return (
    
     <Router>
-      <Navigation />
-      <Lofi1Button onClick={Lofi1} />
-      <TutorialModal />
+      {/* <Navigation /> */}
+      {/* <Lofi1Button onClick={Lofi1} />
+      <TutorialModal /> */}
+      {/* <br />
       <br />
       <br />
-      <br />
-      <br />
+      <br /> */}
       <Routes> 
+        
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        {/* {/* <Route path='/' element={<Home />} /> */}
+        <Route path='/' element={<Home />} />
       </Routes>
     </Router>
    
