@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
 import { motion } from 'framer-motion'
-import TutorialModal from '../../components/TurtorialModal';
+import TutorialModal from '../../components/Modals/TurtorialModal';
 import Lofi1 from '../../components/Lofi1';
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
