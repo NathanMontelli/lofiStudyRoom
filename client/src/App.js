@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react'
 import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
 
-import Bot from './components/Modals/botModal';
+
 
 
 // import Home from './pages/Home'
@@ -34,7 +34,7 @@ const App = () => {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
 
-      <Bot />
+
       <Routes> 
         
         <Route path='/register' element={<Register />} />
