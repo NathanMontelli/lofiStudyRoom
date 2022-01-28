@@ -1,0 +1,43 @@
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #DCC2A7;
+  background-image: url(./Assets/loaderCat2.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#preloader-none {
+  opacity: 0;
+}
+
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+.botModal {
+
+  border-radius: 25px 25px 0px 0px;
+  background-color: #DCC2A7;
+  -webkit-border-radius: 25px 25px 0px 0px;
+  -moz-border-radius: 25px 25px 0px 0px;
+  -ms-border-radius: 25px 25px 0px 0px;
+  -o-border-radius: 25px 25px 0px 0px;
+}
+
+@media only screen and (min-width: 700px) {
+  .botModal {
+    width: 40vw;
+    max-width: 40vh;
+    height: 32vh;
+    max-height: 32vw;
+    border-radius: 25px 25px 0px 0px;
+    background-color: #DCC2A7;
+  }
+}
