@@ -1,6 +1,3 @@
-.landing {
-  background-image: url('./bed.png');
-  background-size: cover;
-  min-height: 100vh;
-  min-width: 100vw;
+section{
+  padding-top: 1rem;
 }
