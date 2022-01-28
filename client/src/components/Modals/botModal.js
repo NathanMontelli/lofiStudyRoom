@@ -2,6 +2,7 @@ import { Offcanvas } from 'react-bootstrap'
 import { useState } from 'react'
 import "../../style.css"
 import ButtonComponent from '../ButtonComponent';
+import { trusted } from 'mongoose';
 
 
 
@@ -22,7 +23,7 @@ function Bot() {
 
       <Offcanvas className="botModal" show={show} onHide={handleClose}
         placement="bottom"
-        scroll={true}
+        scroll={trusted}
         backdrop={false}>
 
         <Offcanvas.Header closeButton>
