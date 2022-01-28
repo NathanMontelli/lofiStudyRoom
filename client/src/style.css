@@ -1,3 +1,7 @@
+body {
+  font-family: 'Architects daughter'
+}
+
 #preloader {
   position: fixed;
   top: 0;
@@ -21,23 +25,5 @@
 }
 
 
-.botModal {
 
-  border-radius: 25px 25px 0px 0px;
-  background-color: #DCC2A7;
-  -webkit-border-radius: 25px 25px 0px 0px;
-  -moz-border-radius: 25px 25px 0px 0px;
-  -ms-border-radius: 25px 25px 0px 0px;
-  -o-border-radius: 25px 25px 0px 0px;
-}
 
-@media only screen and (min-width: 700px) {
-  .botModal {
-    width: 40vw;
-    max-width: 40vh;
-    height: 32vh;
-    max-height: 32vw;
-    border-radius: 25px 25px 0px 0px;
-    background-color: #DCC2A7;
-  }
-}

@@ -1,6 +1,5 @@
 import React from 'react';
-import "../Button.css"
-
+import "./Button.css"
 
 
 const ButtonComponent = ({handleBtnClick, name}) => {
@@ -19,9 +18,6 @@ const ButtonComponent = ({handleBtnClick, name}) => {
       </button>
 
 
-
-
-    
   );
 }
 
