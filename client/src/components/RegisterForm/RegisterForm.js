@@ -15,7 +15,7 @@ const RegisterForm = () => {
 
 
     //Specify a starting and ending point in this case the opacity
-    tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 3 })
+    tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 8 })
 
   }, [])
 

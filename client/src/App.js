@@ -52,7 +52,6 @@ const App = () => {
       <br />
       <br />
       <br />
-      <Routes>
       <Bot />
       <Routes> 
         <Route path='/register' element={<Register />} />
