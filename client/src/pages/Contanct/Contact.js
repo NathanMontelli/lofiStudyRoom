@@ -74,7 +74,7 @@ const Contact = () => {
                     With supporting text below as a natural lead-in to additional content.
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted"> <a><ButtonComponent name={'GitHub'} /></a></Card.Footer>
+                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/BR0C0DE'><ButtonComponent name={'GitHub'} /></a></Card.Footer>
               </Card>
             </Col>
           </Row>
@@ -92,7 +92,7 @@ const Contact = () => {
                   </Card.Text>
 
                 </Card.Body>
-                <Card.Footer className="text-muted"> <ButtonComponent name={'GitHub'} /></Card.Footer>
+                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/kelleyindahouse'><ButtonComponent name={'GitHub'} /></a></Card.Footer>
               </Card>
             </Col>
           <Col md={3}> </Col>
