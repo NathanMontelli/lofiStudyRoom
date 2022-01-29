@@ -10,18 +10,6 @@ import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent';
 
 const Contact = () => {
  
- const openPeterGitHub = () =>{
-   window.location.href = ('https://github.com/Psong562')
-}
-
-  const openNathanGitHub = () => {
-    window.location.href = ('https://github.com/NathanMontelli')
-  }
-
-  const openAbrahamGitHub = () => {
-    window.location.href = ('https://github.com/Abraham-Solis')
-  }
-
 
   return (
     <>
@@ -41,7 +29,8 @@ const Contact = () => {
                   </Card.Text>
 
                 </Card.Body>
-                <Card.Footer className="text-muted"> <ButtonComponent handleBtnClick={openPeterGitHub}name={'GitHub'} /></Card.Footer>
+                <Card.Footer className="text-muted">
+                  <a target="_blank" rel="noopener noreferrer" href='https://github.com/Psong562'> <ButtonComponent name={'GitHub'} /> </a> </Card.Footer>
               </Card>
               {/* NATHANS CARD */}
             </Col>
@@ -55,7 +44,7 @@ const Contact = () => {
                     With supporting text below as a natural lead-in to additional content.
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted"> <ButtonComponent name={'GitHub'} handleBtnClick={openNathanGitHub} /></Card.Footer>
+                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/NathanMontelli'><ButtonComponent name={'GitHub'} /> </a></Card.Footer>
               </Card>
             </Col>
           </Row>
@@ -71,7 +60,7 @@ const Contact = () => {
                     With supporting text below as a natural lead-in to additional content.
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted"> <ButtonComponent name={'GitHub'} handleBtnClick={openAbrahamGitHub} /></Card.Footer>
+                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/Abraham-Solis' ><ButtonComponent name={'GitHub'} /></a></Card.Footer>
               </Card>
             </Col>
             {/* AUSTINS CARD */}
@@ -85,7 +74,7 @@ const Contact = () => {
                     With supporting text below as a natural lead-in to additional content.
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted"> <ButtonComponent name={'GitHub'} handleBtnClick={openAbrahamGitHub} /></Card.Footer>
+                <Card.Footer className="text-muted"> <a><ButtonComponent name={'GitHub'} /></a></Card.Footer>
               </Card>
             </Col>
           </Row>

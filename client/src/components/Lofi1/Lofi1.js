@@ -14,8 +14,8 @@ filter: drop-shadow(0px 5px 3px black);
 `;
 
 const MotionConstraints = styled(motion.div)`
-  height: 94vh;
-  width: 94vw;
+  height: 85vh;
+  width: 85vw;
 `;
 
 
