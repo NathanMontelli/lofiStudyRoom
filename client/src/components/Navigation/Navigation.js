@@ -22,7 +22,7 @@ const Navigation = () => {
   return (
     <Navbar bg="" expand={false}>
       <Container fluid>
-        <Navbar.Brand className="logo" href="#">Lofi Study Room</Navbar.Brand>
+        <Navbar.Brand className="logo" href="/">Lofi Study Room</Navbar.Brand>
         <Navbar.Toggle className="hamburger" aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
