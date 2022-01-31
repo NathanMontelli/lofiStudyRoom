@@ -8,6 +8,12 @@ import Navigation from '../../components/Navigation'
 import { Row, Container } from 'react-bootstrap'
 import Bot from '../../components/Modals/botModal';
 
+import Rain from '../../components/backgroundSounds/Rain';
+import Fire from '../../components/backgroundSounds/Fire';
+import Cars from '../../components/backgroundSounds/Cars';
+import Waves from '../../components/backgroundSounds/Waves';
+
+
 
 const Home = () => {
 
@@ -16,6 +22,21 @@ const Home = () => {
       <section className="homeBackground">
         <Navigation />
         <Bot />
+        <br />
+        <br />
+        <br />
+        <Rain />
+        <br />
+        <br />
+        <Fire />
+        <br />
+        <br />
+        <Cars />
+        <br />
+        <br />
+        <Waves />
+    
+       
         <div className="container">
           <div className="row p-5 rounded-lg ">
             <div className="col-md-4">

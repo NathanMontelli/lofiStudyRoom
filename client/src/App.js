@@ -15,6 +15,10 @@ import { useState, useEffect } from 'react'
 import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
 
+
+
+
+
 // import Home from './pages/Home'
 const App = () => {
 
