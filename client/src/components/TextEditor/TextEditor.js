@@ -35,7 +35,7 @@ function TextEditor() {
 
   // setting up socket and disconnect when no longer needed
   useEffect(() => {
-    const s = io("http://localhost:3001")
+    const s = io("http://localhost:8080")
     setSocket(s)
 
     return () => {
