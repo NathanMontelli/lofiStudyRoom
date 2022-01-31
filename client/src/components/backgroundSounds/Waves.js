@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import fireSound from "../Assets/campfire.mp3"
-import ButtonComponent from "./ButtonCompnent/ButtonComponent";
+import WavesSound from "../../Assets/waves.mp3"
+import ButtonComponent from "../ButtonCompnent/ButtonComponent";
 
 
-
-function Fire() {
+function Waves() {
 
   const audio = useRef(null);
 
@@ -13,16 +12,6 @@ function Fire() {
   const handlePlay = () => {
     setIsPlaying(!isPlaying)
   }
-
-
-//   const [slider, setSlider] = useState({
-//     value: 0,
-//     label: ''
-//   });
-
-//  const onSlide = () => {
-//    setSlider(slider.value)
-//  }
 
 
   useEffect(() => {
@@ -35,28 +24,27 @@ function Fire() {
     }
   })
 
-  
 
   return (
 
     <div>
-      
       <audio
         // controls
         loop
-        src={fireSound}
+        src={WavesSound}
         ref={audio}
         autoPlay
       >
       </audio>
-      <ButtonComponent handleBtnClick={handlePlay} name={'Fire'} />
+
+      <ButtonComponent handleBtnClick={handlePlay} name={'Waves'} />
       {/* <input
         type="range"
         min={0}
-        max={1}
+        max={20}
         step={0.02}
-      value={slider.value}
-      onChange={onSlide}
+      value={volume}
+      onChange={setVolume}
       /> */}
     </div>
 
@@ -64,4 +52,4 @@ function Fire() {
   );
 }
 
-export default Fire;
+export default Waves;
