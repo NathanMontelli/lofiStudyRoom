@@ -57,7 +57,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <Form noValidate validated={validated} className="register">
+    <Form noValidate validated={validated} className='register'>
       <Row className="mb-3">
         <Form.Group as={Col} md="10" controlId="validName">
           <InputGroup hasValidation>
