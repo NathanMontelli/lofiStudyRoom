@@ -29,6 +29,7 @@ import "./style.css";
 import Contact from './pages/Contanct'
 
 
+
 // import Home from './pages/Home'
 const App = () => {
 

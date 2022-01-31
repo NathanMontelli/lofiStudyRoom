@@ -9,6 +9,10 @@ import { Row, Container } from 'react-bootstrap'
 import Bot from '../../components/Modals/botModal';
 import TextEditior from '../../components/TextEditor'
 
+import Rain from '../../components/Rain';
+import Fire from '../../components/Fire';
+
+
 
 const Home = () => {
 
@@ -17,6 +21,15 @@ const Home = () => {
       <section className="homeBackground">
         <Navigation />
         <Bot />
+        <br />
+        <br />
+        <br />
+        <Rain />
+        <br />
+        <br />
+        <Fire />
+    
+       
         <div className="container">
           <div className="row p-5 rounded-lg ">
             <div className="col-md-4">
