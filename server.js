@@ -53,9 +53,9 @@ const defaultValue = ''
 
 // listening for text changes
 io.on('connection', socket => {
-  socket.on('get-document', documentId => {
+  socket.on('get-document', async documentId => {
     // capturing function to find document by Id
-    const document = findOrCreateDocument(documentId)
+    const document = await findOrCreateDocument(documentId)
     // putting socket into a 'room' based on documentId and everyone with this socket can talk to one another
     socket.join(documentId)
     // send out data from matching document
@@ -67,15 +67,15 @@ io.on('connection', socket => {
     })
     // updating saved data on documents
     socket.on('save-document', async data => {
-      Document.findByIdAndUpdate(documentId, { data })
+      await Document.findByIdAndUpdate(documentId, { data })
     })
   })
 })
 
-function findOrCreateDocument(id) {
+async function findOrCreateDocument(id) {
   if (id == null) return
 
-  const document = Document.findById(id)
+  const document = await Document.findById(id)
   if (document) return document
-  return Document.create({ _id: id, data: defaultValue })
+  return await Document.create({ _id: id, data: defaultValue })
 }
