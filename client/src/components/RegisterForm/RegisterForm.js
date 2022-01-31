@@ -15,7 +15,7 @@ const RegisterForm = () => {
 
 
     //Specify a starting and ending point in this case the opacity
-    tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 8 })
+    tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 3 })
 
   }, [])
 
@@ -57,43 +57,74 @@ const RegisterForm = () => {
   }
 
   return (
-    <Form className = "register">
-      <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Label>Full Name</Form.Label>
-        <Form.Control
-          type="text"
-          name="name"
-          value={registerState.name}
-          onChange={handleInputChange} />
-      </Form.Group>
+    <Form noValidate validated={validated} className='register'>
+      <Row className="mb-3">
+        <Form.Group as={Col} md="10" controlId="validName">
+          <InputGroup hasValidation>
+            <Form.Control
+              required
+              placeholder='Full Name'
+              type="text"
+              name="name"
+              value={registerState.name}
+              onChange={handleInputChange} />
+            <Form.Control.Feedback type="invalid">
+              Please enter a name.
+            </Form.Control.Feedback>
+          </InputGroup>
+        </Form.Group>
+      </Row>
 
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email</Form.Label>
-        <Form.Control
-          type="email"
-          name="email"
-          value={registerState.email}
-          onChange={handleInputChange} />
-      </Form.Group>
+      <Row className="mb-3">
+        <Form.Group as={Col} md="10" controlId="validEmail">
+          <InputGroup hasValidation>
+            <Form.Control
+              required
+              placeholder='Email'
+              type="email"
+              name="email"
+              value={registerState.email}
+              onChange={handleInputChange} />
+            <Form.Control.Feedback type="invalid">
+              Please enter a email.
+            </Form.Control.Feedback>
+          </InputGroup>
+        </Form.Group>
+      </Row>
 
-      <Form.Group className="mb-3" controlId="formBasicUsername">
-        <Form.Label>Username</Form.Label>
-        <Form.Control
-          type="text"
-          name="username"
-          value={registerState.username}
-          onChange={handleInputChange} />
-      </Form.Group>
+      <Row className="mb-3">
+        <Form.Group as={Col} md="10" controlId="validUsername">
+          <InputGroup hasValidation>
+            <Form.Control
+              required
+              placeholder='Username'
+              type="text"
+              name="username"
+              value={registerState.username}
+              onChange={handleInputChange} />
+            <Form.Control.Feedback type="invalid">
+              Please enter a username.
+            </Form.Control.Feedback>
+          </InputGroup>
+        </Form.Group>
+      </Row>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          name="password"
-          value={registerState.password}
-          onChange={handleInputChange} />
-      </Form.Group>
-
+      <Row className="mb-3">
+        <Form.Group as={Col} md="10" controlId="validPassword">
+          <InputGroup hasValidation>
+            <Form.Control
+              required
+              placeholder='Password'
+              type="password"
+              name="password"
+              value={registerState.password}
+              onChange={handleInputChange} />
+            <Form.Control.Feedback type="invalid">
+              Please enter a password.
+            </Form.Control.Feedback>
+          </InputGroup>
+        </Form.Group>
+      </Row>
       <Button
         variant="primary"
         type="submit"
