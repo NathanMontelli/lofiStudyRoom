@@ -18,3 +18,7 @@
 .center{
   justify-content: center;
 }
+
+.bottomPadding{
+  padding-bottom: 1rem;
+}

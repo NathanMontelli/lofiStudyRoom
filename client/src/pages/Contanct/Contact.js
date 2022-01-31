@@ -13,7 +13,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className='landing'>
+      <section className='landing' >
         <Navigation />
         <Container fluid="md">
           <Row>
@@ -98,6 +98,7 @@ const Contact = () => {
           <Col md={3}> </Col>
           </Row>
         </Container>
+      <a href='/' ><ButtonComponent name={'Home'} /></a>
       </section>
     </>
 

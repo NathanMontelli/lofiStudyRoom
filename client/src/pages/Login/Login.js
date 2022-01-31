@@ -4,12 +4,14 @@ import LoginForm from "../../components/LoginForm"
 import {motion} from 'framer-motion'
 import BackgroundButton from "../../components/BackgroundButton";
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
+import Navigation from '../../components/Navigation'
 
 const Login = () => {
 
   return (
     <>
       <section className="background">
+        <Navigation />
       <div className="container">
         <div className="row p-5 rounded-lg m-3">     
           <motion.h1
