@@ -34,7 +34,7 @@ const Home = () => {
               </motion.h1> */}
             </div>
             <div className="col-md-4">
-              <TextEditior></TextEditior>
+             
               <div className="tutorialModal">
                 <TutorialModal />
               </div>

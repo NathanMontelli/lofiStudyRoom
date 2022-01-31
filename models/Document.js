@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose')
 
-const Document = new Schema ({
+const Documents = new Schema ({
   _id: String,
   data: Object
 })
 
-module.exports = model('Document', Document)
+module.exports = model('documents', Documents)
