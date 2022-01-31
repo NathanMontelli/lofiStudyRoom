@@ -7,6 +7,7 @@ import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
 import { Row, Container } from 'react-bootstrap'
 import Bot from '../../components/Modals/botModal';
+import TextEditior from '../../components/TextEditor'
 
 
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
               </motion.h1> */}
             </div>
             <div className="col-md-4">
+              <TextEditior></TextEditior>
               <div className="tutorialModal">
                 <TutorialModal />
               </div>
