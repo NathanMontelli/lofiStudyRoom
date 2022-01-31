@@ -13,7 +13,7 @@ const Profile = () => {
         <Container>
           <Row>
             <Col md="auto"><WelcomeBadge /></Col>
-            <Col md="auto"><TextEditor /></Col>
+            <Col md="auto"></Col>
             <Col>
             </Col>
           </Row>
