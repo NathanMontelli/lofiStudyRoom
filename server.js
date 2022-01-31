@@ -7,10 +7,10 @@ const { Strategy: LocalStrategy } = require('passport-local')
 const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt')
 
 const mongoose = require('mongoose')
-const Document = require('./models/Document.js')
+// const Document = require('./models/Document.js')
 
 const app = express()
-const { User } = require('./models')
+const { User,Document } = require('./models')
 
 app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({ extended: true }))
@@ -35,16 +35,16 @@ app.use(require('./routes'))
 
 app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'public', 'index.html')))
 
-require('./db')
-  .then(() => app.listen(process.env.PORT || 3001))
-  .catch(err => console.log(err))
+// require('./db')
+//   .then(() => app.listen(process.env.PORT || 3001))
+//   .catch(err => console.log(err))
 
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
 
 const io = require("socket.io")(3001 , {
   cors: {
-    origin: "http://localhost:3000/",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"]
   }
 })

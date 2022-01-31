@@ -113,7 +113,7 @@ function TextEditor() {
       theme: 'snow',
       modules: { toolbar: TOOLBAR_OPTIONS },
     })
-    // q.disable()
+    q.disable()
     q.setText('Loading...')
 
     setQuill(q)
