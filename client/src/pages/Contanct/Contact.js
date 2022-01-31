@@ -98,7 +98,7 @@ const Contact = () => {
           <Col md={3}> </Col>
           </Row>
         </Container>
-      <a href='/' ><ButtonComponent name={'Home'} /></a>
+      <a href='/' ><ButtonComponent name={'Home'} className="beGone" /></a>
       </section>
     </>
 

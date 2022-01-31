@@ -4,7 +4,6 @@ import LoginForm from "../../components/LoginForm"
 import {motion} from 'framer-motion'
 import BackgroundButton from "../../components/BackgroundButton";
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
-import Navigation from '../../components/Navigation'
 
 const Login = () => {
 
@@ -12,7 +11,7 @@ const Login = () => {
     <>
       <section className="background">
       <div className="container">
-        <div className="row p-5 rounded-lg m-3">     
+        <div className="row p-5 rounded-lg">     
           <motion.h1
             initial={{opacity:0, translateX: -50, translateY: -50}}
             animate = {{opacity:1, translatex:0, translateY:0}}
@@ -28,10 +27,7 @@ const Login = () => {
             <LoginForm />
           <div className="col-md-4"></div>
           </div>
-        </div>
-        <BackgroundButton />
-        <Lofi1Button />
-        
+        </div> 
       </div>
       </section>
     </>

@@ -17,7 +17,7 @@ const Register = () => {
     <>
       <section className="background">
       <div className="container">
-        <div className="row p-5 rounded-lg m-3">
+        <div className="row p-5 rounded-lg">
             <motion.h1
               initial={{ opacity: 0, translateX: -50, translateY: -50 }}
               animate={{ opacity: 1, translatex: 0, translateY: 0 }}

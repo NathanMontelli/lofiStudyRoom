@@ -19,6 +19,6 @@
   justify-content: center;
 }
 
-.bottomPadding{
-  padding-bottom: 1rem;
+.beGone{
+  padding-bottom: 0% !important;
 }
