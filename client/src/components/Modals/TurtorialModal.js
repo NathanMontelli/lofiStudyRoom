@@ -3,11 +3,11 @@ import { useState } from 'react'
 import { Modal } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
 import { Carousel } from 'react-bootstrap';
-import first from "../Assets/lofigirl.gif"
-import second from "../Assets/jake-lofi.gif"
-import third from "../Assets/nuro.gif"
-import "../Button.css"
-import ButtonComponent from './ButtonComponent';
+import first from "../../Assets/lofigirl.gif"
+import second from "../../Assets/jake-lofi.gif"
+import third from "../../Assets/nuro.gif"
+import "../../Button.css"
+import ButtonComponent from '../ButtonComponent';
 
 const TutorialModal = () => {
   const [show, setShow] = useState(false);

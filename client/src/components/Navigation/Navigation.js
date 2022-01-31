@@ -23,8 +23,8 @@ const Navigation = () => {
   return (
     <Navbar bg="" expand={false}>
       <Container fluid>
-        <Navbar.Brand className="logo" href="#">Lofi Study Room</Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Brand className="logo" href="/">Lofi Study Room</Navbar.Brand>
+        <Navbar.Toggle className="hamburger" aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
@@ -54,6 +54,8 @@ const Navigation = () => {
               />
               <Button variant="outline-success">Search</Button>
             </Form>
+            <Nav.Link className="nav-links" href="/login">Login</Nav.Link>
+            <Nav.Link className="nav-links" href="/register">Register</Nav.Link>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
