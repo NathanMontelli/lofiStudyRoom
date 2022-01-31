@@ -2,12 +2,14 @@ import React from 'react'
 import './PageLogin.css'
 import LoginForm from "../../components/LoginForm"
 import {motion} from 'framer-motion'
+import Navigation from '../../components/Navigation'
 
 const Login = () => {
 
   return (
     <>
       <section className="background">
+        <Navigation />
       <div className="container">
         <div className="row p-5 rounded-lg m-3">     
           <motion.h1

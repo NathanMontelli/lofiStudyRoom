@@ -1,17 +1,25 @@
+import React from 'react'
+import { Row, Container, Col } from 'react-bootstrap'
 import WelcomeBadge from "../../components/WelcomeBadge"
 import Navigation from "../../components/Navigation"
 import TextEditor from "../../components/TextEditor"
-import './Profile.css'
+import "./Profile.css"
 
-const Profilepage = () => {
+const Profile = () => {
   return (
     <>
+    <section className= "background">
     <Navigation />
-      <section className="background">
-        <WelcomeBadge />
-        <TextEditor />
-    </section>
-      </>
+        <Container>
+          <Row>
+            <Col md="auto"><WelcomeBadge /></Col>
+            <Col md="auto"><TextEditor /></Col>
+            <Col>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </>
     )}
 
-export default Profilepage
+export default Profile

@@ -3,6 +3,7 @@ import RegisterForm from "../../components/RegisterForm"
 import'./PageRegister.css'
 
 import { motion } from 'framer-motion'
+import Navigation from '../../components/Navigation'
 
 const Register = () => {
 
@@ -11,6 +12,7 @@ const Register = () => {
   return (
     <>
       <section className="background">
+        <Navigation />
       <div className="container">
         <div className="row p-5 rounded-lg m-3">
             <motion.h1

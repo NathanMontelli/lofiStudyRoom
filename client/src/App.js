@@ -8,7 +8,7 @@ import { v4 as uuidV4 } from 'uuid'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './pages/Login'
 import Register from './pages/Register'
-import Profilepage from './pages/Profile'
+import Profile from './pages/Profile'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home'
 import { useState, useEffect } from 'react'
@@ -36,12 +36,11 @@ const App = () => {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-
       <Routes> 
         
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/profile' element={<Profilepage />} />
+        <Route path='/profile' element={<Profile />} />
         <Route path='/' element={<Home />} />
       </Routes>
       </div>
