@@ -14,10 +14,11 @@ filter: drop-shadow(0px 5px 3px black);
 `;
 
 const MotionConstraints = styled(motion.div)`
-  height: 85vh;
-  width: 85vw;
-`;
-
+  height: 80vh;
+  width: 80vw;
+  `;
+  
+  // border: 1px solid #f00;
 
 
 const Lofi1 = () => {

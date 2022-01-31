@@ -15,7 +15,8 @@ const Contact = () => {
     <>
       <section className='landing' >
         <Navigation />
-        <Container fluid="md">
+        <Container style={{"padding-bottom":20}}fluid="md">
+          <a href='/' ><ButtonComponent name={'Home'} className="beGone" /></a>
           <Row>
             {/* PETERS CARD  */}
             <Col className="bottom">
@@ -97,8 +98,8 @@ const Contact = () => {
             </Col>
           <Col md={3}> </Col>
           </Row>
+  
         </Container>
-      <a href='/' ><ButtonComponent name={'Home'} className="beGone" /></a>
       </section>
     </>
 

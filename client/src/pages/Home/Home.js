@@ -5,7 +5,7 @@ import TutorialModal from '../../components/Modals/TurtorialModal';
 import Lofi1 from '../../components/Lofi1';
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
-import { Row, Container } from 'react-bootstrap'
+import { Row, Container, Button } from 'react-bootstrap'
 import Bot from '../../components/Modals/botModal';
 import TextEditior from '../../components/TextEditor'
 
@@ -13,6 +13,7 @@ import Rain from '../../components/backgroundSounds/Rain';
 import Fire from '../../components/backgroundSounds/Fire';
 import Cars from '../../components/backgroundSounds/Cars';
 import Waves from '../../components/backgroundSounds/Waves';
+import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent';
 
 
 
@@ -47,6 +48,7 @@ const Home = () => {
             </div>
 
             <div className="col-md-4">
+                 
               {/* <motion.h1
                 initial={{ opacity: 0, translateX: -40, translateY: -40 }}
                 animate={{ opacity: 1, translatex: -10, translateY: -10 }}
@@ -58,6 +60,7 @@ const Home = () => {
              
               <div className="tutorialModal">
                 <TutorialModal />
+                <a href='/notes' target="_blank"> <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
               </div>
             </div>
           </div>

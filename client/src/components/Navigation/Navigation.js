@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 
 const Navigation = () => {
 
+    //Animations
   const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
 
   useEffect(() => {
@@ -18,6 +19,9 @@ const Navigation = () => {
     tl.fromTo('.logo', { opacity: 0 }, { opacity: 1, duration: 3 })
 
   }, [tl])
+
+  //Search DB for Note
+  
 
   return (
     <Navbar bg="" expand={false}>
@@ -38,8 +42,6 @@ const Navigation = () => {
               <Nav.Link className="nav-links" href="#action2">Profile</Nav.Link>
               <Nav.Link className="nav-links" href="#action2">Background</Nav.Link>
               <Nav.Link className="nav-links" href="/contact">Contanct</Nav.Link>
-              <Nav.Link className="nav-links" href="/login">Login</Nav.Link>
-              <Nav.Link className="nav-links" href="/register">Register</Nav.Link>
             </Nav>
             <Form className="d-flex">
               <FormControl
