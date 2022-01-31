@@ -23,6 +23,7 @@
     "uuid": "^8.3.2",
     "react-scripts": "5.0.0",
     "reactstrap": "^9.0.1",
+    "socket.io-client": "^4.4.1",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.4"
   },
