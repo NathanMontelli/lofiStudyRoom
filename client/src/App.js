@@ -1,8 +1,11 @@
+import TextEditor from "../src/components/TextEditor";
 import {
   BrowserRouter as Router,
+  Route,
   Routes,
-  Route
+  Navigate,
 } from 'react-router-dom'
+import { v4 as uuidV4 } from 'uuid'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -50,6 +53,9 @@ const App = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/' element={<Home />} />
+        {/* <Route path='/' element={<Home />} /> */}
+        <Route path='/notes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
+        <Route path='/documents/:id' element={<TextEditor />} />
       </Routes>
       </div>
     </Router>
