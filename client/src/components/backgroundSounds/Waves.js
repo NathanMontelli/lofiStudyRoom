@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import rainSound from "../Assets/rain-03.mp3"
-import ButtonComponent from "./ButtonCompnent/ButtonComponent";
+import WavesSound from "../../Assets/waves.mp3"
+import ButtonComponent from "../ButtonCompnent/ButtonComponent";
 
 
-function Rain() {
+function Waves() {
 
   const audio = useRef(null);
 
@@ -17,7 +17,7 @@ function Rain() {
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.7;
+      audio.current.volume = 0.2;
 
     } else {
       audio.current.pause();
@@ -31,13 +31,13 @@ function Rain() {
       <audio
         // controls
         loop
-        src={rainSound}
+        src={WavesSound}
         ref={audio}
         autoPlay
       >
       </audio>
 
-      <ButtonComponent handleBtnClick={handlePlay} name={'Rain'} />
+      <ButtonComponent handleBtnClick={handlePlay} name={'Waves'} />
       {/* <input
         type="range"
         min={0}
@@ -52,4 +52,4 @@ function Rain() {
   );
 }
 
-export default Rain;
+export default Waves;
