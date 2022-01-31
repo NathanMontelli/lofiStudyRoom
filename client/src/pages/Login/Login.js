@@ -11,7 +11,6 @@ const Login = () => {
   return (
     <>
       <section className="background">
-        <Navigation />
       <div className="container">
         <div className="row p-5 rounded-lg m-3">     
           <motion.h1
