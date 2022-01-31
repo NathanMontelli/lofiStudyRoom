@@ -11,7 +11,6 @@ import Register from './pages/Register'
 import Profilepage from './pages/Profile'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home'
-import TutorialModal from './components/Modals/TurtorialModal';
 import { useState, useEffect } from 'react'
 import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
@@ -38,13 +37,11 @@ const App = () => {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
 
-      <Bot />
       <Routes> 
         
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/profile' element={<Profilepage />} />
-        {/* {/* <Route path='/' element={<Home />} /> */}
         <Route path='/' element={<Home />} />
       </Routes>
       </div>

@@ -1,5 +1,6 @@
-import ProfileComp from "../../components/ProfileComp"
+import WelcomeBadge from "../../components/WelcomeBadge"
 import Navigation from "../../components/Navigation"
+import TextEditor from "../../components/TextEditor"
 import './Profile.css'
 
 const Profilepage = () => {
@@ -7,7 +8,8 @@ const Profilepage = () => {
     <>
     <Navigation />
       <section className="background">
-      <ProfileComp/>
+        <WelcomeBadge />
+        <TextEditor />
     </section>
       </>
     )}
