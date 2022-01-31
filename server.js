@@ -6,6 +6,9 @@ const passport = require('passport')
 const { Strategy: LocalStrategy } = require('passport-local')
 const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt')
 
+const mongoose = require('mongoose')
+const Document = require('./models/Document.js')
+
 const app = express()
 const { User } = require('./models')
 
@@ -35,3 +38,44 @@ app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'inde
 require('./db')
   .then(() => app.listen(process.env.PORT || 3001))
   .catch(err => console.log(err))
+
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofinotes');
+
+const io = require("socket.io")(3001, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"]
+  }
+})
+
+const defaultValue = ''
+
+// listening for text changes
+io.on('connection', socket => {
+  socket.on('get-document', documentId => {
+    // capturing function to find document by Id
+    const document = findOrCreateDocument(documentId)
+    // putting socket into a 'room' based on documentId and everyone with this socket can talk to one another
+    socket.join(documentId)
+    // send out data from matching document
+    socket.emit('load-document', document.data)
+
+    socket.on('send-changes', delta => {
+      // broadcasts to everyone but 'us' that there are changes and 'delta' are those changes
+      socket.broadcast.to(documentId).emit('receive-changes', delta)
+    })
+    // updating saved data on documents
+    socket.on('save-document', async data => {
+      Document.findByIdAndUpdate(documentId, { data })
+    })
+  })
+})
+
+function findOrCreateDocument(id) {
+  if (id == null) return
+
+  const document = Document.findById(id)
+  if (document) return document
+  return Document.create({ _id: id, data: defaultValue })
+}
