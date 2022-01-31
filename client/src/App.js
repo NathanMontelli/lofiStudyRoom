@@ -14,6 +14,7 @@ import "./style.css";
 
 
 
+
 // import Home from './pages/Home'
 const App = () => {
 
@@ -33,7 +34,7 @@ const App = () => {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-
+      
 
       <Routes> 
         
