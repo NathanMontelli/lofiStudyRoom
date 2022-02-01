@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Home.css'
-import { motion } from 'framer-motion'
 import TutorialModal from '../../components/Modals/TurtorialModal';
 import Lofi1 from '../../components/Lofi1';
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
-import { Row, Container, Button } from 'react-bootstrap'
 import Bot from '../../components/Modals/botModal';
-import TextEditior from '../../components/TextEditor'
-
 import Rain from '../../components/backgroundSounds/Rain';
 import Fire from '../../components/backgroundSounds/Fire';
 import Cars from '../../components/backgroundSounds/Cars';
 import Waves from '../../components/backgroundSounds/Waves';
 import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent';
-import Lofi2 from '../../components/Lofi2/';
-import Lofi2Button from '../../components/Lofi2Button'
+
 
 
 
@@ -70,7 +65,6 @@ const Home = () => {
             <div className="col-md-4">
               <div className="tutorialModal">
               <Lofi1Button onClick={Lofi1} />
-              <Lofi2Button onClick={Lofi2} />
               </div>
             </div>
           </div>
