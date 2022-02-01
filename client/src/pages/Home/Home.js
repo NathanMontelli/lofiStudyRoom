@@ -25,6 +25,10 @@ const Home = () => {
     <>
       <section className="homeBackground">
         <Navigation />
+        <br />
+        <br />
+        <br />
+        <br />
         <Bot />
         <br />
         <br />
@@ -39,8 +43,7 @@ const Home = () => {
         <br />
         <br />
         <Waves />
-    
-       
+     
         <div className="container">
           <div className="row p-5 rounded-lg ">
             <div className="col-md-4">
