@@ -1,15 +1,28 @@
 body {
-  font-family: 'Architects daughter'
+  font-family: 'Architects daughter';
 }
 
 button {
   border: none;
   background: transparent;
+  text-shadow: 1px 1px 3px rgb(12, 12, 12);
+  color: rgb(251, 239, 186);
 }
+
 
 button:focus {
   outline-color: transparent;
 }
+
+button:hover {
+  text-shadow: 0px 0px 10px #fff185;
+  -moz-transition: all 0.1s e1ase-in;
+  -o-transition: all 0.1s e1ase-in;
+  -webkit-transition: all 0.1s e1ase-in;
+  transition: all 0.1s e1ase-in;
+  -ms-transition: all 0.1s e1ase-in;
+}
+
 
 a {
   text-decoration: none;
@@ -30,7 +43,7 @@ a {
   left: 0;
   display: block;
   border-radius: 28px;
-  background: rgba(17, 145, 70, 0.5);
+  background: rgba(211, 209, 123, 0);
   width: 56px;
   height: 56px;
   transition: all 0.3s ease;
@@ -53,7 +66,7 @@ a {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: #111;
+  stroke: rgb(246, 245, 173);
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
@@ -61,8 +74,9 @@ a {
 
 .cta:hover:before {
   width: 100%;
-  background: rgba(17, 145, 70, 0.5);
+  background: rgba(0, 0, 0, 0.603);
   cursor: pointer;
+
 }
 
 .cta:hover svg {

@@ -2,8 +2,6 @@ import React from 'react'
 import './PageLogin.css'
 import LoginForm from "../../components/LoginForm"
 import {motion} from 'framer-motion'
-import BackgroundButton from "../../components/BackgroundButton";
-import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 
 const Login = () => {
 

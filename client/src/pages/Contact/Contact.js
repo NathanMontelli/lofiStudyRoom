@@ -14,9 +14,8 @@ const Contact = () => {
   return (
     <>
       <section className='landing' >
-        <Navigation />
-        <Container style={{"padding-bottom":20}}fluid="md">
-          <a href='/' ><ButtonComponent name={'Home'} className="beGone" /></a>
+        <Navigation  />
+        <Container style={{ "padding-top": 60}}fluid="md">
           <Row>
             {/* PETERS CARD  */}
             <Col className="bottom">
