@@ -10,6 +10,7 @@ import Register from './pages/Register'
 import { useState, useEffect } from 'react'
 import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
+import Profile from './pages/Profile'
 
 
 
@@ -38,6 +39,7 @@ const App = () => {
 
       <Routes> 
         
+        <Route path='/profile' element={<Profile />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/' element={<Home />} />
