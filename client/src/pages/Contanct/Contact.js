@@ -4,6 +4,7 @@ import Peter from './peter.png'
 import Abe from './abe.png'
 import Austin from './austin.png'
 import Nathan from './nathan.png'
+import Kevin from './kevin.png'
 import Navigation from '../../components/Navigation'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent';
@@ -86,7 +87,7 @@ const Contact = () => {
 
                 <Card.Body >
                   <Card.Title>Kevin</Card.Title>
-                  <Card.Img variant="top" src={Austin} />
+                  <Card.Img variant="top" src={Kevin} />
                   <Card.Text>
                     With supporting text below as a natural lead-in to additional content.
                   </Card.Text>
