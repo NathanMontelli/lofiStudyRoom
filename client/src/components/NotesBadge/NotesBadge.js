@@ -1,8 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
-import { Form, Button, Alert, Badge, Card, Row, Col, Container } from 'react-bootstrap'
-import Navigation from "../Navigation"
-import username from "../../utils/UserAPI"
+import { Button, Card, Row, Col, Container } from 'react-bootstrap'
 
 // let username = 
 
