@@ -13,15 +13,12 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Register from './pages/Register'
 import TutorialModal from './components/Modals/TurtorialModal';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lofi1 from './components/Lofi1';
 import Lofi1Button from './components/Lofi1Button/Lofi1Button';
 import Navigation from './components/Navigation'
 import BackgroundButton from './components/BackgroundButton'
 import Background from './components/Background'
-
-
 import { useState, useEffect } from 'react'
 import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
