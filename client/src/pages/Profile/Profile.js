@@ -12,10 +12,7 @@ const Profile = () => {
         <Navigation />
         <Container>
           <Row>
-            <Col md="auto"><WelcomeBadge /></Col>
-            <Col md="auto"></Col>
-            <Col>
-            </Col>
+            <Col md="auto"><WelcomeBadge /> </Col>
           </Row>
         </Container>
       </section>

@@ -29,7 +29,7 @@ import "./style.css";
 
 
 
-import Contact from './pages/Contanct'
+import Contact from './pages/Contact'
 
 
 
@@ -55,6 +55,7 @@ const App = () => {
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/profile' element={<Profile />} />
         <Route path='/' element={<Home />} />
         {/* <Route path='/' element={<Home />} /> */}
         <Route path='/notes' element={<Navigate to={`/documents/${uuidV4()}`} />} />

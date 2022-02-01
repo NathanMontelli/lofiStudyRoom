@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css'
 import Peter from './peter.png'
-import Abe from './Abe.png'
+import Abe from './abe.png'
 import Austin from './austin.png'
 import Nathan from './nathan.png'
 import Navigation from '../../components/Navigation'
