@@ -12,7 +12,7 @@ const mongoose = require('mongoose')
 const app = express()
 const { User, Document } = require('./models')
 
-app.use(express.static(join(__dirname, 'client', 'public')))
+app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
@@ -33,7 +33,7 @@ passport.use(new JWTStrategy({
 
 app.use(require('./routes'))
 
-app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'public', 'index.html')))
+app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'index.html')))
 
 require('./db')
   .then(() => app.listen(process.env.PORT || 3001))
