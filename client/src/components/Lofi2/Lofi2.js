@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from "framer-motion";
-import Geko from './geko.png'
+import Pizza from './pizza.png'
 import { useRef } from "react";
 // import Lofi1Button from '../Lofi1Button';
 
@@ -16,18 +16,18 @@ filter: drop-shadow(0px 5px 3px black);
 const MotionConstraints = styled(motion.div)`
   height: 80vh;
   width: 80vw;
+  border: 1px solid #f00;
   `;
-  // Use the below code above to see dimensions
-  // border: 1px solid #f00;
 
 
-const Lofi1 = () => {
+
+const Lofi2 = () => {
   const constraintsRef = useRef(null);
   return (
     <>
 
       <MotionConstraints ref={constraintsRef}>
-        <Image src={Geko} alt='geko'
+        <Image src={Pizza} alt='Pizza'
           drag={true}
           dragConstraints={constraintsRef}
           initial={{ opacity: 0, y: -100 }}
@@ -36,12 +36,11 @@ const Lofi1 = () => {
           whileTap={{ scale: 0.9 }}
         />
 
-    </MotionConstraints>
+      </MotionConstraints>
 
-  
+
     </>
   );
 };
 
-export default Lofi1;
-
+export default Lofi2;

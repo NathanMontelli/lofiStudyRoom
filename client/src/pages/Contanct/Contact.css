@@ -1,0 +1,24 @@
+.bottom {
+  padding-bottom: 2rem;
+}
+
+.landing {
+  background-image: url('./bed.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+}
+
+.bgCard {
+  background-color: #bac2c5;
+}
+
+.center{
+  justify-content: center;
+}
+
+.beGone{
+  padding-bottom: 0% !important;
+}
