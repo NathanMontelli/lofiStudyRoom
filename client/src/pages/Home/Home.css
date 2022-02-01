@@ -6,7 +6,7 @@
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  
+
 }
 
 
@@ -31,6 +31,10 @@
   right: 0;
 }
 
-.spaceBottom{
+.spaceBottom {
   padding-bottom: 20px;
+}
+
+.rightNav {
+  padding: 70px 0;
 }
