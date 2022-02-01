@@ -5,7 +5,6 @@ import Lofi1 from '../../components/Lofi1';
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
 import Bot from '../../components/Modals/botModal';
-import TextEditior from '../../components/TextEditor'
 import Rain from '../../components/backgroundSounds/Rain';
 import Fire from '../../components/backgroundSounds/Fire';
 import Cars from '../../components/backgroundSounds/Cars';
