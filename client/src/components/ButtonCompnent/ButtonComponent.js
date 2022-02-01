@@ -7,7 +7,7 @@ const ButtonComponent = ({handleBtnClick, name}) => {
   return (
     
 
-    <button onClick={handleBtnClick}>
+    <button className='BRUH' onClick={handleBtnClick}>
         <span className="cta">
           <span>{name}</span>
           <svg width="13px" height="10px" viewBox="0 0 13 10">

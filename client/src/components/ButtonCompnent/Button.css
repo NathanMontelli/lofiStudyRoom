@@ -2,7 +2,7 @@ body {
   font-family: 'Architects daughter';
 }
 
-button {
+.BRUH {
   border: none;
   background: transparent;
   text-shadow: 1px 1px 3px rgb(12, 12, 12);
@@ -10,11 +10,11 @@ button {
 }
 
 
-button:focus {
+.BRUH:focus {
   outline-color: transparent;
 }
 
-button:hover {
+.BRUH:hover {
   text-shadow: 0px 0px 10px #fff185;
   -moz-transition: all 0.1s e1ase-in;
   -o-transition: all 0.1s e1ase-in;
@@ -86,3 +86,4 @@ a {
 .cta:active {
   transform: scale(0.96);
 }
+
