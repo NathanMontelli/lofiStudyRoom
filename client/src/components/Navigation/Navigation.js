@@ -1,12 +1,13 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './Navigation.css';
-import { Nav, Navbar, NavDropdown, Offcanvas, Button, Form, FormControl, Container } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown, Offcanvas, Button, Form, FormControl, Container, ButtonGroup } from "react-bootstrap";
 import { gsap } from "gsap";
 
 
 
-const Navigation = () => {
+
+const Navigation = (handleBtnClick) => {
 
   const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
 
@@ -38,11 +39,10 @@ const Navigation = () => {
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link className="nav-links" href="#action2">Profile</Nav.Link>
               <Nav.Link className="nav-links" href="#action2">Background</Nav.Link>
-              <NavDropdown className="nav-station" title="Stations" id="offcanvasNavbarDropdown">
-                <NavDropdown.Item href="#action3">Chill</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Moody</NavDropdown.Item>
-                <NavDropdown.Item href="#action5"> Ambient </NavDropdown.Item>
+              <NavDropdown className="nav-station" title="Ambient Sounds" id="offcanvasNavbarDropdown">
+            
               </NavDropdown>
+              
             </Nav>
             <Form className="d-flex">
               <FormControl
@@ -56,6 +56,7 @@ const Navigation = () => {
             </Form>
             <Nav.Link className="nav-links" href="/login">Login</Nav.Link>
             <Nav.Link className="nav-links" href="/register">Register</Nav.Link>
+              
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
