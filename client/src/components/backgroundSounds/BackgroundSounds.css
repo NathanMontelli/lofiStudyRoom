@@ -1,7 +1,7 @@
 input[type=range] {
   background: rgba(0, 0, 255, 0);
   -webkit-appearance: none;
-  width: 10%;
+  width: 8%;
 }
 
 input[type=range]:focus {
