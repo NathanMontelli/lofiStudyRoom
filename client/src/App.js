@@ -29,7 +29,7 @@ import Profile from './pages/Profile'
 
 
 
-import Contact from './pages/Contanct'
+import Contact from './pages/Contact'
 
 
 

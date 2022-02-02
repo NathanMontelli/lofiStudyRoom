@@ -40,19 +40,10 @@ const Navigation = (handleBtnClick) => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link className="nav-links" href="#action2">Profile</Nav.Link>
-              <Nav.Link className="nav-links" href="#action2">Background</Nav.Link>
-              <Nav.Link className="nav-links" href="/contact">Contanct</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank" href="/profile">Profile</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank"href="#action2">Background</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank" href="/contact">Contact</Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search for notes..."
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
