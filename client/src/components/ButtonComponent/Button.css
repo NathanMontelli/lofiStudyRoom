@@ -74,7 +74,7 @@ a {
 
 .cta:hover:before {
   width: 100%;
-  background: rgba(0, 0, 0, 0.883);
+  background: rgba(0, 0, 0, 0.555);
   cursor: pointer;
 
 }

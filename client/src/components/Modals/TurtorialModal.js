@@ -45,7 +45,7 @@ return (
           <Carousel>
             <Carousel.Item pause='hover'>
               <div>
-                <h3>How to Login</h3>
+                <h3>Music</h3>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
               </div>
 
@@ -60,7 +60,7 @@ return (
 
             <Carousel.Item pause='hover'>
               <div>
-                <h3>Moving items on the page</h3>
+                <h3>Ambient Sounds</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
               <img
@@ -73,7 +73,7 @@ return (
             </Carousel.Item>
             <Carousel.Item pause='hover'>
               <div>
-                <h3>Etc</h3>
+                <h3>Theme Toggle</h3>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p></div>
               <div>
 
@@ -85,10 +85,49 @@ return (
                 />
               </div>
 
+            </Carousel.Item>
+            <Carousel.Item pause='hover'>
+              <div>
+                <h3>Fidget-cons</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
 
-              <Carousel.Caption>
+              <div>
+                <img
+                  className="d-block w-100"
+                  src={first}
+                  alt="First slide"
+                />
+              </div>
+            </Carousel.Item>
 
-              </Carousel.Caption>
+            <Carousel.Item pause='hover'>
+              <div>
+                <h3>Let Your Ideas Flow</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <img
+                className="d-block w-100"
+                src={second}
+                alt="Second slide"
+              />
+
+
+            </Carousel.Item>
+            <Carousel.Item pause='hover'>
+              <div>
+                <h3>Accessing Profile and Saving Notes</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p></div>
+              <div>
+
+
+                <img
+                  className="d-block w-100"
+                  src={third}
+                  alt="Third slide"
+                />
+              </div>
+
             </Carousel.Item>
           </Carousel>
 

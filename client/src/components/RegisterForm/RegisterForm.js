@@ -59,7 +59,7 @@ const RegisterForm = () => {
   return (
     <Form noValidate validated={validated} className='register'>
       <Row className="mb-3">
-        <Form.Group as={Col} md="10" controlId="validName">
+        <Form.Group  md="10" controlId="validName">
           <InputGroup hasValidation>
             <Form.Control
               required
@@ -76,7 +76,7 @@ const RegisterForm = () => {
       </Row>
 
       <Row className="mb-3">
-        <Form.Group as={Col} md="10" controlId="validEmail">
+        <Form.Group  md="10" controlId="validEmail">
           <InputGroup hasValidation>
             <Form.Control
               required
@@ -93,7 +93,7 @@ const RegisterForm = () => {
       </Row>
 
       <Row className="mb-3">
-        <Form.Group as={Col} md="10" controlId="validUsername">
+        <Form.Group  md="10" controlId="validUsername">
           <InputGroup hasValidation>
             <Form.Control
               required
@@ -110,7 +110,7 @@ const RegisterForm = () => {
       </Row>
 
       <Row className="mb-3">
-        <Form.Group as={Col} md="10" controlId="validPassword">
+        <Form.Group  md="10" controlId="validPassword">
           <InputGroup hasValidation>
             <Form.Control
               required
@@ -135,7 +135,7 @@ const RegisterForm = () => {
       <hr />
       <Alert className='stuff'>
         Already have an account?
-        <Alert.Link href="/login">Login Here</Alert.Link>
+        <Alert.Link href="/login">&nbsp;Login Here</Alert.Link>
       </Alert>
     </Form>
 

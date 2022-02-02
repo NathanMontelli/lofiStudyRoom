@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
+import Navigation from '../../components/Navigation'
 
 const Profile = () => {
 
   const [noteState, setNoteState] = useState({
+    title: '',
     body: '',
     notes: []
   })
-  const handleInputChange = ({ target: { name, value } }) => {
-    setNoteState({ ...noteState, [name]: value })
-  }
+  const handleInputChange = ({ target: { name, value } }) => { setNoteState({ ...noteState, [name]: value })}
 
   useEffect(() => {
     axios.get('/api/notes', {
@@ -19,14 +19,21 @@ const Profile = () => {
         'Authorization': `Bearer ${localStorage.getItem('user')}`
       }
     })
+  
       .then(res => {
-        console.log(res.data)
+        // console.log(res.data)
         setNoteState({ ...noteState, notes: res.data })
-      })
+      }) 
+      .catch(err => 
+        window.location = '/login')
+    
   }, [])
 
-  const handleSubmitNote = () => {
+  const handleSubmitNote = event=> {
+    event.preventDefault()
+   
     let newnote = {
+      title: noteState.title,
       body: noteState.body
     }
     axios.post('/api/notes', newnote, {
@@ -35,23 +42,63 @@ const Profile = () => {
       }
     })
       .then(res => {
-        console.log(res)
+        // console.log(res.data)
+        
+        axios.get('/api/notes', {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('user')}`
+          }
+        })
+          .then(res => {
+            console.log(res.data)
+            setNoteState({ ...noteState, notes: res.data, body: '' })
+            
+          })
       })
   }
-  // const handleGoToNote = (body) => {
-  //   console.log(body)
-  //   window.location =`/${body}` 
-  // }
+
+  const handleDeleteNote = (id) => {
+    console.log(id)
+    axios.delete(`/api/notes/${id}`,
+    {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('user')}`
+      }
+    })
+    .then (res =>{
+      console.log(res)
+      axios.get('/api/notes', {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('user')}`
+        }
+      })
+        .then(res => {
+          console.log(res.data)
+          setNoteState({ ...noteState, notes: res.data, body: '' })
+        })
+    })
+    
+
+  }
 
   
-
-
   return (
     <>
+      <Navigation />
       <h1>Study NotePad</h1>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Note Url Goes here</Form.Label>
+          <Form.Label>Title of notes (max of 10 characters)</Form.Label>
+          <Form.Control
+            as="textarea"
+            maxLength={10}
+            rows={1}
+            name='title'
+            onChange={handleInputChange}
+          />
+
+
+          <Form.Label>Note Url Goes here (ex: document/1234567890) </Form.Label>
           <Form.Control 
           as="textarea" 
           rows={3} 
@@ -66,6 +113,8 @@ const Profile = () => {
 
 
 
+
+
      
       {
         noteState.notes.map(note =>
@@ -74,11 +123,13 @@ const Profile = () => {
             <h6>Created on {note.createdAt.slice(0, -14)}</h6>
             <br />
           
-            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'}/> </a>
+            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={`${note.title}`}/> </a>
 
             <br />
             <br />
-         
+            <Button
+              onClick={()=>handleDeleteNote(note._id)}
+            >Delete</Button>
 
 
             {/* this is how you need to write functions that take in parameters onClick */}

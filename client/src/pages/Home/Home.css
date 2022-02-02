@@ -44,9 +44,11 @@
     visibility: hidden;
   }
 
-  .tutorialModal{
-
+  .homeBackground {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: fixed;
   }
 
-  
+
 }

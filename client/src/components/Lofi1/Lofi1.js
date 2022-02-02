@@ -61,7 +61,7 @@ const Lofi1 = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           dragTransition={{ bounceStiffness: 30, bounceDamping: .2 }}
-          whileTap={{ scale: 2 }}
+          whileTap={{ scale: 1.5 }}
 
         />
 

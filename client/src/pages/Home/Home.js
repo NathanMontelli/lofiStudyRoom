@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 import TutorialModal from '../../components/Modals/TurtorialModal';
 import Lofi1 from '../../components/Lofi1';
@@ -11,60 +11,59 @@ import Cars from '../../components/backgroundSounds/Cars';
 import Waves from '../../components/backgroundSounds/Waves';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
 
-
+import { ThemeContext } from "../../components/Toggler/Toggler"
+import { useContext } from "react"
 
 
 const Home = () => {
+  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
+  const [load, upadateLoad] = useState(true);
 
   return (
     <>
       <section className="homeBackground">
-        <Navigation />
-        <a href='/notes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <Bot />
-        <br />
-        <br />
-        <br />
-        <Rain />
-        <br />
-        <br />
-        <Fire />
-        <br />
-        <br />
-        <Cars />
-        <br />
-        <br />
-        <Waves />
-     
-        <div className="container">
-          <div className="row p-5 rounded-lg ">
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <div
+            className="app"
+            style={{
+              backgroundColor: theme.backgroundColor, color: theme.color, backgroundImage: theme.backgroundImage,
+              backgroundSize: theme.backgroundSize,
+              minHeight: theme.minHeight, backgroundPosition:theme.backgroundPosition
+            }}
+          >
+            <Navigation />
+            <a href='/notes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <div className="col-md-4">
+              <ButtonComponent name={`Toggle Theme`} type="button btn" handleBtnClick={toggleTheme}>
+                It's a {isDark ? "Dark" : "Light"} theme
+              </ButtonComponent>
+            </div>
+            <br />
+            <br />
+            <Bot />
+            <br />
+            <br />
+            <Rain />
+            <br />
+            <Fire />
+            <br />
+            <Cars />
+            <br />
+            <Waves />
+            <div className="lofi1Button">
+              <TutorialModal />
+
+            </div>
+            <div className="col-md-4">
+            </div>
             <div className="col-md-4">
               <div className="tutorialModal">
                 <Lofi1Button onClick={Lofi1} />
-              </div>
-            </div>
-
-            <div className="col-md-4">
-                 
-              {/* <motion.h1
-                initial={{ opacity: 0, translateX: -40, translateY: -40 }}
-                animate={{ opacity: 1, translatex: -10, translateY: -10 }}
-                transition={{ duration: 3 }}>
-                <h1 className='lofi2'>LoFi Study Room</h1>
-              </motion.h1> */}
-            </div>
-            <div className="col-md-4">
-              <div className="lofi1Button">
-                <TutorialModal />    
               </div>
             </div>
           </div>
