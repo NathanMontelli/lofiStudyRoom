@@ -17,7 +17,7 @@ import { useContext } from "react"
 
 const Home = () => {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
-  const [load, upadateLoad] = useState(true);
+  const [load, updateLoad] = useState(true);
 
   return (
     <>
@@ -32,7 +32,7 @@ const Home = () => {
             }}
           >
             <Navigation />
-            <a href='/notes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
+            <a href='/studyNotes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
             <br />
             <br />
             <br />

@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Container, Col, Row } from 'react-bootstrap'
 import './styles.css'
 import Quill from "quill"
 import "quill/dist/quill.snow.css"
 import { io } from 'socket.io-client'
 import { useParams } from 'react-router-dom'
-import 'react-bootstrap'
+import { Col, Container } from 'react-bootstrap'
+
 
 const SAVE_INTERVAL_MS = 2000
 

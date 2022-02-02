@@ -19,11 +19,11 @@ import Contact from './pages/Contact'
 
 
 const App = () => {
-  const [load, upadateLoad] = useState(true);
+  const [load, updateLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      upadateLoad(false);
+      updateLoad(false);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -41,8 +41,8 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/' element={<Home />} />
         {/* <Route path='/' element={<Home />} /> */}
-          <Route path='/notes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
-          <Route path='/documents/:id' element={<TextEditor />} />
+        <Route path='/studyNotes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
+        <Route path='/documents/:id' element={<TextEditor />} />
       </Routes>
       </div>
     </Router>
