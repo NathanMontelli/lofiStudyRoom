@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
+import Navigation from '../../components/Navigation'
 
 const Profile = () => {
 
@@ -23,9 +24,14 @@ const Profile = () => {
         console.log(res.data)
         setNoteState({ ...noteState, notes: res.data })
       })
+      .catch(err => 
+        window.location = '/login')
+    
   }, [])
 
-  const handleSubmitNote = () => {
+  const handleSubmitNote = ()=> {
+    // event.preventDefault()
+   
     let newnote = {
       body: noteState.body
     }
@@ -35,9 +41,44 @@ const Profile = () => {
       }
     })
       .then(res => {
-        console.log(res)
+        console.log(res.data)
+        axios.get('/api/notes', {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('user')}`
+          }
+        })
+          .then(res => {
+            console.log(res.data)
+            setNoteState({ ...noteState, notes: res.data })
+          })
       })
   }
+
+  const handleDeleteNote = (id) => {
+    console.log(id)
+    axios.delete(`/api/notes/${id}`,
+    {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('user')}`
+      }
+    })
+    .then (res =>{
+      console.log(res)
+      axios.get('/api/notes', {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('user')}`
+        }
+      })
+        .then(res => {
+          console.log(res.data)
+          setNoteState({ ...noteState, notes: res.data })
+        })
+    })
+    
+
+  }
+
+
   // const handleGoToNote = (body) => {
   //   console.log(body)
   //   window.location =`/${body}` 
@@ -48,6 +89,7 @@ const Profile = () => {
 
   return (
     <>
+      <Navigation />
       <h1>Study NotePad</h1>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -66,6 +108,8 @@ const Profile = () => {
 
 
 
+
+
      
       {
         noteState.notes.map(note =>
@@ -78,7 +122,9 @@ const Profile = () => {
 
             <br />
             <br />
-         
+            <Button
+              onClick={()=>handleDeleteNote(note._id)}
+            >Delete</Button>
 
 
             {/* this is how you need to write functions that take in parameters onClick */}

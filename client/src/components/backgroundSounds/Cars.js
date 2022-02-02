@@ -14,10 +14,17 @@ function Cars() {
   }
 
 
+
+  const setVolume = event => {
+    const volume = event.target.value
+    audio.current.volume = parseFloat(volume)
+  }
+
+
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.2;
+      // audio.current.volume = 0.5;
 
     } else {
       audio.current.pause();
@@ -38,14 +45,14 @@ function Cars() {
       </audio>
 
       <ButtonComponent handleBtnClick={handlePlay} name={'Cars'} />
-      {/* <input
+      <input
         type="range"
         min={0}
-        max={20}
+        max={1}
         step={0.02}
-      value={volume}
+      defaultValue={1}
       onChange={setVolume}
-      /> */}
+      />
     </div>
 
 
