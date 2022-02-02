@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import { ThemeProvider } from "./components/Toggler/Toggler"
 
-
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
