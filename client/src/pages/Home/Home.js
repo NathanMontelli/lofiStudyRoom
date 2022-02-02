@@ -21,53 +21,49 @@ const Home = () => {
 
   return (
     <>
-      <section>
-        <div className="container">
-          <div className="row p-5 rounded-lg ">
-            <div className="App" id={load ? "no-scroll" : "scroll"}>
-              <div
-                className="app"
-                style={{
-                  backgroundColor: theme.backgroundColor, color: theme.color, backgroundImage: theme.backgroundImage,
-                  backgroundSize: theme.backgroundSize,
-                  minHeight: theme.minHeight, backgroundPosition:theme.backgroundPosition
-                }}
-              >
-                <Navigation />
-                <a href='/studyNotes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
-                <br />
-                <br />
-                <br />
-                <br />
+      <section className="homeBackground">
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <div
+            className="app"
+            style={{
+              backgroundColor: theme.backgroundColor, color: theme.color, backgroundImage: theme.backgroundImage,
+              backgroundSize: theme.backgroundSize,
+              minHeight: theme.minHeight, backgroundPosition:theme.backgroundPosition
+            }}
+          >
+            <Navigation />
+            <a href='/studyNotes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
+            <br />
+            <br />
+            <br />
+            <br />
 
-                <div className="col-md-4">
-                  <ButtonComponent name={`Toggle Theme`} type="button btn" handleBtnClick={toggleTheme}>
-                    It's a {isDark ? "Dark" : "Light"} theme
-                  </ButtonComponent>
-                </div>
-                <br />
-                <br />
-                <Bot />
-                <br />
-                <br />
-                <Rain />
-                <br />
-                <Fire />
-                <br />
-                <Cars />
-                <br />
-                <Waves />
-                <div className="lofi1Button">
-                  <TutorialModal />
+            <div className="col-md-4">
+              <ButtonComponent name={`Toggle Theme`} type="button btn" handleBtnClick={toggleTheme}>
+                It's a {isDark ? "Dark" : "Light"} theme
+              </ButtonComponent>
+            </div>
+            <br />
+            <br />
+            <Bot />
+            <br />
+            <br />
+            <Rain />
+            <br />
+            <Fire />
+            <br />
+            <Cars />
+            <br />
+            <Waves />
+            <div className="lofi1Button">
+              <TutorialModal />
 
-                </div>
-                <div className="col-md-4">
-                </div>
-                <div className="col-md-4">
-                  <div className="tutorialModal">
-                    <Lofi1Button onClick={Lofi1} />
-                  </div>
-                </div>
+            </div>
+            <div className="col-md-4">
+            </div>
+            <div className="col-md-4">
+              <div className="tutorialModal">
+                <Lofi1Button onClick={Lofi1} />
               </div>
             </div>
           </div>

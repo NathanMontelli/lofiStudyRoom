@@ -121,7 +121,7 @@ function TextEditor() {
   }, [])
 
   return (
-    <div className='container m-5' ref={wrapperRef}></div>
+    <div className='container mt-5' ref={wrapperRef}></div>
   )
 };
 
