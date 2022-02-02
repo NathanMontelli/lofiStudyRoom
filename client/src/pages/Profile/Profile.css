@@ -6,8 +6,8 @@
 .text {
   font-family: 'Architects daughter';
   font-size: 20px;
-
 }
+
 
 .lofi {
   font-family: 'Architects daughter';
@@ -18,10 +18,21 @@
   text-align: center;
   font-weight: bold;
 }
+.textbox{
+  margin: auto;
+  padding: 2%;
+  padding-left: 2%;
+}
+.Title{
+  color: orange;
+}
+.noteTitle{
+  color: orange;
+}
 
 .background1 {
   min-height: 100vh;
-  background-image: url('https://wallpapercave.com/wp/wp6330246.jpg');
+  background-image: url('./studyroom2.jpg');
   background-size: cover;
   background-position: center;
 

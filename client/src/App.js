@@ -36,16 +36,6 @@ const App = () => {
 
     <>
 
-      <div
-        className="app"
-        style={{ imgfile: theme.imgfile }}
-      // style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
-      >
-        <div className="text">It's a {isDark ? "Dark" : "Light"} theme</div>
-        <button type="button" onClick={toggleTheme}>
-          Toggle theme
-        </button>
-      </div>
       <Router>
         <Preloader load={load} />
         <div className="App" id={load ? "no-scroll" : "scroll"}>

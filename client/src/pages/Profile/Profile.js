@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Row, Container, Col } from 'react-bootstrap'
 import axios from 'axios'
 import ButtonComponent from '../../components/ButtonComponent'
+import './Profile.css'
+
 
 const Profile = () => {
 
@@ -48,25 +50,29 @@ const Profile = () => {
 
   return (
     <>
-      <h1>Study NotePad</h1>
+    <section className="background1">
+      <Container>
+      <h1 className="Title">Study NotePad</h1>
+        </Container>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Note Url Goes here</Form.Label>
-          <Form.Control
+          <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
+          <Row>
+            <Col>
+          <Form.Control className="textbox"
             as="textarea"
             rows={3}
             name='body'
             onChange={handleInputChange}
           />
+              </Col>
+            </Row>
         </Form.Group>
       </Form>
+  
       <Button
         onClick={handleSubmitNote}
-      >Submit yo note boi</Button>
-
-
-
-
+      >Save Note</Button>
       {
         noteState.notes.map(note =>
           <>
@@ -79,14 +85,13 @@ const Profile = () => {
             <br />
             <br />
 
-
-
             {/* this is how you need to write functions that take in parameters onClick */}
           </>
         )
       }
+      </section>
     </>
-
+    
   )
 }
 
