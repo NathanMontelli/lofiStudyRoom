@@ -50,7 +50,7 @@ const Profile = () => {
           }
         })
           .then(res => {
-            // console.log(res.data)
+            console.log(res.data)
             setNoteState({ ...noteState, notes: res.data, body: '' })
             
           })
