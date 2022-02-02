@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import CarsSound from "../../Assets/cars.mp3"
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import "./BackgroundSounds.css"
 
 
 function Cars() {
@@ -46,6 +47,7 @@ function Cars() {
 
       <ButtonComponent handleBtnClick={handlePlay} name={'Cars'} />
       <input
+        className="slider"
         type="range"
         min={0}
         max={1}
