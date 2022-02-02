@@ -8,12 +8,12 @@
   font-size: 18px;
 }
 
-
+/* 
 .textbox {
   margin: auto;
   padding: 2%;
   padding-left: 2%;
-}
+} */
 
 .Title {
   font-family: 'Architects daughter';
@@ -22,7 +22,16 @@
   text-shadow: #FC0 1px 0 10px;
   color: rgb(255, 252, 236) !important;
   text-shadow: 1px 1px 3px rgb(255, 230, 0);
-  margin-bottom: 1%;
+}
+
+.subtitle {
+  font-family: 'Architects daughter';
+  font-size: 1.5rem;
+  font-weight: 550;
+  text-shadow: #FC0 1px 0 10px;
+  color: rgb(255, 252, 236) !important;
+  text-shadow: 1px 1px 3px rgb(255, 230, 0);
+  text-decoration-line: overline;
 }
 
 .noteTitle {
@@ -36,14 +45,7 @@
   background-position: center;
 }
 
-.subtitle {
-  font-family: 'Architects daughter';
-  font-size: 1.5rem;
-  font-weight: 550;
-  text-shadow: #FC0 1px 0 10px;
-  color: rgb(255, 252, 236) !important;
-  text-shadow: 1px 1px 3px rgb(255, 230, 0);
-}
+
 
 .noteSection {
   top: 50%;
@@ -63,3 +65,8 @@
   margin-top: 5%;
 }
 
+.savedNote {
+  border-bottom: beige 2px;
+  border-width: 2px;
+  border-top: aliceblue 2px;
+}

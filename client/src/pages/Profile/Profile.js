@@ -107,35 +107,40 @@ const Profile = () => {
       </Form>
       <Button className="justify-content-center"
         onClick={handleSubmitNote}
-              >Submit yo note boi</Button></Col>
+              >Save Note ID</Button></Col>
               <Col className="noteSection">
-              <Row>
+              <h1 className="Title">Saved Notes:</h1>
+              <Row className="savedNote">
+               
       {
         noteState.notes.map(note =>
           <>
-            <h2 className="Title">Your study notes:</h2>
-            <h6 className="subtitle">Created on {note.createdAt.slice(0, -14)}</h6>
-            <br />
-
-            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a>
-
-            <br />
-            <br />
-            <Col></Col>
-            <Col sm={4}>
+            <h2 className="subtitle">Your Note: Created on {note.createdAt.slice(0, -14)}</h2>
+            <h6 className="subtitle"></h6>
+            
+            <Col md={{ span: 3, offset: 3 }}><a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a></Col>
+            <Col md={{ span: 3, }} >
+              
             <Button
               size= "sm"
+              variant="danger"
               onClick={() => handleDeleteNote(note._id)}
               >Delete</Button>
             </Col>
+
+            <br />
+            <br />
             <Col></Col>
             {/* this is how you need to write functions that take in parameters onClick */}
           </>
         )
       }
               </Row>
+              
             </Col>
+          
           </Row>
+         
         </Container>
 </section>
     </>
