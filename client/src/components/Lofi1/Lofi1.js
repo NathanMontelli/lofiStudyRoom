@@ -5,6 +5,7 @@ import Geko from './geko.png';
 import Pizza from './pizza.png';
 import DognCat from './dogncat.png';
 import { useRef } from "react";
+import './Lofi1.css'
 // import Lofi1Button from '../Lofi1Button';
 
 
@@ -21,9 +22,9 @@ const MotionConstraints = styled(motion.div)`
   width: 80vw;
   margin-right:160px;
   margin-bottom:160px;
+  border: 1px solid #f00;
   `;
   // Use the below code above to see dimensions
-  // border: 1px solid #f00;
 
 
 const Lofi1 = () => {
@@ -31,7 +32,7 @@ const Lofi1 = () => {
   return (
     <>
 
-      <MotionConstraints ref={constraintsRef}>
+      <MotionConstraints className='mobileConstraints' ref={constraintsRef}>
         <Image src={Geko} alt='geko'
           style={{ overflowX: "hidden" }}
           drag={true}
