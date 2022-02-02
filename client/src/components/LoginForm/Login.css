@@ -1,14 +1,18 @@
 .login {
   font-family: 'Architects daughter';
   font-size: 20px;
+  align-content: center;
+}
+
+.formWidth{
+  max-width: 450px;
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 700px) {
   .login {
     align-content: center;
     width: 100%;
-
   }
 
 }

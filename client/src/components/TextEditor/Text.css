@@ -2,25 +2,28 @@
   box-sizing: border-box;
 }
 
-body{
-  background-color: rgb(248, 211, 162) !important;
+body {
+  /* background-color: rgb(248, 211, 162) !important; */
+  background-image: url(../../Assets/lofi-background-texteditor.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
 }
 
 .container .ql-editor {
-  width: 4in;
-  min-height: 5in;
+  width: 8.5in;
+  min-height: 65vh;
   padding: 0.25in;
   margin: 1rem;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
-  background-color: rgb(250, 221, 141);
-
+  background-color: rgb(255, 220, 122);
 }
 
 .container .ql-container.ql-snow {
   border: none;
   display: flex;
   justify-content: center;
-
 }
 
 .container .ql-toolbar.ql-snow {
@@ -41,8 +44,8 @@ body{
   }
 
   .container .ql-editor {
-    width: 8in;
-    height: 8in;
+    width: 8.5in;
+    height: 11in;
     margin: 1in;
     box-shadow: none;
     align-self: flex-start;
@@ -51,4 +54,15 @@ body{
   .container .ql-toolbar.ql-snow {
     display: none;
   }
+}
+
+.reminder {
+  text-align: center;
+  font-family: 'Architects daughter';
+  font-size: 1.5rem;
+  font-weight: 550;
+  text-shadow: #FC0 1px 0 10px;
+  color: rgb(255, 252, 236) !important;
+  text-shadow: 1px 1px 3px rgb(255, 230, 0);
+  background: rgba(50, 51, 43, 0.849);
 }

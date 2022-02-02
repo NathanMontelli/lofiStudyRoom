@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Form, Button, Alert, Row, Col, InputGroup } from 'react-bootstrap'
+import { Form, Button, Alert, Row, Col, InputGroup, Container } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 import { gsap } from "gsap";
 import './Register.css'
@@ -130,7 +130,8 @@ const RegisterForm = () => {
         <Alert.Link href="/login">&nbsp;Login Here</Alert.Link>
       </Alert>
     </Form>
-</Container>
+    </Container>
+
   )
 }
 

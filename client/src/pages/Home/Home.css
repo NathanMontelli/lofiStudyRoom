@@ -12,7 +12,7 @@
 
 .homeBackground {
   min-height: 100vh;
-  background-image: url('../../Assets/lofigirl.gif');
+  /* background-image: url('../../Assets/lofigirl.gif'); */
   background-size: cover;
   background-position: center;
 }

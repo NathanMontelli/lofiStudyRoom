@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Note, User} = require('../models')
+const { Note, User } = require('../models')
 const passport = require('passport')
 
 router.get('/notes', passport.authenticate('jwt'), async function (req, res) {

@@ -48,7 +48,7 @@ const LoginForm = () => {
   }
 
   return (
-    <Container className='stuff'>
+    <Container className="formWidth">
     <Form className="login">
       <Form.Group className="mb-3" controlId="formBasiclUsername">
         <Form.Control
