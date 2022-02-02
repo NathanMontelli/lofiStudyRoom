@@ -10,9 +10,7 @@ const Profile = () => {
     body: '',
     notes: []
   })
-  const handleInputChange = ({ target: { name, value } }) => {
-    setNoteState({ ...noteState, [name]: value })
-  }
+  const handleInputChange = ({ target: { name, value } }) => { setNoteState({ ...noteState, [name]: value })}
 
   useEffect(() => {
     axios.get('/api/notes', {
@@ -20,17 +18,18 @@ const Profile = () => {
         'Authorization': `Bearer ${localStorage.getItem('user')}`
       }
     })
+  
       .then(res => {
-        console.log(res.data)
+        // console.log(res.data)
         setNoteState({ ...noteState, notes: res.data })
-      })
+      }) 
       .catch(err => 
         window.location = '/login')
     
   }, [])
 
-  const handleSubmitNote = ()=> {
-    // event.preventDefault()
+  const handleSubmitNote = event=> {
+    event.preventDefault()
    
     let newnote = {
       body: noteState.body
@@ -41,15 +40,17 @@ const Profile = () => {
       }
     })
       .then(res => {
-        console.log(res.data)
+        // console.log(res.data)
+        
         axios.get('/api/notes', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('user')}`
           }
         })
           .then(res => {
-            console.log(res.data)
-            setNoteState({ ...noteState, notes: res.data })
+            // console.log(res.data)
+            setNoteState({ ...noteState, notes: res.data, body: '' })
+            
           })
       })
   }
@@ -71,22 +72,14 @@ const Profile = () => {
       })
         .then(res => {
           console.log(res.data)
-          setNoteState({ ...noteState, notes: res.data })
+          setNoteState({ ...noteState, notes: res.data, body: '' })
         })
     })
     
 
   }
 
-
-  // const handleGoToNote = (body) => {
-  //   console.log(body)
-  //   window.location =`/${body}` 
-  // }
-
   
-
-
   return (
     <>
       <Navigation />
