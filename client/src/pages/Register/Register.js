@@ -1,17 +1,15 @@
 import React from 'react'
 import RegisterForm from "../../components/RegisterForm"
 import'./PageRegister.css'
-
 import { motion } from 'framer-motion'
 import { Container } from "react-bootstrap"
 const Register = () => {
 
 
+const Register = () => {
 
   //first needs class and then movement of object "%" and duration of animation
   
-
-
   return (
     <>
 

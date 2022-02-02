@@ -4,8 +4,6 @@ import UserAPI from '../../utils/UserAPI'
 import { gsap } from "gsap";
 import './Register.css'
 
-
-
 const RegisterForm = () => {
 
 

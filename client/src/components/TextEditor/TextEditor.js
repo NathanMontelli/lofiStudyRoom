@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { Container, Col, Row } from 'react-bootstrap'
 import './styles.css'
 import Quill from "quill"
 import "quill/dist/quill.snow.css"
@@ -114,14 +115,23 @@ function TextEditor() {
       theme: 'snow',
       modules: { toolbar: TOOLBAR_OPTIONS },
     })
-    q.disable()
-    q.setText('Loading...')
+    // q.disable()
+    q.setText('Begin Writing here')
 
     setQuill(q)
   }, [])
 
   return (
-    <div className='container m-5' ref={wrapperRef}></div>
+    <>
+    <div className='container' ref={wrapperRef}></div>
+    <Container>
+      <Col>
+    <h4 className="reminder">Dont Forget!</h4>
+          <h6 className="reminder">Copy and paste everything after "/documents/" from the URL</h6>
+          
+        </Col>
+      </Container>
+    </>
   )
 };
 

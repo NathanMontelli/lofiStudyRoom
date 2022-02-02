@@ -10,7 +10,7 @@ const mongoose = require('mongoose')
 // const Document = require('./models/Document.js')
 
 const app = express()
-const { User, Document, Note } = require('./models')
+const { User, Note, Document } = require('./models')
 
 app.use(express.static(join(__dirname, 'client', 'public')))
 app.use(express.urlencoded({ extended: true }))
@@ -40,9 +40,9 @@ require('./db')
   .catch(err => console.log(err))
 
 
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofinotes');
 
-const io = require("socket.io")(8080 , {
+const io = require("socket.io")(8080, {
   cors: {
     origin: "http://localhost:3000",
     methods: ["GET", "POST"]
