@@ -28,7 +28,7 @@ const Register = () => {
               <h5 >Register A New Account</h5>
               <hr />
             </Container>
-            <Container className='formWidth'>
+            <Container >
               <RegisterForm />
             </Container>
           </Container>
