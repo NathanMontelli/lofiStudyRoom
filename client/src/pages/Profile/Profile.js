@@ -3,7 +3,6 @@ import { Form, Button, Row, Container, Col } from 'react-bootstrap'
 import axios from 'axios'
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
 import Navigation from '../../components/Navigation'
-import './Profile.css'
 
 const Profile = () => {
 
@@ -25,6 +24,8 @@ const Profile = () => {
         console.log(res.data)
         setNoteState({ ...noteState, notes: res.data })
       })
+      
+
   }, [])
 
   const handleSubmitNote = () => {
@@ -88,65 +89,54 @@ const Profile = () => {
   return (
     <>
       <section className="background1">
-        <Navigation />
+      <Navigation />
         <Container>
-          <Row>
-            <Col><h1 className="Title">Study NotePad</h1>
-              <Form>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                  <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
+          <Row className="row">
+            <Col className="notepad"><h1 className="Title">Study NotePad</h1>
+      <Form>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
+          <Form.Control className="textbox"
+            as="textarea"
+            rows={3}
+            name='body'
+            onChange={handleInputChange}
+          />
+        </Form.Group>
+      </Form>
+      <Button className="justify-content-center"
+        onClick={handleSubmitNote}
+              >Submit yo note boi</Button></Col>
+              <Col className="noteSection">
+              <Row>
+      {
+        noteState.notes.map(note =>
+          <>
+            <h2 className="Title">Your study notes:</h2>
+            <h6 className="subtitle">Created on {note.createdAt.slice(0, -14)}</h6>
+            <br />
 
-                  <Form.Control className="textbox"
-                    as="textarea"
-                    size="lg"
-                    rows={3}
-                    name='body'
-                    onChange={handleInputChange}
-                  />
+            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a>
 
-                </Form.Group>
-              </Form>
-
-              <Button className="justify-content-center"
-                onClick={handleSubmitNote}
-              >Save Note</Button></Col>
-            <Col><h2 className="Title">Your study notes:</h2>
-              <h6 className="Title">Created on </h6>
-              <br />
-
-              <a><ButtonComponent name={'Notes'} /> </a>
-
-              <br />
-              <br />
-              <Button variant="danger"
-                onClick
+            <br />
+            <br />
+            <Col></Col>
+            <Col sm={4}>sm=4>
+            <Button
+              size= "sm"
+              onClick={() => handleDeleteNote(note._id)}
               >Delete</Button>
-
-
-              {
-                noteState.notes.map(note =>
-                  <>
-                    <h2>Your study notes:</h2>
-                    <h6>Created on {note.createdAt.slice(0, -14)}</h6>
-                    <br />
-
-                    <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a>
-
-                    <br />
-                    <br />
-                    <Button
-                      onClick={() => handleDeleteNote(note._id)}
-                    >Delete</Button>
-
-
-                    {/* this is how you need to write functions that take in parameters onClick */}
-                  </>
-                )
-              }</Col>
+            </Col>
+            <Col></Col>
+            {/* this is how you need to write functions that take in parameters onClick */}
+          </>
+        )
+      }
+              </Row>
+            </Col>
           </Row>
         </Container>
-
-      </section>
+</section>
     </>
 
   )

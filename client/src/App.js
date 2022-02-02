@@ -35,12 +35,10 @@ const App = () => {
   return (
 
     <>
-
       <Router>
         <Preloader load={load} />
         <div className="App" id={load ? "no-scroll" : "scroll"}>
           <Routes>
-
             <Route path='/' element={<Home />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/login' element={<Login />} />
