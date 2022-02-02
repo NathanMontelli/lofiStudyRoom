@@ -126,7 +126,8 @@ function TextEditor() {
     <Container>
       <Col>
     <h4 className="reminder">Dont Forget!</h4>
-    <h6 className="reminder">Copy and past everything after "/documents/" from the URL</h6>
+          <h6 className="reminder">Copy and paste everything after "/documents/" from the URL</h6>
+          
         </Col>
       </Container>
     </>
