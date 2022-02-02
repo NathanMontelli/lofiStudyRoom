@@ -3,6 +3,7 @@ import { Form, Button, Row, Container, Col } from 'react-bootstrap'
 import axios from 'axios'
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
 import Navigation from '../../components/Navigation'
+import './Profile.css'
 
 const Profile = () => {
 
@@ -121,7 +122,7 @@ const Profile = () => {
             <br />
             <br />
             <Col></Col>
-            <Col sm={4}>sm=4>
+            <Col sm={4}>
             <Button
               size= "sm"
               onClick={() => handleDeleteNote(note._id)}
