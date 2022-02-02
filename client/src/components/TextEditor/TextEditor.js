@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Container, Col, Row } from 'react-bootstrap'
 import './styles.css'
 import Quill from "quill"
 import "quill/dist/quill.snow.css"
