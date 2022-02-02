@@ -9,6 +9,7 @@ import { v4 as uuidV4 } from 'uuid'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Profile from './pages/Profile'
 import Register from './pages/Register'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react'
@@ -28,7 +29,6 @@ const App = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
 
   return (
     <>
@@ -54,3 +54,4 @@ const App = () => {
 }
 
 export default App
+

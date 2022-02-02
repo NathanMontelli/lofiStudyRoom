@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { Container, Col, Row } from 'react-bootstrap'
 import './styles.css'
 import Quill from "quill"
 import "quill/dist/quill.snow.css"
@@ -114,8 +115,8 @@ function TextEditor() {
       theme: 'snow',
       modules: { toolbar: TOOLBAR_OPTIONS },
     })
-    q.disable()
-    q.setText('Loading...')
+    // q.disable()
+    q.setText('Begin Writing here')
 
     setQuill(q)
   }, [])

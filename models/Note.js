@@ -1,6 +1,12 @@
 const { Schema, model } = require('mongoose')
 
 const Note = new Schema({
+  title: {
+    type: String,
+    required: true,
+    maxlength: 11,
+    minlength: 1
+  },
   body: {
     type: String,
     required: true,
