@@ -24,6 +24,9 @@ const Profile = () => {
         console.log(res.data)
         setNoteState({ ...noteState, notes: res.data })
       })
+      .catch(err => 
+        window.location = '/login')
+    
   }, [])
 
   const handleSubmitNote = ()=> {
