@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { Form, Button, Alert, Row, Col, InputGroup } from 'react-bootstrap'
+import { Container, Form, Button, Alert, Row, Col, InputGroup } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 import { gsap } from "gsap";
 import './Register.css'
 
-
-
 const RegisterForm = () => {
-
 
   const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
   useEffect(() => {
 
-
-
     //Specify a starting and ending point in this case the opacity
     tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 3 })
-
   }, [])
 
   const [registerState, setRegisterState] = useState({
@@ -45,19 +39,17 @@ const RegisterForm = () => {
         password: registerState.password
       })
         .then(() => {
-          alert('User Registered! Please Log In!')
           setRegisterState({ ...registerState, name: '', email: '', username: '', password: '' })
           window.location = '/login'
         })
         .catch(err => console.log(err))
-
     }
     setValidated(true);
-
   }
 
   return (
-    <Form noValidate validated={validated} className='register'>
+    <Container className='register'>
+    <Form noValidate validated={validated} >
       <Row className="mb-3">
         <Form.Group  md="10" controlId="validName">
           <InputGroup hasValidation>
@@ -138,7 +130,7 @@ const RegisterForm = () => {
         <Alert.Link href="/login">&nbsp;Login Here</Alert.Link>
       </Alert>
     </Form>
-
+</Container>
   )
 }
 

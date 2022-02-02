@@ -17,7 +17,7 @@ const themes = {
     color: "black",
     backgroundSize: "cover",
     minHeight: "100vh",
-    backgroundPosition:"center",
+    backgroundPosition: "center",
   },
 };
 

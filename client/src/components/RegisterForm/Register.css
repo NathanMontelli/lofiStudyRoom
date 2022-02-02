@@ -1,12 +1,14 @@
 .register {
   font-family: 'Architects daughter';
   font-size: 20px;
+  max-width: 450px;
+  /* justify-content:flex-end; */
 }
 
-.stuff {
+/* .stuff {
   text-align: center;
 }
-
+ */
 
 @media only screen and (max-width: 700px) {
   .register {
