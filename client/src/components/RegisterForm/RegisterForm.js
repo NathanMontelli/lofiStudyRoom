@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Form, Button, Alert, Row, Col, InputGroup } from 'react-bootstrap'
+import { Form, Button, Alert, Row, Col, InputGroup, Container } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 import { gsap } from "gsap";
 import './Register.css'
@@ -57,7 +57,8 @@ const RegisterForm = () => {
   }
 
   return (
-    <Form noValidate validated={validated} className='register'>
+    <Container className='register'>
+    <Form noValidate validated={validated} >
       <Row className="mb-3">
         <Form.Group  md="10" controlId="validName">
           <InputGroup hasValidation>
@@ -138,6 +139,7 @@ const RegisterForm = () => {
         <Alert.Link href="/login">&nbsp;Login Here</Alert.Link>
       </Alert>
     </Form>
+    </Container>
 
   )
 }

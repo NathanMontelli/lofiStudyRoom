@@ -4,6 +4,10 @@
   align-content: center;
 }
 
+.formWidth{
+  max-width: 450px;
+}
+
 
 @media only screen and (min-width: 700px) {
   .login {
