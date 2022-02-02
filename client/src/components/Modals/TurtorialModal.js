@@ -2,9 +2,6 @@ import React, { useEffect } from 'react';
 import { useState } from 'react'
 import { Modal } from "react-bootstrap";
 import { Carousel } from 'react-bootstrap';
-// import first from "../../Assets/lofigirl.gif"
-// import second from "../../Assets/jake-lofi.gif"
-// import third from "../../Assets/nuro.gif"
 import '../ButtonComponent/Button.css'
 import ambientSound from '../../Assets/Tutorial/ambientSounds.gif'
 import fidgetCons from '../../Assets/Tutorial/fidgetCons.gif'
@@ -13,6 +10,7 @@ import noteBook from '../../Assets/Tutorial/noteBook.gif'
 import part1 from '../../Assets/Tutorial/part1.gif'
 import part2 from '../../Assets/Tutorial/part2.gif'
 import toggleTheme from '../../Assets/Tutorial/toggleTheme.gif'
+import './Modal.css'
 
 
 import ButtonComponent from '../ButtonComponent/ButtonComponent';
@@ -36,6 +34,7 @@ return (
 
 
       <Modal
+        className="tutorialModal"
         show={show}
         onHide={handleClose}
         // backdrop="static"
@@ -44,16 +43,16 @@ return (
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton>
-          <Modal.Title><h1 className='text-center '>Tutorial</h1></Modal.Title>
-        </Modal.Header>
+      {/* <Modal.Header closeButton className="tutorialTitle">
+          <Modal.Title >Tutorial</Modal.Title>
+        </Modal.Header> */}
         <Modal.Body>
 
 
           <Carousel>
             <Carousel.Item pause='hover'>
               <div>
-                <h3>Music</h3>
+              <h3>Music</h3>
                 <p>Access the music button to choose which type of music you want to listen to.</p>
               </div>
 
