@@ -15,7 +15,7 @@ import { ThemeContext } from "./components/Toggler/Toggler"
 import { useContext } from "react"
 
 const App = () => {
-  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
+  // const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
@@ -29,26 +29,26 @@ const App = () => {
 
   return (
     <>
-      <div
+      
+      <Router>
+        <Preloader load={load} />
+        {/* <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <div
         className="app"
-        style={{ imgfile: theme.imgfile }}
-      // style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
+      style={{ backgroundColor: theme.backgroundColor, color: theme.color, backgroundImage: theme.backgroundImage }}
       >
         <div className="text">It's a {isDark ? "Dark" : "Light"} theme</div>
         <button type="button" onClick={toggleTheme}>
           Toggle theme
         </button>
-      </div>
-      <Router>
-        <Preloader load={load} />
-        <div className="App" id={load ? "no-scroll" : "scroll"}>
+      </div> */}
           <Routes>
 
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
             <Route path='/' element={<Home />} />
           </Routes>
-        </div>
+        {/* </div> */}
       </Router>
     </>
   )

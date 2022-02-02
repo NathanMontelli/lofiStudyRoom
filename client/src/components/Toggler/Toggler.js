@@ -1,13 +1,20 @@
 import { createContext, useState, useEffect } from "react";
 import lofigirl2 from "../../Assets/lofigirl.gif"
+import lofigirl from "../../Assets/lofiNight.gif"
 // import "./Toggler.css"
+
 const themes = {
   dark: {
-    img: {lofigirl2}
+    backgroundImage: `url(${lofigirl2})`,
+    color: "black",
+    backgroundSize: "cover",
+    minHeight: "100vh"
   },
   light: {
-    backgroundColor: "white",
-    color: "blue",
+    backgroundImage: `url(${lofigirl})`,
+    color: "black",
+    backgroundSize: "cover",
+    minHeight: "100vh"
   },
 };
 
@@ -32,4 +39,4 @@ export const ThemeProvider = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   )
-  }
+}
