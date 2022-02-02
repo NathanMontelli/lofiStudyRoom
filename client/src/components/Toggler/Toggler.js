@@ -8,13 +8,15 @@ const themes = {
     backgroundImage: `url(${lofigirl2})`,
     color: "black",
     backgroundSize: "cover",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    backgroundPosition: "center",
   },
   light: {
     backgroundImage: `url(${lofigirl})`,
     color: "black",
     backgroundSize: "cover",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    backgroundPosition: "center",
   },
 };
 

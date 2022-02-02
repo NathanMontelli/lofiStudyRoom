@@ -4,19 +4,13 @@ import UserAPI from '../../utils/UserAPI'
 import { gsap } from "gsap";
 import './Register.css'
 
-
-
 const RegisterForm = () => {
-
 
   const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
   useEffect(() => {
 
-
-
     //Specify a starting and ending point in this case the opacity
     tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 3 })
-
   }, [])
 
   const [registerState, setRegisterState] = useState({
@@ -45,15 +39,12 @@ const RegisterForm = () => {
         password: registerState.password
       })
         .then(() => {
-          alert('User Registered! Please Log In!')
           setRegisterState({ ...registerState, name: '', email: '', username: '', password: '' })
           window.location = '/login'
         })
         .catch(err => console.log(err))
-
     }
     setValidated(true);
-
   }
 
   return (
