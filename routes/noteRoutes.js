@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Note, User} = require('../models')
+const { Note, User } = require('../models')
 const passport = require('passport')
 
 router.get('/notes', passport.authenticate('jwt'), async function (req, res) {
@@ -16,7 +16,7 @@ router.get('/notes/:id', passport.authenticate('jwt'), (req, res) => {
 router.post('/notes', passport.authenticate('jwt'), async function (req, res) {
   const note = await Note.create({ ...req.body, user: req.user._id })
   await User.findByIdAndUpdate(req.user._id, { $push: { notes: note._id } })
-  res.json(Note)
+  res.json(note)
 })
 
 router.put('/notes/:id', passport.authenticate('jwt'), async function (req, res) {
