@@ -39,6 +39,15 @@ const Profile = () => {
     })
       .then(res => {
         console.log(res.data)
+        axios.get('/api/notes', {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('user')}`
+          }
+        })
+          .then(res => {
+            console.log(res.data)
+            setNoteState({ ...noteState, notes: res.data })
+          })
       })
   }
 
@@ -50,6 +59,19 @@ const Profile = () => {
         'Authorization': `Bearer ${localStorage.getItem('user')}`
       }
     })
+    .then (res =>{
+      console.log(res)
+      axios.get('/api/notes', {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('user')}`
+        }
+      })
+        .then(res => {
+          console.log(res.data)
+          setNoteState({ ...noteState, notes: res.data })
+        })
+    })
+    
 
   }
 
@@ -98,7 +120,7 @@ const Profile = () => {
             <br />
             <br />
             <Button
-              onClick={handleDeleteNote}
+              onClick={()=>handleDeleteNote(note._id)}
             >Delete</Button>
 
 
