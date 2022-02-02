@@ -7,6 +7,7 @@ import Navigation from '../../components/Navigation'
 const Profile = () => {
 
   const [noteState, setNoteState] = useState({
+    title: '',
     body: '',
     notes: []
   })
@@ -32,6 +33,7 @@ const Profile = () => {
     event.preventDefault()
    
     let newnote = {
+      title: noteState.title,
       body: noteState.body
     }
     axios.post('/api/notes', newnote, {
@@ -86,7 +88,17 @@ const Profile = () => {
       <h1>Study NotePad</h1>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Note Url Goes here</Form.Label>
+          <Form.Label>Title of notes (max of 10 characters)</Form.Label>
+          <Form.Control
+            as="textarea"
+            maxLength={10}
+            rows={1}
+            name='title'
+            onChange={handleInputChange}
+          />
+
+
+          <Form.Label>Note Url Goes here (ex: document/1234567890) </Form.Label>
           <Form.Control 
           as="textarea" 
           rows={3} 
@@ -111,7 +123,7 @@ const Profile = () => {
             <h6>Created on {note.createdAt.slice(0, -14)}</h6>
             <br />
           
-            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'}/> </a>
+            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={`${note.title}`}/> </a>
 
             <br />
             <br />
