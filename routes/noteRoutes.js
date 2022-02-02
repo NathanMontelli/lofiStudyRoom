@@ -1,39 +1,33 @@
-// const router = require('express').Router()
-// const { Notes } = require('../models')
-// const passport = require('passport')
-// const jwt = require('jsonwebtoken')
-// const { response } = require('express')
+const router = require('express').Router()
+const { Note, User} = require('../models')
+const passport = require('passport')
 
-// router.post('/', (req, res) => {
-//   const { username, body } = req.body
-//   Notes.create(new Notes({ username, body }), err => {
-//     if (err) {
-//       console.log(err)
-//       res.sendStatus(400)
-//     } else {
-//       res.sendStatus(200)
-//     }
-//   })
-// })
+router.get('/notes', passport.authenticate('jwt'), async function (req, res) {
+  const notes = await Note.find({}).populate('user')
+  res.json(notes)
+})
 
-// router.get('/', (req, res) => {
-//   Notes.find()
-//   .then((notes)=>{
-//     res.json(notes)
-//   }).catch((err)=>{
-//     res.status(500).json(err)
-//   })
-// })
+router.get('/notes/:id', passport.authenticate('jwt'), (req, res) => {
+  Note.findById(req.params.id).populate('user')
+    .then(note => res.json(note))
+    .catch(err => console.log(err))
+})
 
-// router.post('/users/profile', (req, res) => {
-//   User.authenticate()(req.body.username, req.body.password, (err, user) => {
-//     if (err) { console.log(err) }
-//     res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
-//   })
-// })
+router.post('/notes', passport.authenticate('jwt'), async function (req, res) {
+  const note = await Note.create({ ...req.body, user: req.user._id })
+  await User.findByIdAndUpdate(req.user._id, { $push: { notes: note._id } })
+  res.json(Note)
+})
 
-// router.get('/users', passport.authenticate('jwt'), (req, res) => {
-//   res.json(req.user)
-// })
+router.put('/notes/:id', passport.authenticate('jwt'), async function (req, res) {
+  const note = await Note.findByIdAndUpdate(req.params.id, { $set: req.body })
+  // await User.findByIdAndUpdate(req.user._id, { $push: { Notes: Note._id } })
+  res.sendStatus(200)
+})
 
-// module.exports = router
+router.delete('/notes/:id', passport.authenticate('jwt'), async function (req, res) {
+  await Note.findByIdAndDelete(req.params.id)
+  res.sendStatus(200)
+})
+
+module.exports = router

@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react'
 import { Modal } from "react-bootstrap";
 import { Carousel } from 'react-bootstrap';
 import first from "../../Assets/lofigirl.gif"
 import second from "../../Assets/jake-lofi.gif"
 import third from "../../Assets/nuro.gif"
+import '../ButtonComponent/Button.css'
 
-import ButtonComponent from '../ButtonCompnent/ButtonComponent';
+import ButtonComponent from '../ButtonComponent/ButtonComponent';
 
 const TutorialModal = () => {
   const [show, setShow] = useState(false);
@@ -15,10 +16,15 @@ const TutorialModal = () => {
   const handleShow = () => setShow(true);
 
 
-  return (
-    <>
+useEffect(() =>{
+  handleShow()
 
-      <ButtonComponent handleBtnClick={handleShow} name={'Tutorial'} />
+},[])
+  
+return (
+  <>
+
+    <ButtonComponent className='toggles'handleBtnClick={handleShow} name={'Tutorial'} />
 
 
       <Modal
@@ -31,7 +37,7 @@ const TutorialModal = () => {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title><h1 className='text-center'>Tutorial</h1></Modal.Title>
+          <Modal.Title><h1 className='text-center '>Tutorial</h1></Modal.Title>
         </Modal.Header>
         <Modal.Body>
 

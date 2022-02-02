@@ -1,12 +1,13 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './Navigation.css';
-import { Nav, Navbar, Offcanvas, Button, Form, FormControl, Container } from "react-bootstrap";
+import { Nav, Navbar, Offcanvas, Container } from "react-bootstrap";
 import { gsap } from "gsap";
 
 
 
-const Navigation = () => {
+
+const Navigation = (handleBtnClick) => {
 
     //Animations
   const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
@@ -24,8 +25,9 @@ const Navigation = () => {
   
 
   return (
-    <Navbar bg="" expand={false}>
+    <Navbar bg="" expand={false} >
       <Container fluid>
+        <div></div>
         <Navbar.Brand className="logo" href="/">Lofi Study Room</Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
@@ -39,19 +41,10 @@ const Navigation = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link className="nav-links" href="/profile">Profile</Nav.Link>
-              <Nav.Link className="nav-links" href="#action2">Background</Nav.Link>
-              <Nav.Link className="nav-links" href="/contact">Contanct</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank" href="/profile">Profile</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank"href="#action2">Background</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank" href="/contact">Contact</Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search for notes..."
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>

@@ -17,6 +17,7 @@ import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
 import Contact from './pages/Contact'
 
+// import Home from './pages/Home'
 const App = () => {
 
   const [load, upadateLoad] = useState(true);
@@ -35,6 +36,8 @@ const App = () => {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
       <Routes> 
+        
+        <Route path='/profile' element={<Profile />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/contact' element={<Contact />} />
