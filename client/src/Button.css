@@ -1,6 +1,7 @@
 button {
   border: none;
   background: transparent;
+  padding-top: 2%;
 }
 
 button:focus {

@@ -27,15 +27,16 @@ const Home = () => {
           >
 
             <Navigation />
-            <Bot />
-            <div className="container">
-              <div className="row p-5 rounded-lg ">
+            
+            {/* <div className="container">
+              <div className=" "> */}
                 <div className="col-md-4">
                   <div className="text">It's a {isDark ? "Dark" : "Light"} theme</div>
                   <button type="button btn" onClick={toggleTheme}>
-                    Toggle theme
+                    It's a {isDark ? "Dark" : "Light"} theme
                   </button>
                 </div>
+                <Bot />
                 <div className="lofi1Button">
                   <Lofi1Button onClick={Lofi1} />
 
@@ -54,8 +55,8 @@ const Home = () => {
                     <TutorialModal />
                   </div>
                 </div>
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
           </div>
 
         </div>
