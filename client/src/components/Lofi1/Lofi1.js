@@ -22,9 +22,9 @@ const MotionConstraints = styled(motion.div)`
   width: 80vw;
   margin-bottom:160px;
   margin-right:160px;
-  border: 1px solid #f00;
   `;
   // Use the below code above to see dimensions
+  // border: 1px solid #f00;
  
 
 
