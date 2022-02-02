@@ -48,6 +48,8 @@ const Home = () => {
             <Bot />
             <br />
             <br />
+            <br />
+            <br />
             <Rain />
             <br />
             <Fire />
