@@ -27,7 +27,7 @@ passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
   secretOrKey: process.env.SECRET
 }, ({ id }, cb) => User.findById(id)
-  .populate('songs')
+  .populate('notes')
   .then(user => cb(null, user))
   .catch(err => cb(err))))
 
@@ -40,9 +40,9 @@ require('./db')
   .catch(err => console.log(err))
 
 
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofinotes');
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
 
-const io = require("socket.io")(8080, {
+const io = require("socket.io")(8080 , {
   cors: {
     origin: "http://localhost:3000",
     methods: ["GET", "POST"]

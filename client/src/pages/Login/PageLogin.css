@@ -7,6 +7,7 @@
   font-family: 'Architects daughter';
   font-size: 20px;
 
+
 }
 
 .lofi {
@@ -16,13 +17,14 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-weight: bold;
+  color: rgb(251, 239, 186);
+  text-shadow: 1px 2px 3px rgb(12, 12, 12);
 }
 
 
 .background {
   min-height: 100vh;
-  background-image: url('https://user-images.githubusercontent.com/92957388/151278539-bbc72287-7b96-4648-b2c6-bc1c2672ec88.png');
+  background-image: url('./lofigirl.jpg');
   background-size: cover;
   background-position: center;
 

@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Home.css'
-import { motion } from 'framer-motion'
 import TutorialModal from '../../components/Modals/TurtorialModal';
 import Lofi1 from '../../components/Lofi1';
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
-import { Row, Container } from 'react-bootstrap'
 import Bot from '../../components/Modals/botModal';
-
 import Rain from '../../components/backgroundSounds/Rain';
 import Fire from '../../components/backgroundSounds/Fire';
 import Cars from '../../components/backgroundSounds/Cars';
 import Waves from '../../components/backgroundSounds/Waves';
+import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
+
 
 
 
@@ -21,6 +20,16 @@ const Home = () => {
     <>
       <section className="homeBackground">
         <Navigation />
+        <a href='/notes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Bot />
         <br />
         <br />
@@ -35,16 +44,17 @@ const Home = () => {
         <br />
         <br />
         <Waves />
-    
+     
         <div className="container">
           <div className="row p-5 rounded-lg ">
             <div className="col-md-4">
-              <div className="lofi1Button">
+              <div className="tutorialModal">
                 <Lofi1Button onClick={Lofi1} />
               </div>
             </div>
 
             <div className="col-md-4">
+                 
               {/* <motion.h1
                 initial={{ opacity: 0, translateX: -40, translateY: -40 }}
                 animate={{ opacity: 1, translatex: -10, translateY: -10 }}
@@ -53,8 +63,8 @@ const Home = () => {
               </motion.h1> */}
             </div>
             <div className="col-md-4">
-              <div className="tutorialModal">
-                <TutorialModal />
+              <div className="lofi1Button">
+                <TutorialModal />    
               </div>
             </div>
           </div>

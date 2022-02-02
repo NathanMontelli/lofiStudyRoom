@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import fireSound from "../../Assets/campfire.mp3"
-import ButtonComponent from "../ButtonCompnent/ButtonComponent";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
 
 
@@ -28,7 +28,7 @@ function Fire() {
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.2;
+      audio.current.volume = 0.5;
 
     } else {
       audio.current.pause();

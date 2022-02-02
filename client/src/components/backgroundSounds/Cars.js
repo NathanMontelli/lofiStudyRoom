@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import CarsSound from "../../Assets/cars.mp3"
-import ButtonComponent from "../ButtonCompnent/ButtonComponent";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
 
 function Cars() {
