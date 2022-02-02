@@ -11,8 +11,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
-import TutorialModal from './components/Modals/TurtorialModal';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lofi1 from './components/Lofi1';
 import Lofi1Button from './components/Lofi1Button/Lofi1Button';
@@ -34,8 +32,14 @@ import Contact from './pages/Contact'
 
 
 // import Home from './pages/Home'
-const App = () => {
+import { useState, useEffect } from 'react'
+import Preloader from "./components/preLoader/pre.js";
+import "./style.css";
+import { ThemeContext } from "./components/Toggler/Toggler"
+import { useContext } from "react"
 
+const App = () => {
+  // const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
@@ -67,6 +71,29 @@ const App = () => {
       </div>
     </Router>
 
+    <>
+      
+      <Router>
+        <Preloader load={load} />
+        {/* <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <div
+        className="app"
+      style={{ backgroundColor: theme.backgroundColor, color: theme.color, backgroundImage: theme.backgroundImage }}
+      >
+        <div className="text">It's a {isDark ? "Dark" : "Light"} theme</div>
+        <button type="button" onClick={toggleTheme}>
+          Toggle theme
+        </button>
+      </div> */}
+          <Routes>
+
+            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/' element={<Home />} />
+          </Routes>
+        {/* </div> */}
+      </Router>
+    </>
   )
 }
 

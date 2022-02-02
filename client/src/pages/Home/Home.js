@@ -12,9 +12,15 @@ import Waves from '../../components/backgroundSounds/Waves';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
 
 
+import { Row, Container, } from 'react-bootstrap'
+import Bot from '../../components/Modals/botModal';
+import { ThemeContext } from "../../components/Toggler/Toggler"
+import { useContext } from "react"
 
 
 const Home = () => {
+  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
+  const [load, upadateLoad] = useState(true);
 
   return (
     <>
@@ -56,6 +62,32 @@ const Home = () => {
             <div className="col-md-4">
                  
               {/* <motion.h1
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <div
+            className="app"
+            style={{ backgroundColor: theme.backgroundColor, color: theme.color, backgroundImage: theme.backgroundImage,
+            backgroundSize: theme.backgroundSize,
+          minHeight: theme.minHeight}}
+          >
+
+            <Navigation />
+            
+            {/* <div className="container">
+              <div className=" "> */}
+                <div className="col-md-4">
+                  <div className="text">It's a {isDark ? "Dark" : "Light"} theme</div>
+                  <button type="button btn" onClick={toggleTheme}>
+                    It's a {isDark ? "Dark" : "Light"} theme
+                  </button>
+                </div>
+                <Bot />
+                <div className="lofi1Button">
+                  <Lofi1Button onClick={Lofi1} />
+
+                </div>
+
+                <div className="col-md-4">
+                  {/* <motion.h1
                 initial={{ opacity: 0, translateX: -40, translateY: -40 }}
                 animate={{ opacity: 1, translatex: -10, translateY: -10 }}
                 transition={{ duration: 3 }}>
@@ -68,7 +100,12 @@ const Home = () => {
               </div>
             </div>
           </div>
+
         </div>
+
+
+
+
       </section>
     </>
   )
