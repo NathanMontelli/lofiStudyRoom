@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import lofigirl2 from "../../Assets/lofigirl.gif"
 import lofigirl from "../../Assets/lofiNight.gif"
+
 // import "./Toggler.css"
 
 const themes = {
@@ -8,13 +9,15 @@ const themes = {
     backgroundImage: `url(${lofigirl2})`,
     color: "black",
     backgroundSize: "cover",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    backgroundPosition: "center",
   },
   light: {
     backgroundImage: `url(${lofigirl})`,
     color: "black",
     backgroundSize: "cover",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    backgroundPosition:"center",
   },
 };
 

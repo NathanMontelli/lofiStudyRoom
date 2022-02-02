@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
- background-color: rgb(249, 255, 162) !important;
-}
 
 .container .ql-editor {
   width: 4in;
