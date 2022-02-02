@@ -47,9 +47,6 @@ const Home = () => {
                 </div>
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
                 <Bot />
                 <br />
                 <br />
@@ -62,6 +59,7 @@ const Home = () => {
                 <Waves />
                 <div className="lofi1Button">
                   <TutorialModal />
+
                 </div>
                 <div className="col-md-4">
                 </div>
