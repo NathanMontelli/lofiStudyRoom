@@ -20,7 +20,7 @@ const Home = () => {
     <>
       <section className="homeBackground">
         <Navigation />
-        <a href='/notes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
+        <a href='/studyNotes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
         <br />
         <br />
         <br />

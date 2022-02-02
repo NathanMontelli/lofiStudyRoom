@@ -45,7 +45,7 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/' element={<Home />} />
         {/* <Route path='/' element={<Home />} /> */}
-        <Route path='/notes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
+        <Route path='/studyNotes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
         <Route path='/documents/:id' element={<TextEditor />} />
       </Routes>
 
