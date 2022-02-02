@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react'
 import { Modal } from "react-bootstrap";
 import { Carousel } from 'react-bootstrap';
@@ -15,8 +15,13 @@ const TutorialModal = () => {
   const handleShow = () => setShow(true);
 
 
-  return (
-    <>
+useEffect(() =>{
+  handleShow()
+
+},[])
+  
+return (
+  <>
 
       <ButtonComponent handleBtnClick={handleShow} name={'Tutorial'} />
 

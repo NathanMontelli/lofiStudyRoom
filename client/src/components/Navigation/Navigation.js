@@ -6,7 +6,8 @@ import { gsap } from "gsap";
 
 
 
-const Navigation = () => {
+
+const Navigation = (handleBtnClick) => {
 
     //Animations
   const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })

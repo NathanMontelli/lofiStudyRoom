@@ -24,6 +24,7 @@ import Background from './components/Background'
 import { useState, useEffect } from 'react'
 import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
+import Profile from './pages/Profile'
 
 
 
@@ -52,6 +53,8 @@ const App = () => {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
       <Routes> 
+        
+        <Route path='/profile' element={<Profile />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/contact' element={<Contact />} />
