@@ -13,7 +13,7 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 14px;
   cursor: pointer;
   box-shadow: 1px 1px 5px #50555C;
-  background: #000000c4;
+  background: #0000004f;
   border-radius: 14px;
   border: 0px solid #000000;
 }
@@ -36,7 +36,7 @@ input[type=range]:focus::-webkit-slider-thumb {
 
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #000000;
+  background: #0000008e;
 }
 
 input[type=range]::-moz-range-track {
