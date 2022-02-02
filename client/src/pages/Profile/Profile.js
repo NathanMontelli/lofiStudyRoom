@@ -50,23 +50,33 @@ const Profile = () => {
 
   return (
     <>
-    <section className="background1">
+
       <Container>
+        <Row>
+          <Col>1 of 2</Col>
+          <Col>2 of 2</Col>
+        </Row>
+        <Row>
+          <Col>1 of 3</Col>
+          <Col>2 of 3</Col>
+          <Col>3 of 3</Col>
+        </Row>
+      </Container>
+    <section className="background1">
+     
       <h1 className="Title">Study NotePad</h1>
-        </Container>
+       
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
-          <Row>
-            <Col>
+         
           <Form.Control className="textbox"
             as="textarea"
             rows={3}
             name='body'
             onChange={handleInputChange}
           />
-              </Col>
-            </Row>
+            
         </Form.Group>
       </Form>
   
