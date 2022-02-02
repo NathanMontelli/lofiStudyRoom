@@ -5,15 +5,13 @@ import Lofi1 from '../../components/Lofi1';
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
 import Bot from '../../components/Modals/botModal';
+import { ThemeContext } from "../../components/Toggler/Toggler"
+import { useContext } from "react"
 import Rain from '../../components/backgroundSounds/Rain';
 import Fire from '../../components/backgroundSounds/Fire';
 import Cars from '../../components/backgroundSounds/Cars';
 import Waves from '../../components/backgroundSounds/Waves';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
-
-import { ThemeContext } from "../../components/Toggler/Toggler"
-import { useContext } from "react"
-
 
 const Home = () => {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
@@ -28,7 +26,7 @@ const Home = () => {
             style={{
               backgroundColor: theme.backgroundColor, color: theme.color, backgroundImage: theme.backgroundImage,
               backgroundSize: theme.backgroundSize,
-              minHeight: theme.minHeight, backgroundPosition:theme.backgroundPosition
+              minHeight: theme.minHeight, backgroundPosition: theme.backgroundPosition
             }}
           >
             <Navigation />

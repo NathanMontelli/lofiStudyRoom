@@ -18,6 +18,8 @@ import "./style.css";
 import Contact from './pages/Contact'
 
 
+
+// import Home from './pages/Home'
 const App = () => {
   const [load, updateLoad] = useState(true);
 
