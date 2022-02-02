@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from 'react-bootstrap'
 import './LofiButton.css'
 import Lofi1 from '../Lofi1'
+import ButtonComponent from '../ButtonCompnent/ButtonComponent.js';
 
 
 
