@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
+  Navigate
 } from 'react-router-dom'
 import { v4 as uuidV4 } from 'uuid'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -42,7 +42,6 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/' element={<Home />} />
-        {/* <Route path='/' element={<Home />} /> */}
         <Route path='/studyNotes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
         <Route path='/documents/:id' element={<TextEditor />} />
       </Routes>
