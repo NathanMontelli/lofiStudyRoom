@@ -1,9 +1,8 @@
 import React from 'react'
 import RegisterForm from "../../components/RegisterForm"
 import'./PageRegister.css'
-
 import { motion } from 'framer-motion'
-import Navigation from '../../components/Navigation'
+
 
 const Register = () => {
 
