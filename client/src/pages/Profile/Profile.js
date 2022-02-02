@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
 import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent'
+import Navigation from '../../components/Navigation'
 
 const Profile = () => {
 
@@ -25,7 +26,9 @@ const Profile = () => {
       })
   }, [])
 
-  const handleSubmitNote = () => {
+  const handleSubmitNote = ()=> {
+    // event.preventDefault()
+   
     let newnote = {
       body: noteState.body
     }
@@ -35,9 +38,22 @@ const Profile = () => {
       }
     })
       .then(res => {
-        console.log(res)
+        console.log(res.data)
       })
   }
+
+  const handleDeleteNote = (id) => {
+    console.log(id)
+    axios.delete(`/api/notes/${id}`,
+    {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('user')}`
+      }
+    })
+
+  }
+
+
   // const handleGoToNote = (body) => {
   //   console.log(body)
   //   window.location =`/${body}` 
@@ -48,6 +64,7 @@ const Profile = () => {
 
   return (
     <>
+      <Navigation />
       <h1>Study NotePad</h1>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -66,6 +83,8 @@ const Profile = () => {
 
 
 
+
+
      
       {
         noteState.notes.map(note =>
@@ -78,7 +97,9 @@ const Profile = () => {
 
             <br />
             <br />
-         
+            <Button
+              onClick={handleDeleteNote}
+            >Delete</Button>
 
 
             {/* this is how you need to write functions that take in parameters onClick */}

@@ -7,7 +7,7 @@ const { Strategy: LocalStrategy } = require('passport-local')
 const { Strategy: JWTStrategy, ExtractJwt } = require('passport-jwt')
 
 const app = express()
-const { User } = require('./models')
+const { User, Note } = require('./models')
 
 app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({ extended: true }))
@@ -30,7 +30,7 @@ passport.use(new JWTStrategy({
 
 app.use(require('./routes'))
 
-app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'index.html')))
+app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'public', 'index.html')))
 
 require('./db')
   .then(() => app.listen(process.env.PORT || 3001))

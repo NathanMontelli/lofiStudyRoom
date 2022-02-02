@@ -17,7 +17,7 @@ function Rain() {
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.1;
+      audio.current.volume = 0.3;
 
     } else {
       audio.current.pause();
