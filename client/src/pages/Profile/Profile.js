@@ -8,12 +8,11 @@ import './Profile.css'
 const Profile = () => {
 
   const [noteState, setNoteState] = useState({
+    title: '',
     body: '',
     notes: []
   })
-  const handleInputChange = ({ target: { name, value } }) => {
-    setNoteState({ ...noteState, [name]: value })
-  }
+  const handleInputChange = ({ target: { name, value } }) => { setNoteState({ ...noteState, [name]: value }) }
 
   useEffect(() => {
     axios.get('/api/notes', {
@@ -21,18 +20,21 @@ const Profile = () => {
         'Authorization': `Bearer ${localStorage.getItem('user')}`
       }
     })
+
       .then(res => {
         console.log(res.data)
         setNoteState({ ...noteState, notes: res.data })
       })
-      
+      .catch(err =>
+        window.location = '/login')
 
   }, [])
 
-  const handleSubmitNote = () => {
-    // event.preventDefault()
+  const handleSubmitNote = event => {
+    event.preventDefault()
 
     let newnote = {
+      title: noteState.title,
       body: noteState.body
     }
     axios.post('/api/notes', newnote, {
@@ -41,15 +43,16 @@ const Profile = () => {
       }
     })
       .then(res => {
-        console.log(res.data)
+        // console.log(res.data)
+
         axios.get('/api/notes', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('user')}`
           }
         })
           .then(res => {
-            console.log(res.data)
-            setNoteState({ ...noteState, notes: res.data })
+            setNoteState({ ...noteState, notes: res.data, body: '' })
+
           })
       })
   }
@@ -71,18 +74,12 @@ const Profile = () => {
         })
           .then(res => {
             console.log(res.data)
-            setNoteState({ ...noteState, notes: res.data })
+            setNoteState({ ...noteState, notes: res.data, body: '' })
           })
       })
 
 
   }
-
-
-  // const handleGoToNote = (body) => {
-  //   console.log(body)
-  //   window.location =`/${body}` 
-  // }
 
 
 
@@ -96,6 +93,14 @@ const Profile = () => {
             <Col className="notepad"><h1 className="Title">Study NotePad</h1>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                  <Form.Label className="subtitle2">Title of notes (max of 10 characters)</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    maxLength={10}
+                    rows={1}
+                    name='title'
+                    onChange={handleInputChange}
+                  />
           <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
           <Form.Control className="textbox"
             as="textarea"
@@ -115,11 +120,12 @@ const Profile = () => {
       {
         noteState.notes.map(note =>
           <>
+            <h2> <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={`${note.title}`} /> </a></h2>
             <h2 className="subtitle">Your Note: Created on {note.createdAt.slice(0, -14)}</h2>
             <h6 className="subtitle"></h6>
             
-            <Col md={{ span: 3, offset: 3 }}><a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a></Col>
-            <Col md={{ span: 3, }} >
+            <Col> </Col>
+            <Col>
               
             <Button
               size= "sm"
