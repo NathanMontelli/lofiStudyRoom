@@ -22,9 +22,9 @@ const MotionConstraints = styled(motion.div)`
   width: 80vw;
   margin-bottom:160px;
   margin-right:160px;
+  border: 1px solid #f00;
   `;
   // Use the below code above to see dimensions
-  // border: 1px solid #f00;
  
 
 
@@ -61,7 +61,7 @@ const Lofi1 = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           dragTransition={{ bounceStiffness: 30, bounceDamping: .2 }}
-          whileTap={{ scale: 2 }}
+          whileTap={{ scale: 1.5 }}
 
         />
 
