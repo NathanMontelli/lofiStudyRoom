@@ -45,9 +45,6 @@ const Home = () => {
             </div>
             <br />
             <br />
-            <br />
-            <br />
-            <br />
             <Bot />
             <br />
             <br />
