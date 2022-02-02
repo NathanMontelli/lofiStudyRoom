@@ -12,7 +12,7 @@ import './Lofi1.css'
 const Image = styled(motion.img)`
 position: absolute;
 width: 100%;
-max-width: 250px;
+max-width: 400px;
 filter: drop-shadow(0px 5px 3px black);
 `;
 
@@ -20,11 +20,12 @@ const MotionConstraints = styled(motion.div)`
 
   height: 80vh;
   width: 80vw;
-  margin-right:160px;
   margin-bottom:160px;
+  margin-right:160px;
   `;
   // Use the below code above to see dimensions
   // border: 1px solid #f00;
+ 
 
 
 const Lofi1 = () => {
