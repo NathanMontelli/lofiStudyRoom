@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './Navigation.css';
-import { Nav, Navbar, Offcanvas, Button, Form, FormControl, Container } from "react-bootstrap";
+import { Nav, Navbar, Offcanvas, Container } from "react-bootstrap";
 import { gsap } from "gsap";
 
 
@@ -25,8 +25,9 @@ const Navigation = (handleBtnClick) => {
   
 
   return (
-    <Navbar bg="" expand={false}>
+    <Navbar bg="" expand={false} >
       <Container fluid>
+        <div></div>
         <Navbar.Brand className="logo" href="/">Lofi Study Room</Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas

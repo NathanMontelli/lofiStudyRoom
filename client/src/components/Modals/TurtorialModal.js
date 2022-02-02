@@ -5,8 +5,9 @@ import { Carousel } from 'react-bootstrap';
 import first from "../../Assets/lofigirl.gif"
 import second from "../../Assets/jake-lofi.gif"
 import third from "../../Assets/nuro.gif"
+import '../ButtonComponent/Button.css'
 
-import ButtonComponent from '../ButtonCompnent/ButtonComponent';
+import ButtonComponent from '../ButtonComponent/ButtonComponent';
 
 const TutorialModal = () => {
   const [show, setShow] = useState(false);
@@ -23,7 +24,7 @@ useEffect(() =>{
 return (
   <>
 
-      <ButtonComponent handleBtnClick={handleShow} name={'Tutorial'} />
+    <ButtonComponent className='toggles'handleBtnClick={handleShow} name={'Tutorial'} />
 
 
       <Modal
@@ -36,7 +37,7 @@ return (
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title><h1 className='text-center'>Tutorial</h1></Modal.Title>
+          <Modal.Title><h1 className='text-center '>Tutorial</h1></Modal.Title>
         </Modal.Header>
         <Modal.Body>
 

@@ -9,7 +9,7 @@ import Rain from '../../components/backgroundSounds/Rain';
 import Fire from '../../components/backgroundSounds/Fire';
 import Cars from '../../components/backgroundSounds/Cars';
 import Waves from '../../components/backgroundSounds/Waves';
-import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent';
+import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
 
 
 
@@ -20,6 +20,7 @@ const Home = () => {
     <>
       <section className="homeBackground">
         <Navigation />
+        <a href='/notes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
         <br />
         <br />
         <br />
@@ -47,9 +48,8 @@ const Home = () => {
         <div className="container">
           <div className="row p-5 rounded-lg ">
             <div className="col-md-4">
-              <div className="lofi1Button">
-                <TutorialModal />
-                <a href='/notes' target="_blank" > <ButtonComponent name={'Let ur ideas flow'}></ButtonComponent></a>
+              <div className="tutorialModal">
+                <Lofi1Button onClick={Lofi1} />
               </div>
             </div>
 
@@ -63,8 +63,8 @@ const Home = () => {
               </motion.h1> */}
             </div>
             <div className="col-md-4">
-              <div className="tutorialModal">
-              <Lofi1Button onClick={Lofi1} />
+              <div className="lofi1Button">
+                <TutorialModal />    
               </div>
             </div>
           </div>

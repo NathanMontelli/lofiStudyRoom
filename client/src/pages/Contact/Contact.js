@@ -7,7 +7,7 @@ import Nathan from './nathan.png'
 import Kevin from './kevin.png'
 import Navigation from '../../components/Navigation'
 import { Container, Row, Col, Card } from 'react-bootstrap'
-import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent';
+import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
 
 const Contact = () => {
  
@@ -83,7 +83,7 @@ const Contact = () => {
             {/* KEVINS CARD */}
             <Col md={3}> </Col>
             <Col md={6} className='center'>
-              <Card className="text-center bgCard" >
+              <Card className="text-center bgCard" style={{"margin-bottom": 20}} >
 
                 <Card.Body >
                   <Card.Title>Kevin</Card.Title>

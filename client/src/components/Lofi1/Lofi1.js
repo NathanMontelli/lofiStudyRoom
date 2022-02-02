@@ -16,8 +16,11 @@ filter: drop-shadow(0px 5px 3px black);
 `;
 
 const MotionConstraints = styled(motion.div)`
+
   height: 80vh;
   width: 80vw;
+  margin-right:160px;
+  margin-bottom:160px;
   `;
   // Use the below code above to see dimensions
   // border: 1px solid #f00;
@@ -30,12 +33,13 @@ const Lofi1 = () => {
 
       <MotionConstraints ref={constraintsRef}>
         <Image src={Geko} alt='geko'
+          style={{ overflowX: "hidden" }}
           drag={true}
           dragConstraints={constraintsRef}
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-          dragTransition={{ bounceStiffness: 45, bounceDamping: 5 }}
-          whileTap={{ scale: 0.9 }}
+          dragTransition={{ bounceStiffness: 10, bounceDamping: .2}}
+          whileTap={{ scale: 1.5 }}
           
         />
 
@@ -44,7 +48,7 @@ const Lofi1 = () => {
           dragConstraints={constraintsRef}
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-          dragTransition={{ bounceStiffness: 45, bounceDamping: 5 }}
+          dragTransition={{ bounceStiffness: 20, bounceDamping: .2 }}
           whileTap={{ scale: 0.9 }}
 
         />
@@ -54,8 +58,8 @@ const Lofi1 = () => {
           dragConstraints={constraintsRef}
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-          dragTransition={{ bounceStiffness: 45, bounceDamping: 5 }}
-          whileTap={{ scale: 0.9 }}
+          dragTransition={{ bounceStiffness: 30, bounceDamping: .2 }}
+          whileTap={{ scale: 2 }}
 
         />
 

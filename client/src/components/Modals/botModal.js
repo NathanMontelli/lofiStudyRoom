@@ -1,7 +1,7 @@
 import { Offcanvas, Accordion } from 'react-bootstrap'
 import { useState } from 'react'
 import "../../style.css"
-import ButtonComponent from '../ButtonCompnent/ButtonComponent';
+import ButtonComponent from '../ButtonComponent/ButtonComponent';
 import { trusted } from 'mongoose';
 import "./Modal.css"
 

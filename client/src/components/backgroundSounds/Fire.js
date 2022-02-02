@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import fireSound from "../../Assets/campfire.mp3"
-import ButtonComponent from "../ButtonCompnent/ButtonComponent";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
 
 
