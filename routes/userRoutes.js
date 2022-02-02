@@ -22,12 +22,12 @@ router.post('/users/login', (req, res) => {
   })
 })
 
-router.post('/users/profile', (req, res) => {
-  User.authenticate()(req.body.username, req.body.password, (err, user) => {
-    if (err) { console.log(err) }
-    res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
-  })
-})
+// router.post('/users/profile', (req, res) => {
+//   User.authenticate()(req.body.username, req.body.password, (err, user) => {
+//     if (err) { console.log(err) }
+//     res.json(user ? jwt.sign({ id: user._id }, process.env.SECRET) : null)
+//   })
+// })
 
 router.get('/users', passport.authenticate('jwt'), (req, res) => {
   res.json(req.user)
