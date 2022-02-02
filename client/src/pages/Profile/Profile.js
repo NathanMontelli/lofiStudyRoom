@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Form, Button, Row, Container, Col } from 'react-bootstrap'
 import axios from 'axios'
-import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent'
+import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
 import Navigation from '../../components/Navigation'
 import './Profile.css'
 
@@ -27,9 +27,9 @@ const Profile = () => {
       })
   }, [])
 
-  const handleSubmitNote = ()=> {
+  const handleSubmitNote = () => {
     // event.preventDefault()
-   
+
     let newnote = {
       body: noteState.body
     }
@@ -55,24 +55,24 @@ const Profile = () => {
   const handleDeleteNote = (id) => {
     console.log(id)
     axios.delete(`/api/notes/${id}`,
-    {
-      headers: {
-        'Authorization': `Bearer ${localStorage.getItem('user')}`
-      }
-    })
-    .then (res =>{
-      console.log(res)
-      axios.get('/api/notes', {
+      {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('user')}`
         }
       })
-        .then(res => {
-          console.log(res.data)
-          setNoteState({ ...noteState, notes: res.data })
+      .then(res => {
+        console.log(res)
+        axios.get('/api/notes', {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('user')}`
+          }
         })
-    })
-    
+          .then(res => {
+            console.log(res.data)
+            setNoteState({ ...noteState, notes: res.data })
+          })
+      })
+
 
   }
 
@@ -87,64 +87,68 @@ const Profile = () => {
 
   return (
     <>
-    <section className="background1">
-      <Container>
-        <Row>
-          <Col>1 of 2</Col>
-          <Col>2 of 2</Col>
-        </Row>
-        <Row>
-          <Col>1 of 3</Col>
-          <Col>2 of 3</Col>
-          <Col>3 of 3</Col>
-        </Row>
-      </Container>
-    
-     
-      <h1 className="Title">Study NotePad</h1>
-       
-      <Navigation />
-      <h1>Study NotePad</h1>
-      <Form>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
-         
-          <Form.Control className="textbox"
-            as="textarea"
-            rows={3}
-            name='body'
-            onChange={handleInputChange}
-          />
-            
-        </Form.Group>
-      </Form>
-  
-      <Button
-        onClick={handleSubmitNote}
-      >Save Note</Button>
-      {
-        noteState.notes.map(note =>
-          <>
-            <h2>Your study notes:</h2>
-            <h6>Created on {note.createdAt.slice(0, -14)}</h6>
-            <br />
+      <section className="background1">
+        <Navigation />
+        <Container>
+          <Row>
+            <Col><h1 className="Title">Study NotePad</h1>
+              <Form>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                  <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
 
-            <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a>
+                  <Form.Control className="textbox"
+                    as="textarea"
+                    size="lg"
+                    rows={3}
+                    name='body'
+                    onChange={handleInputChange}
+                  />
 
-            <br />
-            <br />
-            <Button
-              onClick={()=>handleDeleteNote(note._id)}
-            >Delete</Button>
+                </Form.Group>
+              </Form>
+
+              <Button className="justify-content-center"
+                onClick={handleSubmitNote}
+              >Save Note</Button></Col>
+            <Col><h2 className="Title">Your study notes:</h2>
+              <h6 className="Title">Created on </h6>
+              <br />
+
+              <a><ButtonComponent name={'Notes'} /> </a>
+
+              <br />
+              <br />
+              <Button variant="danger"
+                onClick
+              >Delete</Button>
 
 
-            {/* this is how you need to write functions that take in parameters onClick */}
-          </>
-        )
-      }
+              {
+                noteState.notes.map(note =>
+                  <>
+                    <h2>Your study notes:</h2>
+                    <h6>Created on {note.createdAt.slice(0, -14)}</h6>
+                    <br />
+
+                    <a target="_blank" rel="noopener noreferrer" href={note.body}><ButtonComponent name={'Notes'} /> </a>
+
+                    <br />
+                    <br />
+                    <Button
+                      onClick={() => handleDeleteNote(note._id)}
+                    >Delete</Button>
+
+
+                    {/* this is how you need to write functions that take in parameters onClick */}
+                  </>
+                )
+              }</Col>
+          </Row>
+        </Container>
+
       </section>
     </>
-    
+
   )
 }
 

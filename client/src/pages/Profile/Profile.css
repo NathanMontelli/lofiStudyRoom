@@ -5,29 +5,27 @@
 
 .text {
   font-family: 'Architects daughter';
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
-.lofi {
-  font-family: 'Architects daughter';
-  font-size: 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-weight: bold;
-}
-.textbox{
+.textbox {
   margin: auto;
   padding: 2%;
   padding-left: 2%;
 }
-.Title{
-  color: orange;
+
+.Title {
+  font-family: 'Architects daughter';
+  font-size: 2rem;
+  font-weight: 550;
+  text-shadow: #FC0 1px 0 10px;
+  color: rgb(255, 252, 236) !important;
+  text-shadow: 1px 1px 3px rgb(255, 230, 0);
 }
-.noteTitle{
-  color: orange;
+
+.noteTitle {
+  color: beige;
 }
 
 .background1 {
