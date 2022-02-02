@@ -12,14 +12,29 @@ import Fire from '../../components/backgroundSounds/Fire';
 import Cars from '../../components/backgroundSounds/Cars';
 import Waves from '../../components/backgroundSounds/Waves';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
+import axios from 'axios'
 
 const Home = () => {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
   const [load, updateLoad] = useState(true);
 
+  async function getUsers() {
+    try {
+      const { data: users } = await axios.get('/api/users', {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      })
+      return users
+
+    } catch (err) {
+      window.location = '/register'
+    }
+  }
+
   return (
     <>
-      <section className="homeBackground">
+      <section onLoad={getUsers} className="homeBackground">
         <div className="App" id={load ? "no-scroll" : "scroll"}>
           <div
             className="app"
