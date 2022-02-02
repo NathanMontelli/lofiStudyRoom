@@ -17,7 +17,7 @@ const RegisterForm = () => {
     //Specify a starting and ending point in this case the opacity
     tl.fromTo('.register', { opacity: 0 }, { opacity: 1, duration: 3 })
 
-  })
+  }, [])
 
   const [registerState, setRegisterState] = useState({
     name: '',
@@ -57,7 +57,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <Form noValidate validated={validated}>
+    <Form noValidate validated={validated} className='register'>
       <Row className="mb-3">
         <Form.Group as={Col} md="10" controlId="validName">
           <InputGroup hasValidation>
