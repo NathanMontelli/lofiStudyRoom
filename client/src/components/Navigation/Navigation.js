@@ -44,6 +44,8 @@ const Navigation = (handleBtnClick) => {
               <Nav.Link className="nav-links" target="_blank" href="/profile">Profile</Nav.Link>
               <Nav.Link className="nav-links" target="_blank"href="/login">Logout</Nav.Link>
               <Nav.Link className="nav-links" target="_blank" href="/contact">Contact</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank" href="/login">Sign Up</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank" href="/register">Register</Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
