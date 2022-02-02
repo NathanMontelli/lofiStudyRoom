@@ -16,10 +16,12 @@ import { useState, useEffect } from 'react'
 import Preloader from "./components/preLoader/pre.js";
 import "./style.css";
 import Contact from './pages/Contact'
-
 // import Home from './pages/Home'
-const App = () => {
+import { ThemeContext } from "./components/Toggler/Toggler"
+import { useContext } from "react"
 
+const App = () => {
+  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
@@ -32,25 +34,34 @@ const App = () => {
 
   return (
 
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-      <Routes> 
-        
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/' element={<Home />} />
-        {/* <Route path='/' element={<Home />} /> */}
-        <Route path='/notes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
-        <Route path='/documents/:id' element={<TextEditor />} />
-      </Routes>
+    <>
 
+      <div
+        className="app"
+        style={{ imgfile: theme.imgfile }}
+      // style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
+      >
+        <div className="text">It's a {isDark ? "Dark" : "Light"} theme</div>
+        <button type="button" onClick={toggleTheme}>
+          Toggle theme
+        </button>
       </div>
-    </Router>
+      <Router>
+        <Preloader load={load} />
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <Routes>
 
+            <Route path='/' element={<Home />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/notes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
+            <Route path='/documents/:id' element={<TextEditor />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   )
 }
 
