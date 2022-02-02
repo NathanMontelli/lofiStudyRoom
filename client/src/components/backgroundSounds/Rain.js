@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import rainSound from "../../Assets/rain-03.mp3"
-import ButtonComponent from "../ButtonCompnent/ButtonComponent";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
 
 function Rain() {
@@ -17,7 +17,7 @@ function Rain() {
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.1;
+      audio.current.volume = 0.7;
 
     } else {
       audio.current.pause();

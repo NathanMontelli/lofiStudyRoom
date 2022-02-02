@@ -1,13 +1,15 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './Navigation.css';
-import { Nav, Navbar, NavDropdown, Offcanvas, Button, Form, FormControl, Container } from "react-bootstrap";
+import { Nav, Navbar, Offcanvas, Container } from "react-bootstrap";
 import { gsap } from "gsap";
 
 
 
-const Navigation = () => {
 
+const Navigation = (handleBtnClick) => {
+
+    //Animations
   const tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
 
   useEffect(() => {
@@ -16,15 +18,18 @@ const Navigation = () => {
 
     //Specify a starting and ending point in this case the opacity
     tl.fromTo('.logo', { opacity: 0 }, { opacity: 1, duration: 3 })
-    tl.fromTo('.hamburger', { opacity: 0 }, { opacity: 1, duration: 3 })
 
-  })
+  }, [tl])
+
+  //Search DB for Note
+  
 
   return (
-    <Navbar bg="" expand={false}>
+    <Navbar bg="" expand={false} >
       <Container fluid>
+        <div></div>
         <Navbar.Brand className="logo" href="/">Lofi Study Room</Navbar.Brand>
-        <Navbar.Toggle className="hamburger" aria-controls="offcanvasNavbar" />
+        <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
@@ -36,26 +41,10 @@ const Navigation = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link className="nav-links" href="#action2">Profile</Nav.Link>
-              <Nav.Link className="nav-links" href="#action2">Background</Nav.Link>
-              <NavDropdown className="nav-station" title="Stations" id="offcanvasNavbarDropdown">
-                <NavDropdown.Item href="#action3">Chill</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Moody</NavDropdown.Item>
-                <NavDropdown.Item href="#action5"> Ambient </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link className="nav-links" target="_blank" href="/profile">Profile</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank"href="#action2">Background</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank" href="/contact">Contact</Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search for notes..."
-                className="me-2"
-                aria-label="Search"
-
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-            <Nav.Link className="nav-links" href="/login">Login</Nav.Link>
-            <Nav.Link className="nav-links" href="/register">Register</Nav.Link>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>

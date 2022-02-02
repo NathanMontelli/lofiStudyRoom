@@ -1,4 +1,4 @@
-import React ,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Form, Button, Alert } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 import './Login.css'
@@ -13,7 +13,7 @@ const LoginForm = () => {
 
 
     //Specify a starting and ending point in this case the opacity
-    tl.fromTo('.login', { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl.fromTo('.login', { opacity: 0 }, { opacity: 1, duration: 8 })
 
   }, [])
 

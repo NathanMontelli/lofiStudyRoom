@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import './styles.css'
 import Quill from "quill"
 import "quill/dist/quill.snow.css"
 import { io } from 'socket.io-client'

@@ -1,7 +1,20 @@
 .logo {
+  
   font-family: 'Architects daughter';
-  font-size: 1.5rem;
-  display: flex;
+  font-size: 2rem;
+  font-weight: 550;
+  text-shadow: #FC0 1px 0 10px;
+  color: rgb(255, 252, 236) !important;
+  text-shadow: 1px 1px 3px rgb(255, 230, 0);
+
+}
+
+.logo:hover {
+  text-shadow: 0px 0px 10px #fff185;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .nav-links {
@@ -19,12 +32,8 @@
 }
 
 
-.navbar-toggler{
-  background-color: white;
-}
-
-.navbar-light .navbar-brand{
-  color: white;
+.navbar-toggler {
+  background-color: rgba(251, 239, 186, 0.822);
 }
 
 
