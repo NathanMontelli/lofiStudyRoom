@@ -25,6 +25,7 @@ router.put('/notes/:id', passport.authenticate('jwt'), async function (req, res)
   res.sendStatus(200)
 })
 
+
 router.delete('/notes/:id', passport.authenticate('jwt'), async function (req, res) {
   await Note.findByIdAndDelete(req.params.id)
   res.sendStatus(200)

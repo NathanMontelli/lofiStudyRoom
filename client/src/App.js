@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate
+  Navigate,
 } from 'react-router-dom'
 import { v4 as uuidV4 } from 'uuid'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -18,10 +18,7 @@ import Profile from './pages/Profile'
 import Contact from './pages/Contact'
 
 
-
-// import Home from './pages/Home'
 const App = () => {
-
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
@@ -34,23 +31,25 @@ const App = () => {
 
 
   return (
+    <>
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-      <Routes> 
-        
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/' element={<Home />} />
+        <Routes> 
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/' element={<Home />} />
         {/* <Route path='/' element={<Home />} /> */}
         <Route path='/studyNotes' element={<Navigate to={`/documents/${uuidV4()}`} />} />
         <Route path='/documents/:id' element={<TextEditor />} />
       </Routes>
-
       </div>
     </Router>
+
+    
+    </>
   )
 }
 

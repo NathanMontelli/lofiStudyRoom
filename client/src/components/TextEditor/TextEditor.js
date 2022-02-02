@@ -4,6 +4,7 @@ import Quill from "quill"
 import "quill/dist/quill.snow.css"
 import { io } from 'socket.io-client'
 import { useParams } from 'react-router-dom'
+import 'react-bootstrap'
 
 const SAVE_INTERVAL_MS = 2000
 
@@ -120,7 +121,7 @@ function TextEditor() {
   }, [])
 
   return (
-    <div className='container' ref={wrapperRef}></div>
+    <div className='container m-5' ref={wrapperRef}></div>
   )
 };
 

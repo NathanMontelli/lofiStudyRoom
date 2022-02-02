@@ -14,10 +14,15 @@ function Rain() {
   }
 
 
+  const setVolume = event => {
+    const volume = event.target.value
+    audio.current.volume = parseFloat(volume)
+  }
+
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.7;
+      audio.current.volume = 0.3;
 
     } else {
       audio.current.pause();
@@ -38,14 +43,15 @@ function Rain() {
       </audio>
 
       <ButtonComponent handleBtnClick={handlePlay} name={'Rain'} />
-      {/* <input
+      <input
         type="range"
+        className="slider"
         min={0}
-        max={20}
+        max={1}
         step={0.02}
-      value={volume}
-      onChange={setVolume}
-      /> */}
+        defaultValue={1}
+        onChange={setVolume}
+      />
     </div>
 
 

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import CarsSound from "../../Assets/cars.mp3"
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import "./BackgroundSounds.css"
 
 
 function Cars() {
@@ -14,10 +15,17 @@ function Cars() {
   }
 
 
+
+  const setVolume = event => {
+    const volume = event.target.value
+    audio.current.volume = parseFloat(volume)
+  }
+
+
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.2;
+      // audio.current.volume = 0.5;
 
     } else {
       audio.current.pause();
@@ -38,14 +46,15 @@ function Cars() {
       </audio>
 
       <ButtonComponent handleBtnClick={handlePlay} name={'Cars'} />
-      {/* <input
+      <input
+        className="slider"
         type="range"
         min={0}
-        max={20}
+        max={1}
         step={0.02}
-      value={volume}
+      defaultValue={1}
       onChange={setVolume}
-      /> */}
+      />
     </div>
 
 
