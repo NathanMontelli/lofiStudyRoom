@@ -4,10 +4,6 @@ import TutorialModal from '../../components/Modals/TurtorialModal';
 import Lofi1 from '../../components/Lofi1';
 import Lofi1Button from '../../components/Lofi1Button/Lofi1Button';
 import Navigation from '../../components/Navigation'
-<<<<<<< HEAD
-import { Row, Container, } from 'react-bootstrap'
-=======
->>>>>>> d5c376f628dc74314943a1e8273a3b0c6705a3f2
 import Bot from '../../components/Modals/botModal';
 import { ThemeContext } from "../../components/Toggler/Toggler"
 import { useContext } from "react"
@@ -16,9 +12,6 @@ import Fire from '../../components/backgroundSounds/Fire';
 import Cars from '../../components/backgroundSounds/Cars';
 import Waves from '../../components/backgroundSounds/Waves';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
-import { ThemeContext } from "../../components/Toggler/Toggler"
-import { useContext } from "react"
-
 
 const Home = () => {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
