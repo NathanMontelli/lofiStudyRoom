@@ -19,8 +19,8 @@ const Contact = () => {
         <Container style={{ "padding-top": 60}}fluid="md">
           <Row>
             {/* PETERS CARD  */}
-            <Col className="bottom">
-              <Card className="text-center bgCard" >
+            <Col>
+              <Card className="text-center bgCard bottom" >
 
                 <Card.Body>
                   <Card.Title>Peter Song</Card.Title>
@@ -33,26 +33,26 @@ const Contact = () => {
                 <Card.Footer className="text-muted">
                   <a target="_blank" rel="noopener noreferrer" href='https://github.com/Psong562'> <ButtonComponent name={'GitHub'} /> </a> </Card.Footer>
               </Card>
-              {/* NATHANS CARD */}
+              {/* KEVINS CARD */}
             </Col>
             <Col>
               <Card className="text-center bgCard">
 
                 <Card.Body>
-                  <Card.Title>Nathan Monetelli </Card.Title>
-                  <Card.Img variant="top" src={Nathan} />
+                  <Card.Title>Kevin Kelley </Card.Title>
+                  <Card.Img variant="top" src={Kevin} />
                   <Card.Text>
                     With supporting text below as a natural lead-in to additional content.
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/NathanMontelli'><ButtonComponent name={'GitHub'} /> </a></Card.Footer>
+                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/kelleyindahouse'><ButtonComponent name={'GitHub'} /> </a></Card.Footer>
               </Card>
             </Col>
           </Row>
           <Row>
             {/* ABES CARD  */}
-            <Col className="bottom">
-              <Card className="text-center bgCard">
+            <Col >
+              <Card className="text-center bgCard bottom">
 
                 <Card.Body>
                   <Card.Title>Abraham Solis</Card.Title>
@@ -69,7 +69,7 @@ const Contact = () => {
               <Card className="text-center bgCard" >
 
                 <Card.Body>
-                  <Card.Title>Austin</Card.Title>
+                  <Card.Title>Austin Hall</Card.Title>
                   <Card.Img variant="top" src={Austin} />
                   <Card.Text>
                     With supporting text below as a natural lead-in to additional content.
@@ -86,14 +86,14 @@ const Contact = () => {
               <Card className="text-center bgCard" style={{"margin-bottom": 20}} >
 
                 <Card.Body >
-                  <Card.Title>Kevin</Card.Title>
-                  <Card.Img variant="top" src={Kevin} />
+                  <Card.Title>Nathan Montelli </Card.Title>
+                  <Card.Img variant="top" src={Nathan} />
                   <Card.Text>
                     With supporting text below as a natural lead-in to additional content.
                   </Card.Text>
 
                 </Card.Body>
-                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/kelleyindahouse'><ButtonComponent name={'GitHub'} /></a></Card.Footer>
+                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/NathanMontelli'><ButtonComponent name={'GitHub'} /></a></Card.Footer>
               </Card>
             </Col>
           <Col md={3}> </Col>

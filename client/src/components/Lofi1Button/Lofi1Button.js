@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap'
 import './LofiButton.css'
 import Lofi1 from '../Lofi1'
 import ButtonComponent from '../ButtonComponent/ButtonComponent.js';
@@ -23,7 +22,7 @@ return (
       }
     {/* <Button variant="primary" onClick={handleHide}>GekoMe</Button> */}
 
-    <ButtonComponent handleBtnClick={handleHide} name={"Fidget-Icons"} />
+    <ButtonComponent handleBtnClick={handleHide} name={"Fidget-cons"} />
  
     </>
   );
