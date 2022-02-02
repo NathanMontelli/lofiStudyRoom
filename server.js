@@ -10,7 +10,7 @@ const mongoose = require('mongoose')
 // const Document = require('./models/Document.js')
 
 const app = express()
-const { User, Document, Note } = require('./models')
+const { User, Note } = require('./models')
 
 app.use(express.static(join(__dirname, 'client', 'public')))
 app.use(express.urlencoded({ extended: true }))

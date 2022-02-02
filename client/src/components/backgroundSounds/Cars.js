@@ -17,7 +17,7 @@ function Cars() {
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.2;
+      audio.current.volume = 0.5;
 
     } else {
       audio.current.pause();

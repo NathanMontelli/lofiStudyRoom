@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Form, Button, Row, Container, Col } from 'react-bootstrap'
 import axios from 'axios'
-import ButtonComponent from '../../components/ButtonComponent'
+import ButtonComponent from '../../components/ButtonCompnent/ButtonComponent'
+import Navigation from '../../components/Navigation'
 import './Profile.css'
-
 
 const Profile = () => {
 
@@ -27,7 +27,9 @@ const Profile = () => {
       })
   }, [])
 
-  const handleSubmitNote = () => {
+  const handleSubmitNote = ()=> {
+    // event.preventDefault()
+   
     let newnote = {
       body: noteState.body
     }
@@ -37,9 +39,44 @@ const Profile = () => {
       }
     })
       .then(res => {
-        console.log(res)
+        console.log(res.data)
+        axios.get('/api/notes', {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('user')}`
+          }
+        })
+          .then(res => {
+            console.log(res.data)
+            setNoteState({ ...noteState, notes: res.data })
+          })
       })
   }
+
+  const handleDeleteNote = (id) => {
+    console.log(id)
+    axios.delete(`/api/notes/${id}`,
+    {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('user')}`
+      }
+    })
+    .then (res =>{
+      console.log(res)
+      axios.get('/api/notes', {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('user')}`
+        }
+      })
+        .then(res => {
+          console.log(res.data)
+          setNoteState({ ...noteState, notes: res.data })
+        })
+    })
+    
+
+  }
+
+
   // const handleGoToNote = (body) => {
   //   console.log(body)
   //   window.location =`/${body}` 
@@ -50,7 +87,7 @@ const Profile = () => {
 
   return (
     <>
-
+    <section className="background1">
       <Container>
         <Row>
           <Col>1 of 2</Col>
@@ -62,10 +99,12 @@ const Profile = () => {
           <Col>3 of 3</Col>
         </Row>
       </Container>
-    <section className="background1">
+    
      
       <h1 className="Title">Study NotePad</h1>
        
+      <Navigation />
+      <h1>Study NotePad</h1>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
@@ -94,6 +133,10 @@ const Profile = () => {
 
             <br />
             <br />
+            <Button
+              onClick={()=>handleDeleteNote(note._id)}
+            >Delete</Button>
+
 
             {/* this is how you need to write functions that take in parameters onClick */}
           </>
