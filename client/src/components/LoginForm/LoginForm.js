@@ -3,6 +3,8 @@ import { Form, Button, Alert } from 'react-bootstrap'
 import UserAPI from '../../utils/UserAPI'
 import './Login.css'
 import { gsap } from "gsap";
+import { Container } from "react-bootstrap"
+
 
 const LoginForm = () => {
 
@@ -46,6 +48,7 @@ const LoginForm = () => {
   }
 
   return (
+    <Container>
     <Form className="login">
       <Form.Group className="mb-3" controlId="formBasiclUsername">
         <Form.Control
@@ -72,11 +75,12 @@ const LoginForm = () => {
         Log in
       </Button>
       <hr />
-      <Alert>
+      <Alert className='alertCenter'>
         Dont have an account?
-        <Alert.Link href="/register">Register Now</Alert.Link>
+          <Alert.Link href="/register">&nbsp;Register Now</Alert.Link>
       </Alert>
     </Form>
+    </Container>
   )
 }
 

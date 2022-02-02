@@ -42,7 +42,7 @@ const Navigation = (handleBtnClick) => {
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link className="nav-links" target="_blank" href="/profile">Profile</Nav.Link>
-              <Nav.Link className="nav-links" target="_blank"href="#action2">Background</Nav.Link>
+              <Nav.Link className="nav-links" target="_blank"href="/login">Logout</Nav.Link>
               <Nav.Link className="nav-links" target="_blank" href="/contact">Contact</Nav.Link>
             </Nav>
           </Offcanvas.Body>

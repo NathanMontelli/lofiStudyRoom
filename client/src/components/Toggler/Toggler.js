@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import lofigirl2 from "../../Assets/lofigirl.gif"
 import lofigirl from "../../Assets/lofiNight.gif"
+
 // import "./Toggler.css"
 
 const themes = {

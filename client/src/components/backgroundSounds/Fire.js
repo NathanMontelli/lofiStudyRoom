@@ -14,21 +14,17 @@ function Fire() {
     setIsPlaying(!isPlaying)
   }
 
-
-//   const [slider, setSlider] = useState({
-//     value: 0,
-//     label: ''
-//   });
-
-//  const onSlide = () => {
-//    setSlider(slider.value)
-//  }
+  
+ const setVolume = event =>{
+   const  volume = event.target.value
+   audio.current.volume = parseFloat(volume)
+ }
 
 
   useEffect(() => {
     if (isPlaying) {
       audio.current.play();
-      audio.current.volume = 0.5;
+      // audio.current.volume = 0.3;
 
     } else {
       audio.current.pause();
@@ -50,14 +46,15 @@ function Fire() {
       >
       </audio>
       <ButtonComponent handleBtnClick={handlePlay} name={'Fire'} />
-      {/* <input
+      <input
         type="range"
+        className="slider"
         min={0}
         max={1}
         step={0.02}
-      value={slider.value}
-      onChange={onSlide}
-      /> */}
+      defaultValue={1}
+      onChange={setVolume}
+      />
     </div>
 
 

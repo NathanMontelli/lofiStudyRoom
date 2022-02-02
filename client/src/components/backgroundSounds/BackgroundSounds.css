@@ -1,0 +1,98 @@
+input[type=range] {
+  background: rgba(0, 0, 255, 0);
+  -webkit-appearance: none;
+  width: 8%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 50%;
+  height: 14px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #50555C;
+  background: #0000004f;
+  border-radius: 14px;
+  border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 40px;
+  border-radius: 12px;
+  background: #ffc362;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3px;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  box-shadow: rgb(59, 59, 61);
+}
+
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #0000008e;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #50555C;
+  background: #50555C;
+  border-radius: 14px;
+  border: 0px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 40px;
+  border-radius: 12px;
+  background: #529DE1;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.slider:hover::-webkit-slider-thumb {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #fff185;
+  -moz-transition: all 0.1s e1ase-in;
+  -o-transition: all 0.1s e1ase-in;
+  -webkit-transition: all 0.1s e1ase-in;
+  transition: all 0.1s e1ase-in;
+  -ms-transition: all 0.1s e1ase-in;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  input[type=range]{
+    width: 17%;
+  }
+
+}

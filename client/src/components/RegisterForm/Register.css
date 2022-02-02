@@ -3,4 +3,16 @@
   font-size: 20px;
 }
 
+.stuff {
+  text-align: center;
+}
 
+
+@media only screen and (max-width: 700px) {
+  .register {
+    align-content: center;
+    width: 100%;
+    
+  }
+
+}

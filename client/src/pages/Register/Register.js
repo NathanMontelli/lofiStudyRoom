@@ -3,8 +3,7 @@ import RegisterForm from "../../components/RegisterForm"
 import'./PageRegister.css'
 
 import { motion } from 'framer-motion'
-import Navigation from '../../components/Navigation'
-
+import { Container } from "react-bootstrap"
 const Register = () => {
 
 
@@ -15,11 +14,33 @@ const Register = () => {
 
   return (
     <>
-      <section className="background">
+
+      
+        <section className="background">
+          <Container className="justify-content-center">
+            <motion.h1
+              initial={{ opacity: 0, translateX: 0, translateY: -50 }}
+              animate={{ opacity: 1, translatex: 0, translateY: 0 }}
+              transition={{ duration: 5 }}>
+              <h1 className='lofi p-5'>LoFi Study Room</h1>
+            </motion.h1>
+            <Container className='p-5'>
+              <h5 >Register A New Account</h5>
+              <hr />
+            </Container>
+            <Container >
+              <RegisterForm />
+            </Container>
+          </Container>
+        </section>
+     
+
+
+      {/* <section className="background">
       <div className="container">
         <div className="row p-5 rounded-lg">
             <motion.h1
-              initial={{ opacity: 0, translateX: -50, translateY: -50 }}
+              initial={{ opacity: 0, translateX: 0, translateY: -50 }}
               animate={{ opacity: 1, translatex: 0, translateY: 0 }}
               transition={{ duration: 5 }}>
               <h1 className='lofi'>LoFi Study Room</h1>
@@ -36,7 +57,7 @@ const Register = () => {
           <div className="col-md-4"></div>
         </div>
       </div>
-    </section>
+    </section> */}
     </>
   )
 }
