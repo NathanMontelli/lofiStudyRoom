@@ -1,13 +1,11 @@
-import { useState, useRef, useEffect } from "react";
-import WavesSound from "../../Assets/waves.mp3"
-import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import { useState, useRef, useEffect } from 'react'
+import WavesSound from '../../Assets/waves.mp3'
+import ButtonComponent from '../ButtonComponent/ButtonComponent'
 
+function Waves () {
+  const audio = useRef(null)
 
-function Waves() {
-
-  const audio = useRef(null);
-
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false)
 
   const handlePlay = () => {
     setIsPlaying(!isPlaying)
@@ -18,18 +16,14 @@ function Waves() {
     audio.current.volume = parseFloat(volume)
   }
 
-
-
   useEffect(() => {
     if (isPlaying) {
-      audio.current.play();
-      audio.current.volume = 0.3;
-
+      audio.current.play()
+      audio.current.volume = 0.3
     } else {
-      audio.current.pause();
+      audio.current.pause()
     }
   })
-
 
   return (
 
@@ -40,13 +34,12 @@ function Waves() {
         src={WavesSound}
         ref={audio}
         autoPlay
-      >
-      </audio>
+      />
 
-      <ButtonComponent handleBtnClick={handlePlay} name={'Waves'} />
+      <ButtonComponent handleBtnClick={handlePlay} name='Waves' />
       <input
-        type="range"
-        className="slider"
+        type='range'
+        className='slider'
         min={0}
         max={1}
         step={0.02}
@@ -55,8 +48,7 @@ function Waves() {
       />
     </div>
 
-
-  );
+  )
 }
 
-export default Waves;
+export default Waves

@@ -1,1 +1,1 @@
-export {default} from './BackgrounButton'
+export { default } from './BackgrounButton'

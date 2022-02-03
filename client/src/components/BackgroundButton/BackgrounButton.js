@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
-import Background from '../Background';
+import Background from '../Background'
 
 const BackgroundButton = () => {
-
   const [hideState, setHideState] = useState(false)
-  const handleHide = () =>{
+  const handleHide = () => {
     setHideState(!hideState)
   }
 
@@ -13,12 +12,12 @@ const BackgroundButton = () => {
     <>
 
       {
-        hideState ? < Background /> : null
+        hideState ? <Background /> : null
       }
-      <Button variant="primary" onClick={handleHide}>Change The Background!</Button>
+      <Button variant='primary' onClick={handleHide}>Change The Background!</Button>
     </>
 
-  );
-};
+  )
+}
 
-export default BackgroundButton;
+export default BackgroundButton

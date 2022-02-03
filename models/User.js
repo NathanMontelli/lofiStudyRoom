@@ -16,15 +16,13 @@ const User = new Schema({
     type: String,
     unique: true,
     required: true,
-    match: [/^(?=[a-zA-Z0-9._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/,'Please fill a valid username']
+    match: [/^(?=[a-zA-Z0-9._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/, 'Please fill a valid username']
   },
-  // peters changes 
+  // peters changes
   notes: [{
     type: Schema.Types.ObjectId,
     ref: 'note'
-  }], 
-
-
+  }]
 
 }, { timestamps: true })
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './Contact.css'
 import Peter from './peter.png'
 import Abe from './abe.png'
@@ -7,75 +7,83 @@ import Nathan from './nathan.png'
 import Kevin from './kevin.png'
 import Navigation from '../../components/Navigation'
 import { Container, Row, Col, Card } from 'react-bootstrap'
-import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
+import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
 
 const Contact = () => {
- 
-
   return (
     <>
-      <section className='landing' >
-        <Navigation  />
-        <Container style={{ "padding-top": 60}}fluid="md">
+      <section className='landing'>
+        <Navigation />
+        <Container style={{ 'padding-top': 60 }} fluid='md'>
           <Row>
             {/* PETERS CARD  */}
             <Col>
-              <Card className="text-center bgCard bottom" >
+              <Card className='text-center bgCard bottom'>
 
                 <Card.Body>
-                  <Card.Title>Peter Song</Card.Title>
-                  <Card.Img variant="top" src={Peter} />
+                  <Card.Title className='glowlyText'>Peter Song</Card.Title>
+                  <Card.Img variant='top' src={Peter} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    "The future belongs to those who believe in the beauty of their dreams."
+                    <br />
+                    - Shoyo Hinata.
                   </Card.Text>
 
                 </Card.Body>
-                <Card.Footer className="text-muted">
-                  <a target="_blank" rel="noopener noreferrer" href='https://github.com/Psong562'> <ButtonComponent name={'GitHub'} /> </a> </Card.Footer>
+                <Card.Footer className='text-muted'>
+                  <a target='_blank' rel='noopener noreferrer' href='https://github.com/Psong562'> <ButtonComponent name='GitHub' /> </a>
+                </Card.Footer>
               </Card>
               {/* KEVINS CARD */}
             </Col>
             <Col>
-              <Card className="text-center bgCard">
+              <Card className='text-center bgCard'>
 
                 <Card.Body>
-                  <Card.Title>Kevin Kelley </Card.Title>
-                  <Card.Img variant="top" src={Kevin} />
+                  <Card.Title className='glowlyText'>Kevin Kelley </Card.Title>
+                  <Card.Img variant='top' src={Kevin} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    "I'll never forget you version 32."
+                    <br />
+                    - Albert Einstein
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/kelleyindahouse'><ButtonComponent name={'GitHub'} /> </a></Card.Footer>
+                <Card.Footer className='text-muted'> <a target='_blank' rel='noopener noreferrer' href='https://github.com/kelleyindahouse'><ButtonComponent name='GitHub' /> </a></Card.Footer>
               </Card>
             </Col>
           </Row>
           <Row>
             {/* ABES CARD  */}
-            <Col >
-              <Card className="text-center bgCard bottom">
+            <Col>
+              <Card className='text-center bgCard bottom'>
 
                 <Card.Body>
-                  <Card.Title>Abraham Solis</Card.Title>
-                  <Card.Img variant="top" src={Abe} />
+                  <Card.Title className='glowlyText'>Abraham Solis</Card.Title>
+                  <Card.Img variant='top' src={Abe} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    "Deleted code is debugged code."
+                    <br />
+                    - Jeff Sickel
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/Abraham-Solis' ><ButtonComponent name={'GitHub'} /></a></Card.Footer>
+                <Card.Footer className='text-muted'> <a target='_blank' rel='noopener noreferrer' href='https://github.com/Abraham-Solis'><ButtonComponent name='GitHub' /></a></Card.Footer>
               </Card>
             </Col>
             {/* AUSTINS CARD */}
-            <Col >
-              <Card className="text-center bgCard" >
+            <Col>
+              <Card className='text-center bgCard'>
 
                 <Card.Body>
-                  <Card.Title>Austin Hall</Card.Title>
-                  <Card.Img variant="top" src={Austin} />
+                  <Card.Title className='glowlyText'>Austin Hall</Card.Title>
+                  <Card.Img variant='top' src={Austin} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    “Code is read more than it is written.”
+
+                    <br />
+                    ― Daniel Roy Greenfeld
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/BR0C0DE'><ButtonComponent name={'GitHub'} /></a></Card.Footer>
+                <Card.Footer className='text-muted'> <a target='_blank' rel='noopener noreferrer' href='https://github.com/BR0C0DE'><ButtonComponent name='GitHub' /></a></Card.Footer>
               </Card>
             </Col>
           </Row>
@@ -83,29 +91,29 @@ const Contact = () => {
             {/* KEVINS CARD */}
             <Col md={3}> </Col>
             <Col md={6} className='center'>
-              <Card className="text-center bgCard" style={{"margin-bottom": 20}} >
+              <Card className='text-center bgCard' style={{ 'margin-bottom': 20 }}>
 
-                <Card.Body >
-                  <Card.Title>Nathan Montelli </Card.Title>
-                  <Card.Img variant="top" src={Nathan} />
+                <Card.Body>
+                  <Card.Title className='glowlyText'>Nathan Montelli </Card.Title>
+                  <Card.Img variant='top' src={Nathan} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    "Before software can be reusable it first has to be usable."
+                    <br />
+                    - Ralph Johnson
                   </Card.Text>
 
                 </Card.Body>
-                <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/NathanMontelli'><ButtonComponent name={'GitHub'} /></a></Card.Footer>
+                <Card.Footer className='text-muted'> <a target='_blank' rel='noopener noreferrer' href='https://github.com/NathanMontelli'><ButtonComponent name='GitHub' /></a></Card.Footer>
               </Card>
             </Col>
-          <Col md={3}> </Col>
+            <Col md={3}> </Col>
           </Row>
-  
+
         </Container>
       </section>
     </>
 
+  )
+}
 
-
-  );
-};
-
-export default Contact;
+export default Contact

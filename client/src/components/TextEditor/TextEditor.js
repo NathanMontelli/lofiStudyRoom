@@ -1,35 +1,34 @@
 import { useCallback, useEffect, useState } from 'react'
 import './Text.css'
-import Quill from "quill"
-import "quill/dist/quill.snow.css"
+import Quill from 'quill'
+import 'quill/dist/quill.snow.css'
 import { io } from 'socket.io-client'
 import { useParams } from 'react-router-dom'
 import { Col, Container } from 'react-bootstrap'
 
-
 const SAVE_INTERVAL_MS = 2000
 
 const TOOLBAR_OPTIONS = [
-  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['bold', 'italic', 'underline', 'strike'], // toggled buttons
   ['image', 'blockquote', 'code-block'],
 
-  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-  [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-  [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-  [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-  [{ 'direction': 'rtl' }],                         // text direction
+  [{ header: 1 }, { header: 2 }], // custom button values
+  [{ list: 'ordered' }, { list: 'bullet' }],
+  [{ script: 'sub' }, { script: 'super' }], // superscript/subscript
+  [{ indent: '-1' }, { indent: '+1' }], // outdent/indent
+  [{ direction: 'rtl' }], // text direction
 
-  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+  [{ size: ['small', false, 'large', 'huge'] }], // custom dropdown
+  [{ header: [1, 2, 3, 4, 5, 6, false] }],
 
-  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-  [{ 'font': [] }],
-  [{ 'align': [] }],
+  [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+  [{ font: [] }],
+  [{ align: [] }],
 
-  ['clean'],                                         // remove formatting button
+  ['clean'] // remove formatting button
 ]
 
-function TextEditor() {
+function TextEditor () {
   // renaming id (from URL) to documentId
   const { id: documentId } = useParams()
   const [socket, setSocket] = useState()
@@ -37,7 +36,7 @@ function TextEditor() {
 
   // setting up socket and disconnect when no longer needed
   useEffect(() => {
-    const s = io("https://lofistudy.herokuapp.com/")
+    const s = io('https://thelofistudyroom.herokuapp.com/')
     setSocket(s)
 
     return () => {
@@ -57,7 +56,7 @@ function TextEditor() {
     })
     // gets document from server with the unique 'documentId'
     socket.emit('get-document', documentId)
-  }, [socket, quill, documentId]);
+  }, [socket, quill, documentId])
 
   // setting interval to save document every so often
   useEffect(() => {
@@ -70,7 +69,7 @@ function TextEditor() {
     return () => {
       clearInterval(interval)
     }
-  }, [socket, quill]);
+  }, [socket, quill])
 
   // handles collaborative editing on text-change
   useEffect(() => {
@@ -86,7 +85,7 @@ function TextEditor() {
     return () => {
       socket.off('receive-changes', handler)
     }
-  }, [socket, quill]);
+  }, [socket, quill])
 
   // handles collaborative editing on text-change
   useEffect(() => {
@@ -102,8 +101,7 @@ function TextEditor() {
     return () => {
       quill.off('text-change', handler)
     }
-  }, [socket, quill]);
-
+  }, [socket, quill])
 
   const wrapperRef = useCallback(wrapper => {
     if (wrapper == null) return
@@ -113,7 +111,7 @@ function TextEditor() {
     wrapper.append(editor)
     const q = new Quill(editor, {
       theme: 'snow',
-      modules: { toolbar: TOOLBAR_OPTIONS },
+      modules: { toolbar: TOOLBAR_OPTIONS }
     })
     // q.disable()
     q.setText('Begin Writing here')
@@ -123,21 +121,16 @@ function TextEditor() {
 
   return (
     <>
-    <div className='container' ref={wrapperRef}></div>
-      <Container lassName="reminder">
-      <Col className="reminder">
-          <h4 className="reminder">Dont Forget!</h4>
-          <h6 className="reminder">Copy and paste everything after "/documents/" from the URL</h6>
-          
+      <div className='container' ref={wrapperRef} />
+      <Container lassName='reminder'>
+        <Col className='reminder'>
+          <h4 className='reminder'>Dont Forget!</h4>
+          <h6 className='reminder'>Copy your note ID (ex: "/documents/...") from the URL</h6>
+
         </Col>
       </Container>
     </>
   )
 };
 
-export default TextEditor;
-
-
-
-
-
+export default TextEditor
