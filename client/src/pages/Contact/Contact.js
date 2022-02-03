@@ -23,10 +23,12 @@ const Contact = () => {
               <Card className="text-center bgCard bottom" >
 
                 <Card.Body>
-                  <Card.Title>Peter Song</Card.Title>
+                  <Card.Title className='glowlyText'>Peter Song</Card.Title>
                   <Card.Img variant="top" src={Peter} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    "The future belongs to those who believe in the beauty of their dreams."
+                    <br />
+                    - Shoyo Hinata.
                   </Card.Text>
 
                 </Card.Body>
@@ -39,10 +41,12 @@ const Contact = () => {
               <Card className="text-center bgCard">
 
                 <Card.Body>
-                  <Card.Title>Kevin Kelley </Card.Title>
+                  <Card.Title className='glowlyText'>Kevin Kelley </Card.Title>
                   <Card.Img variant="top" src={Kevin} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    "I'll never forget you version 32."
+                    <br />
+                    - Albert Einstein
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/kelleyindahouse'><ButtonComponent name={'GitHub'} /> </a></Card.Footer>
@@ -55,10 +59,12 @@ const Contact = () => {
               <Card className="text-center bgCard bottom">
 
                 <Card.Body>
-                  <Card.Title>Abraham Solis</Card.Title>
+                  <Card.Title className='glowlyText'>Abraham Solis</Card.Title>
                   <Card.Img variant="top" src={Abe} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    "Deleted code is debugged code." 
+                    <br />
+                    - Jeff Sickel
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/Abraham-Solis' ><ButtonComponent name={'GitHub'} /></a></Card.Footer>
@@ -69,10 +75,13 @@ const Contact = () => {
               <Card className="text-center bgCard" >
 
                 <Card.Body>
-                  <Card.Title>Austin Hall</Card.Title>
+                  <Card.Title className='glowlyText'>Austin Hall</Card.Title>
                   <Card.Img variant="top" src={Austin} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    “Code is read more than it is written.”
+                  
+                    <br />
+                    ― Daniel Roy Greenfeld
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted"> <a target="_blank" rel="noopener noreferrer" href='https://github.com/BR0C0DE'><ButtonComponent name={'GitHub'} /></a></Card.Footer>
@@ -86,10 +95,12 @@ const Contact = () => {
               <Card className="text-center bgCard" style={{"margin-bottom": 20}} >
 
                 <Card.Body >
-                  <Card.Title>Nathan Montelli </Card.Title>
+                  <Card.Title className='glowlyText'>Nathan Montelli </Card.Title>
                   <Card.Img variant="top" src={Nathan} />
                   <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    "Before software can be reusable it first has to be usable."
+                    <br /> 
+                  - Ralph Johnson
                   </Card.Text>
 
                 </Card.Body>

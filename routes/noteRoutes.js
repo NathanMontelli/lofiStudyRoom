@@ -6,6 +6,10 @@ router.get('/notes', passport.authenticate('jwt'), async function (req, res) {
   const notes = await Note.find({}).populate('user')
   res.json(notes)
 })
+router.get('/notes/user', passport.authenticate('jwt'), async function (req, res) {
+  const notes = await Note.find({user: req.user._id}).populate('user')
+  res.json(notes)
+})
 
 router.get('/notes/:id', passport.authenticate('jwt'), (req, res) => {
   Note.findById(req.params.id).populate('user')

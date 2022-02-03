@@ -1,5 +1,5 @@
 .logo {
-  
+
   font-family: 'Architects daughter';
   font-size: 2rem;
   font-weight: 550;
@@ -16,6 +16,11 @@
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+.nav-link {
+  color:rgb(12, 12, 12)
+}
+
+
 
 .nav-links {
   font-family: 'Architects daughter';
@@ -42,4 +47,12 @@
   align-items: center;
   justify-content: space-between;
   min-height: 10vh;
+}
+
+.hamburger {
+  background-color: #DCC2A7;
+}
+
+body {
+  background-color: #DCC2A7;
 }
