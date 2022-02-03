@@ -38,6 +38,8 @@ function TextEditor() {
   // setting up socket and disconnect when no longer needed
   useEffect(() => {
     const s = io("https://lofistudy.herokuapp.com/")
+    // const s = io("https://lofistudy.herokuapp.com/")
+    // const s = io("http://localhost:8080")
     setSocket(s)
 
     return () => {
@@ -127,7 +129,7 @@ function TextEditor() {
       <Container lassName="reminder">
       <Col className="reminder">
           <h4 className="reminder">Dont Forget!</h4>
-          <h6 className="reminder">Copy and paste everything after "/documents/" from the URL</h6>
+          <h6 className="reminder">Copy your note ID (ex: "/documents/...") from the URL</h6>
           
         </Col>
       </Container>
