@@ -37,7 +37,7 @@ app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'inde
 
 
 // this section is for Heroku and change info on texteditor as well
-const SERVER = app.listen(process.env.PORT || 3001)
+const SERVER = app.listen(process.env.PORT || 43962)
 
 
 require('./db')
