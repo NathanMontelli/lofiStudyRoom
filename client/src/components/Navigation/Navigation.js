@@ -47,7 +47,7 @@ const Navigation = (handleBtnClick) => {
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link className="nav-links" target="_blank" href="/profile">Profile</Nav.Link>
               <Nav.Link className="nav-links" target="_blank" href="/contact">Contact</Nav.Link>
-              <Nav.Link className="nav-links" href="/login">Sign Up</Nav.Link>
+              <Nav.Link className="nav-links" href="/login">Login</Nav.Link>
               <Nav.Link className="nav-links" href="/register">Register</Nav.Link> 
               <Nav.Link onClick={handleLogOutUser} className="nav-links" href="/login">Logout</Nav.Link>
             </Nav>
