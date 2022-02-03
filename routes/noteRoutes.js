@@ -7,7 +7,7 @@ router.get('/notes', passport.authenticate('jwt'), async function (req, res) {
   res.json(notes)
 })
 router.get('/notes/user', passport.authenticate('jwt'), async function (req, res) {
-  const notes = await Note.find({user: req.user._id}).populate('user')
+  const notes = await Note.find({ user: req.user._id }).populate('user')
   res.json(notes)
 })
 
@@ -28,7 +28,6 @@ router.put('/notes/:id', passport.authenticate('jwt'), async function (req, res)
   // await User.findByIdAndUpdate(req.user._id, { $push: { Notes: Note._id } })
   res.sendStatus(200)
 })
-
 
 router.delete('/notes/:id', passport.authenticate('jwt'), async function (req, res) {
   await Note.findByIdAndDelete(req.params.id)

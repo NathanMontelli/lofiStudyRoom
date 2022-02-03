@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react'
-import { Modal } from "react-bootstrap";
-import { Carousel } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react'
+import { Modal, Carousel } from 'react-bootstrap'
 import '../ButtonComponent/Button.css'
 import ambientSound from '../../Assets/Tutorial/ambientSounds.gif'
 import fidgetCons from '../../Assets/Tutorial/fidgetCons.gif'
@@ -12,55 +10,50 @@ import part2 from '../../Assets/Tutorial/part2.gif'
 import toggleTheme from '../../Assets/Tutorial/toggleTheme.gif'
 import './Modal.css'
 
-
-import ButtonComponent from '../ButtonComponent/ButtonComponent';
+import ButtonComponent from '../ButtonComponent/ButtonComponent'
 
 const TutorialModal = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
 
-  const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true)
 
+  useEffect(() => {
+    handleShow()
+  }, [])
 
-useEffect(() =>{
-  handleShow()
+  return (
+    <>
 
-},[])
-  
-return (
-  <>
-
-    <ButtonComponent className='toggles'handleBtnClick={handleShow} name={'Tutorial'} />
-
+      <ButtonComponent className='toggles' handleBtnClick={handleShow} name='Tutorial' />
 
       <Modal
-        className="tutorialModal"
+        className='tutorialModal'
         show={show}
         onHide={handleClose}
         // backdrop="static"
         keyboard={false}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
+        size='lg'
+        aria-labelledby='contained-modal-title-vcenter'
         centered
       >
-      {/* <Modal.Header closeButton className="tutorialTitle">
+        {/* <Modal.Header closeButton className="tutorialTitle">
           <Modal.Title >Tutorial</Modal.Title>
         </Modal.Header> */}
         <Modal.Body>
 
-
           <Carousel>
             <Carousel.Item pause='hover'>
               <div>
-              <h3>Music</h3>
+                <h3>Music</h3>
                 <p>Access the music button to choose which type of music you want to listen to.</p>
               </div>
 
               <div>
                 <img
-                  className="d-block w-100"
+                  className='d-block w-100'
                   src={musicTutorial}
-                  alt="First slide"
+                  alt='First slide'
                 />
               </div>
             </Carousel.Item>
@@ -71,24 +64,23 @@ return (
                 <p>Add ambient sounds that include Rain, Fire, Cars and Waves that play in the background</p>
               </div>
               <img
-                className="d-block w-100"
+                className='d-block w-100'
                 src={ambientSound}
-                alt="Second slide"
+                alt='Second slide'
               />
-
 
             </Carousel.Item>
             <Carousel.Item pause='hover'>
               <div>
                 <h3>Theme Toggle</h3>
-                <p>Toggle from day themed and night themed background</p></div>
+                <p>Toggle from day themed and night themed background</p>
+              </div>
               <div>
 
-
                 <img
-                  className="d-block w-100"
+                  className='d-block w-100'
                   src={toggleTheme}
-                  alt="Third slide"
+                  alt='Third slide'
                 />
               </div>
 
@@ -101,9 +93,9 @@ return (
 
               <div>
                 <img
-                  className="d-block w-100"
+                  className='d-block w-100'
                   src={fidgetCons}
-                  alt="Fourth slide"
+                  alt='Fourth slide'
                 />
               </div>
             </Carousel.Item>
@@ -114,24 +106,23 @@ return (
                 <p>Access your study notes with this button here and you can save all of your notes. You can even share the link with friends and have real time changes.</p>
               </div>
               <img
-                className="d-block w-100"
+                className='d-block w-100'
                 src={noteBook}
-                alt="Fifth slide"
+                alt='Fifth slide'
               />
-
 
             </Carousel.Item>
             <Carousel.Item pause='hover'>
               <div>
                 <h3>Accessing Profile and Saving Notes Part 1</h3>
-                <p>Copy the portion of the link starting with document and you can save them to your profile</p></div>
+                <p>Copy the portion of the link starting with document and you can save them to your profile</p>
+              </div>
               <div>
 
-
                 <img
-                  className="d-block w-100"
+                  className='d-block w-100'
                   src={part1}
-                  alt="Sixth slide"
+                  alt='Sixth slide'
                 />
               </div>
 
@@ -139,32 +130,25 @@ return (
             <Carousel.Item pause='hover'>
               <div>
                 <h3>Accessing Profile and Saving Notes Part 2</h3>
-                <p>Paste that code that you just copied and you can save your notes and access them at any moment.</p></div>
+                <p>Paste that code that you just copied and you can save your notes and access them at any moment.</p>
+              </div>
               <div>
 
-
                 <img
-                  className="d-block w-100"
+                  className='d-block w-100'
                   src={part2}
-                  alt="Seventh slide"
+                  alt='Seventh slide'
                 />
               </div>
 
             </Carousel.Item>
           </Carousel>
 
-
-
-
         </Modal.Body>
 
       </Modal>
     </>
-  );
+  )
 }
 
 export default TutorialModal
-
-
-
-

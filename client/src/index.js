@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { ThemeProvider } from "./components/Toggler/Toggler"
+import { ThemeProvider } from './components/Toggler/Toggler'
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-    <App />
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
-
-
