@@ -7,10 +7,10 @@ import Navigation from '../../components/Navigation'
 import Bot from '../../components/Modals/botModal';
 import { ThemeContext } from "../../components/Toggler/Toggler"
 import { useContext } from "react"
-import Rain from '../../components/BackgroundSounds/Rain.js';
-import Fire from '../../components/BackgroundSounds/Fire.js';
-import Cars from '../../components/BackgroundSounds/Cars.js';
-import Waves from '../../components/BackgroundSounds/Waves.js';
+import Rain from '../../components/backgroundSounds/Rain';
+import Fire from '../../components/backgroundSounds/Fire';
+import Cars from '../../components/backgroundSounds/Cars';
+import Waves from '../../components/backgroundSounds/Waves';
 
 
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
