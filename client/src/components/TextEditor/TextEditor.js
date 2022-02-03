@@ -128,7 +128,7 @@ function TextEditor() {
       <Container lassName="reminder">
       <Col className="reminder">
           <h4 className="reminder">Dont Forget!</h4>
-          <h6 className="reminder">Copy and paste everything after "/documents/" from the URL</h6>
+          <h6 className="reminder">Copy your note ID (ex: "/documents/...") from the URL</h6>
           
         </Col>
       </Container>

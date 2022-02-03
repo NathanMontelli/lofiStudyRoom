@@ -19,7 +19,7 @@ const Navigation = (handleBtnClick) => {
     //Specify a starting and ending point in this case the opacity
     tl.fromTo('.logo', { opacity: 0 }, { opacity: 1, duration: 3 })
 
-  }, [tl])
+  }, [])
 
   //Search DB for Note
   
