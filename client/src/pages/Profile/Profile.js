@@ -15,7 +15,7 @@ const Profile = () => {
   const handleInputChange = ({ target: { name, value } }) => { setNoteState({ ...noteState, [name]: value }) }
 
   useEffect(() => {
-    axios.get('/api/notes', {
+    axios.get('/api/notes/user', {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('user')}`
       }
@@ -43,7 +43,7 @@ const Profile = () => {
     })
       .then(res => {
         // console.log(res.data)
-        axios.get('/api/notes', {
+        axios.get('/api/notes/user', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('user')}`
           }
@@ -65,7 +65,7 @@ const Profile = () => {
       })
       .then(res => {
         console.log(res)
-        axios.get('/api/notes', {
+        axios.get('/api/notes/user', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('user')}`
           }
@@ -89,6 +89,7 @@ const Profile = () => {
         <Container>
           <Row className="row">
             <Col className="notepad"><h1 className="Title">Study NotePad</h1>
+            <br />
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                   <Form.Label className="subtitle2">Title of notes (max of 10 characters)</Form.Label>
@@ -99,7 +100,8 @@ const Profile = () => {
                     name='title'
                     onChange={handleInputChange}
                   />
-          <Form.Label className="noteTitle">Note Url Goes here</Form.Label>
+                  <br />
+          <Form.Label className="noteTitle subtitle2">Note Url Goes here</Form.Label>
           <Form.Control className="textbox"
             as="textarea"
             rows={3}
@@ -108,9 +110,10 @@ const Profile = () => {
           />
         </Form.Group>
       </Form>
-      <Button className="justify-content-center"
-        onClick={handleSubmitNote}
-              >Save Note ID</Button></Col>
+      <br />
+      <ButtonComponent className="justify-content-center"
+        handleBtnClick={handleSubmitNote} name={'Save Note ID'}
+              >Save Note ID</ButtonComponent></Col>
               <Col className="noteSection">
               <h1 className="Title">Saved Notes:</h1>
               <Row className="savedNote">

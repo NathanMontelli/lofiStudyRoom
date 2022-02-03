@@ -35,13 +35,13 @@ const Navigation = (handleBtnClick) => {
           aria-labelledby="offcanvasNavbarLabel"
           placement="end"
         >
-          <Offcanvas.Header closeButton >
+          <Offcanvas.Header className='hamburger'closeButton >
             <Offcanvas.Title
               className="nav-menu" id="offcanvasNavbarLabel">Lofi Menu</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
+          <Offcanvas.Body className='hamburger'>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link className="nav-links" target="_blank" href="/profile">Profile</Nav.Link>
+              <Nav.Link className="nav-links hamburgerToggles" target="_blank" href="/profile">Profile</Nav.Link>
               <Nav.Link className="nav-links" target="_blank" href="/contact">Contact</Nav.Link>
               <Nav.Link className="nav-links" target="_blank" href="/login">Sign Up</Nav.Link>
               <Nav.Link className="nav-links" target="_blank" href="/register">Register</Nav.Link> 
