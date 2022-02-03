@@ -35,20 +35,43 @@ app.use(require('./routes'))
 
 app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build', 'index.html')))
 
-const SERVER = app.listen(process.env.PORT || 43962)
+
+// this section is for Heroku and change info on texteditor as well
+// const SERVER = app.listen(process.env.PORT || 3001)
 
 
+// require('./db')
+//   .then(() => SERVER)
+//   .catch(err => console.log(err))
+
+
+// const io = require("socket.io")(SERVER, {
+//   cors: {
+//     // origin: "https://lofistudy.herokuapp.com/",
+//     origin: "https://localhost:3000",
+//     methods: ["GET", "POST"]
+//   }
+// })
+
+
+
+// this section is for local
 require('./db')
-  .then(() => SERVER)
+  .then(() => app.listen(process.env.PORT || 3001))
   .catch(err => console.log(err))
 
 
-const io = require("socket.io")(SERVER, {
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
+
+const io = require("socket.io")(8080, {
   cors: {
-    origin: "https://lofistudy.herokuapp.com/",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"]
   }
 })
+
+
+
 
 const defaultValue = ''
 

@@ -1,5 +1,5 @@
 .bottom {
- margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .landing {
@@ -15,10 +15,20 @@
   background-color: #bac2c5;
 }
 
-.center{
+.center {
   justify-content: center;
 }
 
-.beGone{
+.beGone {
   padding-bottom: 0% !important;
+}
+
+.glowlyText {
+  font-family: 'Architects daughter';
+  font-size: 2rem;
+  font-weight: 550;
+  text-shadow: rgba(255, 204, 0, 0.767) 1px 0 10px;
+  color: rgb(255, 252, 236) !important;
+  /* text-shadow: 1px 1px 3px rgb(255, 230, 0); */
+
 }
