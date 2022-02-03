@@ -12,7 +12,7 @@
 
 @media only screen and (min-width: 700px) {
   .botModal {
-   margin-left: 40%;
+    margin-left: 40%;
     width: 40vw;
     max-width: 40vh;
     height: 28vh;
@@ -32,3 +32,10 @@
 .accordion-button collapsed {
   background-color: #DCC2A7;
 }
+
+.tutorialModal .modal-content {
+  background-color: #DCC2A7;
+  text-align: center;
+}
+
+

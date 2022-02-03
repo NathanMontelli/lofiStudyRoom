@@ -42,14 +42,13 @@ require('./db')
   .then(() => SERVER)
   .catch(err => console.log(err))
 
-  
-  const io = require("socket.io")(SERVER , {
-    cors: {
-      origin: "https://lofistudy.herokuapp.com/",
-      methods: ["GET", "POST"]
-    }
-  })
-  // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/lofiStudyRoom_db');
+
+const io = require("socket.io")(SERVER, {
+  cors: {
+    origin: "https://lofistudy.herokuapp.com/",
+    methods: ["GET", "POST"]
+  }
+})
 
 const defaultValue = ''
 
