@@ -43,7 +43,7 @@ require('./db')
 
 const io = require("socket.io")(SERVER, {
   cors: {
-    origin: "https://lofistudyroom.herokuapp.com/",
+    origin: "https://lofistudyboom.herokuapp.com/",
     methods: ["GET", "POST"]
   }
 })
