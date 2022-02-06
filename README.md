@@ -2,8 +2,8 @@
 
 Live Link: https://studyroom32.herokuapp.com/
 
-<img src="https://user-images.githubusercontent.com/92957388/152700257-6ee5ff62-89d8-4ae4-ab3c-c389c34073ed.PNG">
-<img src="https://user-images.githubusercontent.com/92957388/152700259-77b5319f-1165-479d-84f4-0fa8119efb94.PNG">
+<img src="https://user-images.githubusercontent.com/92957388/152700278-9b36f55e-f2cd-4bc1-a84a-88141e21eb54.PNG">
+
 
   ## Table of Contents
 
