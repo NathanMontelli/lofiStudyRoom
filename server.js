@@ -48,7 +48,7 @@ require('./db')
 const io = require("socket.io")(SERVER, {
   cors: {
     // origin: "https://lofistudy.herokuapp.com/",
-    origin: "https://localhost:3000",
+    origin: "https://amazinglofi.herokuapp.com/",
     methods: ["GET", "POST"]
   }
 })
